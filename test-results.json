@@ -1,0 +1,194 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\groni\\HRMS Automation\\playwright.config.js",
+    "rootDir": "C:/Users/groni/HRMS Automation/tests/specs",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 600000,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/groni/HRMS Automation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/groni/HRMS Automation/tests/specs",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/groni/HRMS Automation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "C:/Users/groni/HRMS Automation/tests/specs",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/groni/HRMS Automation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "C:/Users/groni/HRMS Automation/tests/specs",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "html",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results.json"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "test-results.xml"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.59.1",
+    "workers": 4,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "Login\\login.spec.ts",
+      "file": "Login/login.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Login Tests",
+          "file": "Login/login.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should login with email ",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 14280,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "[INFO] 10:42:35 AM - Navigating to login page\n"
+                        },
+                        {
+                          "text": "[INFO] 10:42:36 AM - Attempting to login with email: avishkar@groniva.com\n"
+                        },
+                        {
+                          "text": "[INFO] 10:42:36 AM - Clicking on Email button\n"
+                        },
+                        {
+                          "text": "[INFO] 10:42:38 AM - Filling Email field with value\n"
+                        },
+                        {
+                          "text": "[INFO] 10:42:39 AM - Filling Password field with value\n"
+                        },
+                        {
+                          "text": "[INFO] 10:42:39 AM - Clicking on Sign In button\n"
+                        },
+                        {
+                          "text": "[INFO] 10:42:40 AM - Login initiated\n"
+                        },
+                        {
+                          "text": "[INFO] 10:42:43 AM - Login with email successful - dashboard URL confirmed\n"
+                        },
+                        {
+                          "text": "[INFO] 10:42:46 AM - Welcome message displayed after email login\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-04-30T05:12:35.454Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\groni\\HRMS Automation\\test-results\\Login-login-Login-Tests-should-login-with-email--chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4f7fd2a119c489bae8d6-cf5b43fd846130f5ed63",
+              "file": "Login/login.spec.ts",
+              "line": 41,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-04-30T05:12:33.253Z",
+    "duration": 18800.63500000001,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

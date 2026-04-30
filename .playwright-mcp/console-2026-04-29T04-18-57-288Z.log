@@ -1,0 +1,2 @@
+[  -16554ms] [ERROR] Access to XMLHttpRequest at 'https://global-template.groniva.net/v1/sign-in-image/no-login?' from origin 'https://shree.groniva.net' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ https://shree.groniva.net/login:0
+[  -16544ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://global-template.groniva.net/v1/sign-in-image/no-login?:0

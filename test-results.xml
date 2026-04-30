@@ -1,0 +1,20 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="18.80063500000001">
+<testsuite name="Login\login.spec.ts" timestamp="2026-04-30T05:12:34.401Z" hostname="chromium" tests="1" failures="0" skipped="0" time="14.28" errors="0">
+<testcase name="Login Tests › should login with email " classname="Login\login.spec.ts" time="14.28">
+<system-out>
+<![CDATA[[INFO] 10:42:35 AM - Navigating to login page
+[INFO] 10:42:36 AM - Attempting to login with email: avishkar@groniva.com
+[INFO] 10:42:36 AM - Clicking on Email button
+[INFO] 10:42:38 AM - Filling Email field with value
+[INFO] 10:42:39 AM - Filling Password field with value
+[INFO] 10:42:39 AM - Clicking on Sign In button
+[INFO] 10:42:40 AM - Login initiated
+[INFO] 10:42:43 AM - Login with email successful - dashboard URL confirmed
+[INFO] 10:42:46 AM - Welcome message displayed after email login
+
+[[ATTACHMENT|test-results\Login-login-Login-Tests-should-login-with-email--chromium\trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>
