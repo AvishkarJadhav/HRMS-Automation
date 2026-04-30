@@ -1,18 +1,31 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="18.80063500000001">
-<testsuite name="Login\login.spec.ts" timestamp="2026-04-30T05:12:34.401Z" hostname="chromium" tests="1" failures="0" skipped="0" time="14.28" errors="0">
-<testcase name="Login Tests › should login with email " classname="Login\login.spec.ts" time="14.28">
+<testsuites id="" name="" tests="2" failures="0" skipped="0" errors="0" time="31.16032999999996">
+<testsuite name="Login\shreeLogin.spec.ts" timestamp="2026-04-30T06:15:53.621Z" hostname="chromium" tests="2" failures="0" skipped="0" time="47.328" errors="0">
+<testcase name="Shree User Login Tests › should login Shree user successfully" classname="Login\shreeLogin.spec.ts" time="20.961">
 <system-out>
-<![CDATA[[INFO] 10:42:35 AM - Navigating to login page
-[INFO] 10:42:36 AM - Attempting to login with email: avishkar@groniva.com
-[INFO] 10:42:36 AM - Clicking on Email button
-[INFO] 10:42:38 AM - Filling Email field with value
-[INFO] 10:42:39 AM - Filling Password field with value
-[INFO] 10:42:39 AM - Clicking on Sign In button
-[INFO] 10:42:40 AM - Login initiated
-[INFO] 10:42:43 AM - Login with email successful - dashboard URL confirmed
-[INFO] 10:42:46 AM - Welcome message displayed after email login
+<![CDATA[[INFO] 11:45:55 AM - Navigating to Shree login page
+[INFO] 11:46:00 AM - Attempting to login with mobile: 9011409986
+[INFO] 11:46:00 AM - Filling Mobile field with value
+[INFO] 11:46:06 AM - Filling Password field with value
+[INFO] 11:46:06 AM - Clicking on Sign In button
+[INFO] 11:46:07 AM - Login initiated
+[INFO] 11:46:10 AM - Shree user login successful
 
-[[ATTACHMENT|test-results\Login-login-Login-Tests-should-login-with-email--chromium\trace.zip]]
+[[ATTACHMENT|test-results\Login-shreeLogin-Shree-Use-99f8f-gin-Shree-user-successfully-chromium\trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Shree User Login Tests › should display dashboard after Shree user login" classname="Login\shreeLogin.spec.ts" time="26.367">
+<system-out>
+<![CDATA[[INFO] 11:45:55 AM - Navigating to Shree login page
+[INFO] 11:46:00 AM - Attempting to login with mobile: 9011409986
+[INFO] 11:46:00 AM - Filling Mobile field with value
+[INFO] 11:46:08 AM - Filling Password field with value
+[INFO] 11:46:08 AM - Clicking on Sign In button
+[INFO] 11:46:09 AM - Login initiated
+[INFO] 11:46:14 AM - Verifying dashboard title: Ess Dashboard
+[INFO] 11:46:18 AM - Dashboard title verified for Shree user
+
+[[ATTACHMENT|test-results\Login-shreeLogin-Shree-Use-a9f95-oard-after-Shree-user-login-chromium\trace.zip]]
 ]]>
 </system-out>
 </testcase>
