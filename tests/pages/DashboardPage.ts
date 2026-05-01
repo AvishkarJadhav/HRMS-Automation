@@ -19,11 +19,13 @@ export class DashboardPage extends BasePage {
   
   async verifyWelcomeMessage(userName: string) {
     Logger.info(`Verifying welcome message for user: ${userName}`);
+    await expect(this.welcomeMessage).toBeVisible({ timeout: 10000 });
     await expect(this.welcomeMessage).toContainText(`Welcome ${userName}`);
   }
 
   async verifyDashboardTitle(title: string) {
     Logger.info(`Verifying dashboard title: ${title}`);
+    await expect(this.dashboardTitle).toBeVisible({ timeout: 10000 });
     await expect(this.dashboardTitle).toContainText(title);
   }
 
