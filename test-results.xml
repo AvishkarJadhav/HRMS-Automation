@@ -1,33 +1,66 @@
-<testsuites id="" name="" tests="2" failures="0" skipped="0" errors="0" time="31.16032999999996">
-<testsuite name="Login\shreeLogin.spec.ts" timestamp="2026-04-30T06:15:53.621Z" hostname="chromium" tests="2" failures="0" skipped="0" time="47.328" errors="0">
-<testcase name="Shree User Login Tests › should login Shree user successfully" classname="Login\shreeLogin.spec.ts" time="20.961">
+<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="30.395017000000923">
+<testsuite name="Login\login.spec.ts" timestamp="2026-04-30T09:48:18.638Z" hostname="chromium" tests="1" failures="1" skipped="0" time="26.04" errors="0">
+<testcase name="Login Tests › should display welcome message after successful login" classname="Login\login.spec.ts" time="26.04">
 <system-out>
-<![CDATA[[INFO] 11:45:55 AM - Navigating to Shree login page
-[INFO] 11:46:00 AM - Attempting to login with mobile: 9011409986
-[INFO] 11:46:00 AM - Filling Mobile field with value
-[INFO] 11:46:06 AM - Filling Password field with value
-[INFO] 11:46:06 AM - Clicking on Sign In button
-[INFO] 11:46:07 AM - Login initiated
-[INFO] 11:46:10 AM - Shree user login successful
+<![CDATA[[INFO] 3:18:20 PM - Navigating to login page
+[INFO] 3:18:22 PM - Attempting to login with mobile: 9011409986
+[INFO] 3:18:22 PM - Filling Mobile field with value
+[INFO] 3:18:34 PM - Filling Password field with value
+[INFO] 3:18:34 PM - Clicking on Sign In button
+[INFO] 3:18:35 PM - Login initiated
 
-[[ATTACHMENT|test-results\Login-shreeLogin-Shree-Use-99f8f-gin-Shree-user-successfully-chromium\trace.zip]]
+[[ATTACHMENT|test-results\Login-login-Login-Tests-sh-3ef0a-sage-after-successful-login-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\Login-login-Login-Tests-sh-3ef0a-sage-after-successful-login-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\Login-login-Login-Tests-sh-3ef0a-sage-after-successful-login-chromium\error-context.md]]
+
+[[ATTACHMENT|test-results\Login-login-Login-Tests-sh-3ef0a-sage-after-successful-login-chromium\trace.zip]]
 ]]>
 </system-out>
-</testcase>
-<testcase name="Shree User Login Tests › should display dashboard after Shree user login" classname="Login\shreeLogin.spec.ts" time="26.367">
-<system-out>
-<![CDATA[[INFO] 11:45:55 AM - Navigating to Shree login page
-[INFO] 11:46:00 AM - Attempting to login with mobile: 9011409986
-[INFO] 11:46:00 AM - Filling Mobile field with value
-[INFO] 11:46:08 AM - Filling Password field with value
-[INFO] 11:46:08 AM - Clicking on Sign In button
-[INFO] 11:46:09 AM - Login initiated
-[INFO] 11:46:14 AM - Verifying dashboard title: Ess Dashboard
-[INFO] 11:46:18 AM - Dashboard title verified for Shree user
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [chromium] › Login\login.spec.ts:30:3 › Login Tests › should display welcome message after successful login 
 
-[[ATTACHMENT|test-results\Login-shreeLogin-Shree-Use-a9f95-oard-after-Shree-user-login-chromium\trace.zip]]
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('text=Welcome')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('text=Welcome')
+
+
+      35 |     
+      36 |     const welcomeLocator = page.locator('text=Welcome');
+    > 37 |     await expect(welcomeLocator).toBeVisible();
+         |                                  ^
+      38 |     Logger.info('Welcome message displayed');
+      39 |   });
+      40 |
+        at C:\Users\groni\HRMS Automation\tests\specs\Login\login.spec.ts:37:34
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\test-results\Login-login-Login-Tests-sh-3ef0a-sage-after-successful-login-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\test-results\Login-login-Login-Tests-sh-3ef0a-sage-after-successful-login-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\test-results\Login-login-Login-Tests-sh-3ef0a-sage-after-successful-login-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\..\test-results\Login-login-Login-Tests-sh-3ef0a-sage-after-successful-login-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\..\test-results\Login-login-Login-Tests-sh-3ef0a-sage-after-successful-login-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
 ]]>
-</system-out>
+</failure>
 </testcase>
 </testsuite>
 </testsuites>

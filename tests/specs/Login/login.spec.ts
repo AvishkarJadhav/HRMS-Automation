@@ -32,8 +32,12 @@ test.describe('Login Tests', () => {
     
     await loginPage.login(testUsers.shreeUser.mobile, testUsers.shreeUser.password);
     await page.waitForURL(/dashboard|ess-dashboard/, { timeout: 30000 });
-    
-    const welcomeLocator = page.locator('text=Welcome');
+    await page.waitForLoadState('networkidle');
+
+     // Give the page a moment to render
+     await page.waitForTimeout(1000);
+
+    const welcomeLocator = page.locator('text=Welcome Avishkar');
     await expect(welcomeLocator).toBeVisible();
     Logger.info('Welcome message displayed');
   });
@@ -51,7 +55,7 @@ test.describe('Login Tests', () => {
 
     await page.waitForURL(/dashboard|ess-dashboard/, { timeout: 30000 });
         await page.waitForLoadState('domcontentloaded');
-    const welcomeLocator = page.locator('text=Welcome');
+    const welcomeLocator = page.locator('text=Welcome Avishkar');
     await expect(welcomeLocator).toBeVisible();
     Logger.info('Welcome message displayed after email login');
     });

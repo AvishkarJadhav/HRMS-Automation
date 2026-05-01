@@ -6,7 +6,7 @@ export class DashboardPage extends BasePage {
   readonly welcomeMessage = this.page.locator('text=Welcome User');
   readonly menuButton = this.page.getByRole('button').first();
   readonly menuLink = this.page.getByRole('link', { name: /menu/i });
-  readonly dashboardTitle = this.page.locator('h4');
+  readonly dashboardTitle = this.page.locator('role=heading[level=4]');
 
   async verifyWelcomeMessage(userName: string) {
     Logger.info(`Verifying welcome message for user: ${userName}`);
