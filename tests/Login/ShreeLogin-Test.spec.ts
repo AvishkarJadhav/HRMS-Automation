@@ -8,7 +8,7 @@
 //   await page.getByRole('textbox', { name: 'Password' }).click();
 //   await page.waitForTimeout(3000); // Waits for 3 seconds
 //   await page.getByRole('textbox', { name: 'Password' }).click({
-//     modifiers: ['ControlOrMeta']/
+//     modifiers: ['ControlOrMeta']
     
 //   });
 //   await page.waitForTimeout(3000); // Waits for 3 seconds
