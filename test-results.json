@@ -113,7 +113,7 @@
             {
               "title": "Multiple employee search",
               "file": "Employee/employeeSearch.spec.ts",
-              "line": 45,
+              "line": 47,
               "column": 8,
               "specs": [
                 {
@@ -129,76 +129,85 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 4,
+                          "workerIndex": 5,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 16445,
+                          "duration": 29319,
                           "errors": [],
                           "stdout": [
                             {
-                              "text": "[INFO] 11:59:45 AM - Setting up: Login and navigate to dashboard\n"
+                              "text": "[INFO] 12:48:58 PM - Setting up: Login and navigate to dashboard\n"
                             },
                             {
-                              "text": "[INFO] 11:59:45 AM - Navigating to https://shree.groniva.net/login\n"
+                              "text": "[INFO] 12:48:58 PM - Navigating to https://shree.groniva.net/login\n"
                             },
                             {
-                              "text": "[INFO] 11:59:46 AM - Attempting to login with email: ckoranne89@gmail.com\n"
+                              "text": "[INFO] 12:48:59 PM - Attempting to login with email: ckoranne89@gmail.com\n"
                             },
                             {
-                              "text": "[INFO] 11:59:46 AM - Clicking on Email button\n"
+                              "text": "[INFO] 12:48:59 PM - Clicking on Email button\n"
                             },
                             {
-                              "text": "[INFO] 11:59:49 AM - Filling Email field with value\n"
+                              "text": "[INFO] 12:49:04 PM - Filling Email field with value\n"
                             },
                             {
-                              "text": "[INFO] 11:59:49 AM - Filling Password field with value\n"
+                              "text": "[INFO] 12:49:04 PM - Filling Password field with value\n"
                             },
                             {
-                              "text": "[INFO] 11:59:50 AM - Clicking on Sign In button\n"
+                              "text": "[INFO] 12:49:05 PM - Clicking on Sign In button\n"
                             },
                             {
-                              "text": "[INFO] 11:59:50 AM - Login initiated\n"
+                              "text": "[INFO] 12:49:05 PM - Login initiated\n"
                             },
                             {
-                              "text": "[INFO] 11:59:50 AM - Login completed and token verified\n"
+                              "text": "[INFO] 12:49:05 PM - Login completed and token verified\n"
                             },
                             {
-                              "text": "[INFO] 11:59:56 AM - Dashboard navigation completed\n"
+                              "text": "[INFO] 12:49:13 PM - Dashboard navigation completed\n"
                             },
                             {
-                              "text": "[INFO] 11:59:56 AM - Verifying dashboard is loaded\n"
+                              "text": "[INFO] 12:49:21 PM - Verifying dashboard is loaded\n"
                             },
                             {
-                              "text": "[INFO] 11:59:57 AM - Current URL: https://shree.groniva.net/app/global-dashboards/ess-dashboard\n"
+                              "text": "[INFO] 12:49:22 PM - Current URL: https://shree.groniva.net/app/global-dashboards/ess-dashboard\n"
                             },
                             {
-                              "text": "[INFO] 11:59:57 AM - Is dashboard URL: true\n"
+                              "text": "[INFO] 12:49:22 PM - Is dashboard URL: true\n"
                             },
                             {
-                              "text": "[INFO] 11:59:57 AM - Dashboard verification complete\n"
+                              "text": "[INFO] 12:49:22 PM - Dashboard verification complete\n"
                             },
                             {
-                              "text": "[INFO] 11:59:57 AM - Clicking search menu\n"
+                              "text": "[INFO] 12:49:22 PM - Clicking search menu\n"
                             },
                             {
-                              "text": "[INFO] 11:59:57 AM - Clicking on Search Menu\n"
+                              "text": "[INFO] 12:49:22 PM - Clicking on Search Menu\n"
                             },
                             {
-                              "text": "[INFO] 11:59:58 AM - Searching for employee: 1027\n"
+                              "text": "[INFO] 12:49:23 PM - Searching for employee: 1027\n"
                             },
                             {
-                              "text": "[INFO] 11:59:58 AM - Clicking on Search combobox\n"
+                              "text": "[INFO] 12:49:23 PM - Clicking on Search combobox\n"
                             },
                             {
-                              "text": "[INFO] 11:59:58 AM - Filling Employee ID with value\n"
+                              "text": "[INFO] 12:49:23 PM - Filling Employee ID with value\n"
                             },
                             {
-                              "text": "[INFO] 11:59:59 AM - Search for employee 1027 completed\n"
+                              "text": "[INFO] 12:49:24 PM - Search for employee 1027 completed\n"
+                            },
+                            {
+                              "text": "[INFO] 12:49:24 PM - Clicking on Organization\n"
+                            },
+                            {
+                              "text": "[INFO] 12:49:24 PM - Clicking on Organization 1027\n"
+                            },
+                            {
+                              "text": "[INFO] 12:49:24 PM - Clicked on Organization for employee 1027\n"
                             }
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-05-02T06:29:45.485Z",
+                          "startTime": "2026-05-02T07:18:58.450Z",
                           "annotations": [],
                           "attachments": [
                             {
@@ -214,7 +223,7 @@
                   ],
                   "id": "b793bb91ddb3a2a7e2e3-f8bd471cd32ea07c0f3e",
                   "file": "Employee/employeeSearch.spec.ts",
-                  "line": 47,
+                  "line": 49,
                   "column": 7
                 }
               ]
@@ -226,8 +235,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-05-02T06:29:43.151Z",
-    "duration": 21223.67300000001,
+    "startTime": "2026-05-02T07:18:56.049Z",
+    "duration": 34278.88500000001,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,

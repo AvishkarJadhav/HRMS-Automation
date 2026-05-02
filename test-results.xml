@@ -1,27 +1,30 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="21.22367300000001">
-<testsuite name="Employee\employeeSearch.spec.ts" timestamp="2026-05-02T06:29:44.335Z" hostname="chromium" tests="1" failures="0" skipped="0" time="16.445" errors="0">
-<testcase name="Employee Search Tests › Multiple employee search › should search for employee 1027" classname="Employee\employeeSearch.spec.ts" time="16.445">
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="34.27888500000001">
+<testsuite name="Employee\employeeSearch.spec.ts" timestamp="2026-05-02T07:18:57.291Z" hostname="chromium" tests="1" failures="0" skipped="0" time="29.319" errors="0">
+<testcase name="Employee Search Tests › Multiple employee search › should search for employee 1027" classname="Employee\employeeSearch.spec.ts" time="29.319">
 <system-out>
-<![CDATA[[INFO] 11:59:45 AM - Setting up: Login and navigate to dashboard
-[INFO] 11:59:45 AM - Navigating to https://shree.groniva.net/login
-[INFO] 11:59:46 AM - Attempting to login with email: ckoranne89@gmail.com
-[INFO] 11:59:46 AM - Clicking on Email button
-[INFO] 11:59:49 AM - Filling Email field with value
-[INFO] 11:59:49 AM - Filling Password field with value
-[INFO] 11:59:50 AM - Clicking on Sign In button
-[INFO] 11:59:50 AM - Login initiated
-[INFO] 11:59:50 AM - Login completed and token verified
-[INFO] 11:59:56 AM - Dashboard navigation completed
-[INFO] 11:59:56 AM - Verifying dashboard is loaded
-[INFO] 11:59:57 AM - Current URL: https://shree.groniva.net/app/global-dashboards/ess-dashboard
-[INFO] 11:59:57 AM - Is dashboard URL: true
-[INFO] 11:59:57 AM - Dashboard verification complete
-[INFO] 11:59:57 AM - Clicking search menu
-[INFO] 11:59:57 AM - Clicking on Search Menu
-[INFO] 11:59:58 AM - Searching for employee: 1027
-[INFO] 11:59:58 AM - Clicking on Search combobox
-[INFO] 11:59:58 AM - Filling Employee ID with value
-[INFO] 11:59:59 AM - Search for employee 1027 completed
+<![CDATA[[INFO] 12:48:58 PM - Setting up: Login and navigate to dashboard
+[INFO] 12:48:58 PM - Navigating to https://shree.groniva.net/login
+[INFO] 12:48:59 PM - Attempting to login with email: ckoranne89@gmail.com
+[INFO] 12:48:59 PM - Clicking on Email button
+[INFO] 12:49:04 PM - Filling Email field with value
+[INFO] 12:49:04 PM - Filling Password field with value
+[INFO] 12:49:05 PM - Clicking on Sign In button
+[INFO] 12:49:05 PM - Login initiated
+[INFO] 12:49:05 PM - Login completed and token verified
+[INFO] 12:49:13 PM - Dashboard navigation completed
+[INFO] 12:49:21 PM - Verifying dashboard is loaded
+[INFO] 12:49:22 PM - Current URL: https://shree.groniva.net/app/global-dashboards/ess-dashboard
+[INFO] 12:49:22 PM - Is dashboard URL: true
+[INFO] 12:49:22 PM - Dashboard verification complete
+[INFO] 12:49:22 PM - Clicking search menu
+[INFO] 12:49:22 PM - Clicking on Search Menu
+[INFO] 12:49:23 PM - Searching for employee: 1027
+[INFO] 12:49:23 PM - Clicking on Search combobox
+[INFO] 12:49:23 PM - Filling Employee ID with value
+[INFO] 12:49:24 PM - Search for employee 1027 completed
+[INFO] 12:49:24 PM - Clicking on Organization
+[INFO] 12:49:24 PM - Clicking on Organization 1027
+[INFO] 12:49:24 PM - Clicked on Organization for employee 1027
 
 [[ATTACHMENT|test-results\Employee-employeeSearch-Em-b0b50-ld-search-for-employee-1027-chromium\trace.zip]]
 ]]>

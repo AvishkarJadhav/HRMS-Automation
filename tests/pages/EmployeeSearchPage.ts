@@ -5,7 +5,9 @@ import { Logger } from '../helpers/logger';
 export class EmployeeSearchPage extends BasePage {
   readonly searchMenuDiv = this.page.locator('div').filter({ hasText: /^Search Menu$/ }).first();
   readonly searchCombobox = this.page.getByRole('combobox').first();
-  
+  readonly approvalWorkflow = this.page.locator('div').filter({ hasText: /^Approval Workflow 1050$/ }).nth(5);
+  readonly organization = this.page.locator('div').filter({ hasText: /^Organization 1027$/ }).nth(5);
+
   async clickSearchMenu() {
     Logger.info(`Clicking search menu`);
     await this.click(this.searchMenuDiv, 'Search Menu');
@@ -35,5 +37,14 @@ export class EmployeeSearchPage extends BasePage {
     Logger.info(`Searching and selecting employee: ${employeeId}`);
     await this.searchEmployee(employeeId);
     await this.selectEmployee(employeeId);
+  }
+
+  async clickonApprovalWorkflow() {
+    Logger.info(`Clicking on Approval Workflow`);
+    await this.click(this.approvalWorkflow, 'Approval Workflow 1050');
+  }
+  async clickonOrganization() {
+    Logger.info(`Clicking on Organization`);
+    await this.click(this.organization, 'Organization 1027');
   }
 }
