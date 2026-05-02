@@ -1,30 +1,32 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="22.346773000000045">
-<testsuite name="Dashboard\Dashboard.spec.ts" timestamp="2026-05-01T10:21:37.356Z" hostname="chromium" tests="1" failures="0" skipped="0" time="17.057" errors="0">
-<testcase name="Dashboard Tests › should search menu with organization and verify results appear" classname="Dashboard\Dashboard.spec.ts" time="17.057">
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="34.27888500000001">
+<testsuite name="Employee\employeeSearch.spec.ts" timestamp="2026-05-02T07:18:57.291Z" hostname="chromium" tests="1" failures="0" skipped="0" time="29.319" errors="0">
+<testcase name="Employee Search Tests › Multiple employee search › should search for employee 1027" classname="Employee\employeeSearch.spec.ts" time="29.319">
 <system-out>
-<![CDATA[[INFO] 3:51:38 PM - Navigating to login page
-[INFO] 3:51:40 PM - Attempting to login with mobile: 9011409986
-[INFO] 3:51:40 PM - Filling Mobile field with value
-[INFO] 3:51:42 PM - Filling Password field with value
-[INFO] 3:51:42 PM - Clicking on Sign In button
-[INFO] 3:51:43 PM - Login initiated
-[INFO] 3:51:45 PM - Verifying dashboard is loaded
-[INFO] 3:51:48 PM - Dashboard loaded successfully
-[INFO] 3:51:48 PM - Opening menu
-[INFO] 3:51:48 PM - Clicking on Menu button
-[INFO] 3:51:49 PM - Clicking menu link
-[INFO] 3:51:49 PM - Clicking on Menu link
-[INFO] 3:51:49 PM - Searching in menu for: organization
-[INFO] 3:51:49 PM - Clicking on Menu search input
-[INFO] 3:51:51 PM - Typed "organization" in menu search
-[INFO] 3:51:51 PM - Dropdown panel is now visible
-[INFO] 3:51:51 PM - Searched for organization in menu
-[INFO] 3:51:52 PM - Verifying search results appear
-[INFO] 3:51:52 PM - Found 0 search results
-[INFO] 3:51:52 PM - Search returned results: false
-[INFO] 3:51:52 PM - Verifying no data found message
+<![CDATA[[INFO] 12:48:58 PM - Setting up: Login and navigate to dashboard
+[INFO] 12:48:58 PM - Navigating to https://shree.groniva.net/login
+[INFO] 12:48:59 PM - Attempting to login with email: ckoranne89@gmail.com
+[INFO] 12:48:59 PM - Clicking on Email button
+[INFO] 12:49:04 PM - Filling Email field with value
+[INFO] 12:49:04 PM - Filling Password field with value
+[INFO] 12:49:05 PM - Clicking on Sign In button
+[INFO] 12:49:05 PM - Login initiated
+[INFO] 12:49:05 PM - Login completed and token verified
+[INFO] 12:49:13 PM - Dashboard navigation completed
+[INFO] 12:49:21 PM - Verifying dashboard is loaded
+[INFO] 12:49:22 PM - Current URL: https://shree.groniva.net/app/global-dashboards/ess-dashboard
+[INFO] 12:49:22 PM - Is dashboard URL: true
+[INFO] 12:49:22 PM - Dashboard verification complete
+[INFO] 12:49:22 PM - Clicking search menu
+[INFO] 12:49:22 PM - Clicking on Search Menu
+[INFO] 12:49:23 PM - Searching for employee: 1027
+[INFO] 12:49:23 PM - Clicking on Search combobox
+[INFO] 12:49:23 PM - Filling Employee ID with value
+[INFO] 12:49:24 PM - Search for employee 1027 completed
+[INFO] 12:49:24 PM - Clicking on Organization
+[INFO] 12:49:24 PM - Clicking on Organization 1027
+[INFO] 12:49:24 PM - Clicked on Organization for employee 1027
 
-[[ATTACHMENT|test-results\Dashboard-Dashboard-Dashbo-5eac5-n-and-verify-results-appear-chromium\trace.zip]]
+[[ATTACHMENT|test-results\Employee-employeeSearch-Em-b0b50-ld-search-for-employee-1027-chromium\trace.zip]]
 ]]>
 </system-out>
 </testcase>

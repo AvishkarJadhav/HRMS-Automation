@@ -19,13 +19,13 @@ export const testUsers = {
     name: 'Chetan',
   },
   shreeUser: {
-    email: process.env.SHREE_EMAIL || 'avishkar@groniva.com',
+    email: process.env.SHREE_EMAIL || 'ckoranne89@gmail.com',
     mobile: process.env.SHREE_MOBILE || '9011409986', // Add mobile
-    password: process.env.SHREE_PASSWORD || 'Vermilion@2026',
+    password: process.env.SHREE_PASSWORD || 'Shree@123',
   },
 };
 
 export const testData = {
-  employeeIds: ['1047', '1048', '1049'],
+  employeeIds: ['1027', '1117', '1050'],
   defaultTimeout: 30000,
 };
