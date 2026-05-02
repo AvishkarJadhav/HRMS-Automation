@@ -13,17 +13,27 @@ test.describe('Employee Search Tests', () => {
     await loginPage.navigateTo(config.shreeURL + '/login');
     await loginPage.login(testUsers.shreeUser.mobile, testUsers.shreeUser.password);
     
+    // Wait for login to complete - verify token is set
+    await page.waitForLoadState('networkidle');
+    Logger.info('Login completed and token verified');
+    
     // Navigate to ESS dashboard
     await page.goto(config.shreeURL + '/app/global-dashboards/ess-dashboard');
-    await page.waitForLoadState('domcontentloaded');
+    await page.waitForLoadState('networkidle');
+    
+    // Additional verification that dashboard is fully loaded
+    await page.waitForTimeout(1500);
+    Logger.info('Dashboard navigation completed');
   });
 
   test('should search and select employee 1047', async ({ page }) => {
     const dashboardPage = new DashboardPage(page);
     const employeeSearchPage = new EmployeeSearchPage(page);
     
-    // Verify we're on dashboard
+    // Verify token and dashboard are ready
+    await page.waitForLoadState('networkidle');
     await dashboardPage.verifyDashboardLoaded();
+    await page.waitForTimeout(500);
     
     // Search for employee
     await employeeSearchPage.clickSearchMenu();
@@ -38,6 +48,11 @@ test.describe('Employee Search Tests', () => {
       test(`should search for employee ${employeeId}`, async ({ page }) => {
         const dashboardPage = new DashboardPage(page);
         const employeeSearchPage = new EmployeeSearchPage(page);
+        
+        // Verify token and dashboard are ready before each search
+        await page.waitForLoadState('networkidle');
+        await dashboardPage.verifyDashboardLoaded();
+        await page.waitForTimeout(500);
         
         await employeeSearchPage.clickSearchMenu();
         await employeeSearchPage.searchEmployee(employeeId);

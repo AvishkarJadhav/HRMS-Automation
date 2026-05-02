@@ -97,121 +97,106 @@
   },
   "suites": [
     {
-      "title": "Dashboard\\Dashboard.spec.ts",
-      "file": "Dashboard/Dashboard.spec.ts",
+      "title": "Employee\\employeeSearch.spec.ts",
+      "file": "Employee/employeeSearch.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "Dashboard Tests",
-          "file": "Dashboard/Dashboard.spec.ts",
+          "title": "Employee Search Tests",
+          "file": "Employee/employeeSearch.spec.ts",
           "line": 8,
           "column": 6,
-          "specs": [
+          "specs": [],
+          "suites": [
             {
-              "title": "should search menu with organization and verify results appear",
-              "ok": true,
-              "tags": [],
-              "tests": [
+              "title": "Multiple employee search",
+              "file": "Employee/employeeSearch.spec.ts",
+              "line": 36,
+              "column": 8,
+              "specs": [
                 {
-                  "timeout": 60000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
+                  "title": "should search for employee 1048",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
                     {
-                      "workerIndex": 18,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 17057,
-                      "errors": [],
-                      "stdout": [
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
                         {
-                          "text": "[INFO] 3:51:38 PM - Navigating to login page\n"
-                        },
-                        {
-                          "text": "[INFO] 3:51:40 PM - Attempting to login with mobile: 9011409986\n"
-                        },
-                        {
-                          "text": "[INFO] 3:51:40 PM - Filling Mobile field with value\n"
-                        },
-                        {
-                          "text": "[INFO] 3:51:42 PM - Filling Password field with value\n"
-                        },
-                        {
-                          "text": "[INFO] 3:51:42 PM - Clicking on Sign In button\n"
-                        },
-                        {
-                          "text": "[INFO] 3:51:43 PM - Login initiated\n"
-                        },
-                        {
-                          "text": "[INFO] 3:51:45 PM - Verifying dashboard is loaded\n"
-                        },
-                        {
-                          "text": "[INFO] 3:51:48 PM - Dashboard loaded successfully\n"
-                        },
-                        {
-                          "text": "[INFO] 3:51:48 PM - Opening menu\n"
-                        },
-                        {
-                          "text": "[INFO] 3:51:48 PM - Clicking on Menu button\n"
-                        },
-                        {
-                          "text": "[INFO] 3:51:49 PM - Clicking menu link\n"
-                        },
-                        {
-                          "text": "[INFO] 3:51:49 PM - Clicking on Menu link\n"
-                        },
-                        {
-                          "text": "[INFO] 3:51:49 PM - Searching in menu for: organization\n"
-                        },
-                        {
-                          "text": "[INFO] 3:51:49 PM - Clicking on Menu search input\n"
-                        },
-                        {
-                          "text": "[INFO] 3:51:51 PM - Typed \"organization\" in menu search\n"
-                        },
-                        {
-                          "text": "[INFO] 3:51:51 PM - Dropdown panel is now visible\n"
-                        },
-                        {
-                          "text": "[INFO] 3:51:51 PM - Searched for organization in menu\n"
-                        },
-                        {
-                          "text": "[INFO] 3:51:52 PM - Verifying search results appear\n"
-                        },
-                        {
-                          "text": "[INFO] 3:51:52 PM - Found 0 search results\n"
-                        },
-                        {
-                          "text": "[INFO] 3:51:52 PM - Search returned results: false\n"
-                        },
-                        {
-                          "text": "[INFO] 3:51:52 PM - Verifying no data found message\n"
+                          "workerIndex": 7,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 10664,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "[INFO] 10:25:26 AM - Setting up: Login and navigate to dashboard\n"
+                            },
+                            {
+                              "text": "[INFO] 10:25:26 AM - Navigating to https://shree.groniva.net/login\n"
+                            },
+                            {
+                              "text": "[INFO] 10:25:27 AM - Attempting to login with mobile: 9011409986\n"
+                            },
+                            {
+                              "text": "[INFO] 10:25:27 AM - Filling Mobile field with value\n"
+                            },
+                            {
+                              "text": "[INFO] 10:25:30 AM - Filling Password field with value\n"
+                            },
+                            {
+                              "text": "[INFO] 10:25:30 AM - Clicking on Sign In button\n"
+                            },
+                            {
+                              "text": "[INFO] 10:25:30 AM - Login initiated\n"
+                            },
+                            {
+                              "text": "[INFO] 10:25:31 AM - Clicking search menu\n"
+                            },
+                            {
+                              "text": "[INFO] 10:25:31 AM - Clicking on Search Menu\n"
+                            },
+                            {
+                              "text": "[INFO] 10:25:34 AM - Searching for employee: 1048\n"
+                            },
+                            {
+                              "text": "[INFO] 10:25:34 AM - Clicking on Search combobox\n"
+                            },
+                            {
+                              "text": "[INFO] 10:25:34 AM - Filling Employee ID with value\n"
+                            },
+                            {
+                              "text": "[INFO] 10:25:35 AM - Search for employee 1048 completed\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-02T04:55:26.683Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "C:\\Users\\groni\\HRMS Automation\\test-results\\Employee-employeeSearch-Em-679da-ld-search-for-employee-1048-chromium\\trace.zip"
+                            }
+                          ]
                         }
                       ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-05-01T10:21:38.464Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "C:\\Users\\groni\\HRMS Automation\\test-results\\Dashboard-Dashboard-Dashbo-5eac5-n-and-verify-results-appear-chromium\\trace.zip"
-                        }
-                      ]
+                      "status": "expected"
                     }
                   ],
-                  "status": "expected"
+                  "id": "b793bb91ddb3a2a7e2e3-e109d09cad565db95226",
+                  "file": "Employee/employeeSearch.spec.ts",
+                  "line": 38,
+                  "column": 7
                 }
-              ],
-              "id": "f84fe583642c2d7b8ad9-a30bd438cbf4795f164e",
-              "file": "Dashboard/Dashboard.spec.ts",
-              "line": 75,
-              "column": 3
+              ]
             }
           ]
         }
@@ -220,8 +205,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-05-01T10:21:36.111Z",
-    "duration": 22346.773000000045,
+    "startTime": "2026-05-02T04:55:24.914Z",
+    "duration": 13957.126999999862,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,
