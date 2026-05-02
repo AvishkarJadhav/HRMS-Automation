@@ -113,11 +113,11 @@
             {
               "title": "Multiple employee search",
               "file": "Employee/employeeSearch.spec.ts",
-              "line": 36,
+              "line": 45,
               "column": 8,
               "specs": [
                 {
-                  "title": "should search for employee 1048",
+                  "title": "should search for employee 1027",
                   "ok": true,
                   "tags": [],
                   "tests": [
@@ -129,61 +129,82 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 7,
+                          "workerIndex": 4,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 10664,
+                          "duration": 16445,
                           "errors": [],
                           "stdout": [
                             {
-                              "text": "[INFO] 10:25:26 AM - Setting up: Login and navigate to dashboard\n"
+                              "text": "[INFO] 11:59:45 AM - Setting up: Login and navigate to dashboard\n"
                             },
                             {
-                              "text": "[INFO] 10:25:26 AM - Navigating to https://shree.groniva.net/login\n"
+                              "text": "[INFO] 11:59:45 AM - Navigating to https://shree.groniva.net/login\n"
                             },
                             {
-                              "text": "[INFO] 10:25:27 AM - Attempting to login with mobile: 9011409986\n"
+                              "text": "[INFO] 11:59:46 AM - Attempting to login with email: ckoranne89@gmail.com\n"
                             },
                             {
-                              "text": "[INFO] 10:25:27 AM - Filling Mobile field with value\n"
+                              "text": "[INFO] 11:59:46 AM - Clicking on Email button\n"
                             },
                             {
-                              "text": "[INFO] 10:25:30 AM - Filling Password field with value\n"
+                              "text": "[INFO] 11:59:49 AM - Filling Email field with value\n"
                             },
                             {
-                              "text": "[INFO] 10:25:30 AM - Clicking on Sign In button\n"
+                              "text": "[INFO] 11:59:49 AM - Filling Password field with value\n"
                             },
                             {
-                              "text": "[INFO] 10:25:30 AM - Login initiated\n"
+                              "text": "[INFO] 11:59:50 AM - Clicking on Sign In button\n"
                             },
                             {
-                              "text": "[INFO] 10:25:31 AM - Clicking search menu\n"
+                              "text": "[INFO] 11:59:50 AM - Login initiated\n"
                             },
                             {
-                              "text": "[INFO] 10:25:31 AM - Clicking on Search Menu\n"
+                              "text": "[INFO] 11:59:50 AM - Login completed and token verified\n"
                             },
                             {
-                              "text": "[INFO] 10:25:34 AM - Searching for employee: 1048\n"
+                              "text": "[INFO] 11:59:56 AM - Dashboard navigation completed\n"
                             },
                             {
-                              "text": "[INFO] 10:25:34 AM - Clicking on Search combobox\n"
+                              "text": "[INFO] 11:59:56 AM - Verifying dashboard is loaded\n"
                             },
                             {
-                              "text": "[INFO] 10:25:34 AM - Filling Employee ID with value\n"
+                              "text": "[INFO] 11:59:57 AM - Current URL: https://shree.groniva.net/app/global-dashboards/ess-dashboard\n"
                             },
                             {
-                              "text": "[INFO] 10:25:35 AM - Search for employee 1048 completed\n"
+                              "text": "[INFO] 11:59:57 AM - Is dashboard URL: true\n"
+                            },
+                            {
+                              "text": "[INFO] 11:59:57 AM - Dashboard verification complete\n"
+                            },
+                            {
+                              "text": "[INFO] 11:59:57 AM - Clicking search menu\n"
+                            },
+                            {
+                              "text": "[INFO] 11:59:57 AM - Clicking on Search Menu\n"
+                            },
+                            {
+                              "text": "[INFO] 11:59:58 AM - Searching for employee: 1027\n"
+                            },
+                            {
+                              "text": "[INFO] 11:59:58 AM - Clicking on Search combobox\n"
+                            },
+                            {
+                              "text": "[INFO] 11:59:58 AM - Filling Employee ID with value\n"
+                            },
+                            {
+                              "text": "[INFO] 11:59:59 AM - Search for employee 1027 completed\n"
                             }
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-05-02T04:55:26.683Z",
+                          "startTime": "2026-05-02T06:29:45.485Z",
                           "annotations": [],
                           "attachments": [
                             {
                               "name": "trace",
                               "contentType": "application/zip",
-                              "path": "C:\\Users\\groni\\HRMS Automation\\test-results\\Employee-employeeSearch-Em-679da-ld-search-for-employee-1048-chromium\\trace.zip"
+                              "path": "C:\\Users\\groni\\HRMS Automation\\test-results\\Employee-employeeSearch-Em-b0b50-ld-search-for-employee-1027-chromium\\trace.zip"
                             }
                           ]
                         }
@@ -191,9 +212,9 @@
                       "status": "expected"
                     }
                   ],
-                  "id": "b793bb91ddb3a2a7e2e3-e109d09cad565db95226",
+                  "id": "b793bb91ddb3a2a7e2e3-f8bd471cd32ea07c0f3e",
                   "file": "Employee/employeeSearch.spec.ts",
-                  "line": 38,
+                  "line": 47,
                   "column": 7
                 }
               ]
@@ -205,8 +226,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-05-02T04:55:24.914Z",
-    "duration": 13957.126999999862,
+    "startTime": "2026-05-02T06:29:43.151Z",
+    "duration": 21223.67300000001,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,

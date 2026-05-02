@@ -11,8 +11,7 @@ test.describe('Employee Search Tests', () => {
     const loginPage = new LoginPage(page);
     
     await loginPage.navigateTo(config.shreeURL + '/login');
-    await loginPage.login(testUsers.shreeUser.mobile, testUsers.shreeUser.password);
-    
+    await loginPage.loginwithEmail(testUsers.shreeUser.email, testUsers.shreeUser.password);
     // Wait for login to complete - verify token is set
     await page.waitForLoadState('networkidle');
     Logger.info('Login completed and token verified');
@@ -37,9 +36,9 @@ test.describe('Employee Search Tests', () => {
     
     // Search for employee
     await employeeSearchPage.clickSearchMenu();
-    await employeeSearchPage.searchEmployee('1047');
+    await employeeSearchPage.searchEmployee('1027');
     
-    Logger.info('Employee 1047 search completed');
+    Logger.info('Employee 1027 search completed');
     expect(page.url()).toBeTruthy(); // Verify page is still responsive
   });
 
