@@ -9,6 +9,7 @@ export class DashboardPage extends BasePage {
   readonly menuLink = this.page.getByRole('link', { name: /menu/i });
   readonly dashboardTitle = this.page.locator('role=heading[level=4]');
   readonly sidebarMenu = this.page.locator("//div[@id='sidebar-menu']");
+  readonly inboxLink = this.page.getByRole('link', { name: 'INBOX' });
 
   
   // ng-select dropdown panel locators
@@ -50,6 +51,13 @@ export class DashboardPage extends BasePage {
     await this.click(this.menuLink, 'Menu link');
   }
   
+  async clickInbox() {
+
+    await this.waitForElement(this.inboxLink);      
+    Logger.info(`INBOX link is visible, proceeding to click`);                
+    Logger.info(`Clicking INBOX link`);
+    await this.click(this.inboxLink, 'INBOX link');
+  }
   async searchInMenu(query: string) {
     Logger.info(`Searching in menu for: ${query}`);
     

@@ -46,5 +46,16 @@ export class EmployeeSearchPage extends BasePage {
   async clickonOrganization() {
     Logger.info(`Clicking on Organization`);
     await this.click(this.organization, 'Organization 1027');
+    // Wait for the click to trigger navigation
+    await this.page.waitForTimeout(1000);
+  }
+
+  async clickOnOrganizationAndWaitForNavigation() {
+    Logger.info(`Clicking on Organization and waiting for navigation`);
+    // Start waiting for navigation before clicking
+    const navigationPromise = this.page.waitForNavigation({ waitUntil: 'networkidle' }).catch(() => {});
+    await this.click(this.organization, 'Organization 1027');
+    await navigationPromise;
+    Logger.info(`Navigation completed after clicking Organization`);
   }
 }

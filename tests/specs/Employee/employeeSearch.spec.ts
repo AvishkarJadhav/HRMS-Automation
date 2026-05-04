@@ -60,20 +60,36 @@ test.describe('Employee Search Tests', () => {
         
         Logger.info(`Search for employee ${employeeId} completed`);
         expect(page.url()).toBeTruthy();
-
-        await employeeSearchPage.clickonOrganization();
-        Logger.info(`Clicked on Organization for employee ${employeeId}`);
-
-        // await employeeSearchPage.clickonApprovalWorkflow();
-        // Logger.info(`Clicked on Approval Workflow for employee ${employeeId}`);   
         
-        // await page.waitForLoadState('networkidle');
-
+        switch(String(employeeId)) {
+          case '1027':
+            await employeeSearchPage.clickonOrganization();
+            Logger.info(`Clicked on Organization for employee ${employeeId}`);
+            break;
+          case '1050':
+            await employeeSearchPage.clickonApprovalWorkflow();
+            Logger.info(`Clicked on Approval Workflow for employee ${employeeId}`);
+            break;
+          default:
+            Logger.info(`No specific workflow configured for employee ${employeeId}`);
+        }
         
-        // // Verify that we navigated to the correct workflow page
-        // const currentURL = await page.url();
-        // expect(currentURL).toContain('/app/workflow/1050');
-        // Logger.info(`Verified navigation to workflow page for employee ${employeeId}`);
+        // Wait for navigation to complete after clicking organization
+        await page.waitForLoadState('networkidle');
+        await page.waitForTimeout(2000);
+
+        // Verify that we navigated to the organization landing page
+        const currentURL = await page.url();
+        expect(currentURL).toBeTruthy();
+        Logger.info(`Successfully navigated to organization landing page. Current URL: ${currentURL}`);
+
+        await dashboardPage.clickInbox();
+        Logger.info(`Clicked on INBOX link for employee ${employeeId}`);
+        await page.waitForLoadState('networkidle');
+        await page.waitForTimeout(2000);
+        const inboxURL = await page.url();
+        expect(inboxURL).toBeTruthy();
+        Logger.info(`Successfully navigated to INBOX page. Current URL: ${inboxURL}`);
       });
     });
   });

@@ -37,7 +37,7 @@ test.describe('Login Tests', () => {
      // Give the page a moment to render
      await page.waitForTimeout(1000);
 
-    const welcomeLocator = page.locator('text=Welcome Avishkar');
+    const welcomeLocator = page.locator('text=Welcome Chetan');
     await expect(welcomeLocator).toBeVisible();
     Logger.info('Welcome message displayed');
   });
@@ -55,7 +55,7 @@ test.describe('Login Tests', () => {
 
     await page.waitForURL(/dashboard|ess-dashboard/, { timeout: 30000 });
         await page.waitForLoadState('domcontentloaded');
-    const welcomeLocator = page.locator('text=Welcome Avishkar');
+    const welcomeLocator = page.locator('text=Welcome Chetan');
     await expect(welcomeLocator).toBeVisible();
     Logger.info('Welcome message displayed after email login');
     });
