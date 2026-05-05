@@ -1,20 +1,59 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="20.05557799999975">
-<testsuite name="Login\login.spec.ts" timestamp="2026-05-04T06:18:33.308Z" hostname="chromium" tests="1" failures="0" skipped="0" time="15.273" errors="0">
-<testcase name="Login Tests › should login with email " classname="Login\login.spec.ts" time="15.273">
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="1" time="50.87753899999999">
+<testsuite name="Login\shreeLogin.spec.ts" timestamp="2026-05-05T12:35:17.785Z" hostname="chromium" tests="1" failures="0" skipped="0" time="45.288" errors="1">
+<testcase name="Shree User Login Tests › should login Shree user successfully" classname="Login\shreeLogin.spec.ts" time="45.288">
 <system-out>
-<![CDATA[[INFO] 11:48:34 AM - Navigating to login page
-[INFO] 11:48:35 AM - Attempting to login with email: ckoranne89@gmail.com
-[INFO] 11:48:35 AM - Clicking on Email button
-[INFO] 11:48:39 AM - Filling Email field with value
-[INFO] 11:48:40 AM - Filling Password field with value
-[INFO] 11:48:40 AM - Clicking on Sign In button
-[INFO] 11:48:40 AM - Login initiated
-[INFO] 11:48:43 AM - Login with email successful - dashboard URL confirmed
-[INFO] 11:48:47 AM - Welcome message displayed after email login
+<![CDATA[[INFO] 6:05:19 PM - Navigating to Shree login page
+[INFO] 6:05:25 PM - Attempting to login with mobile: 9011409986
+[INFO] 6:05:25 PM - Filling Mobile field with value
+[INFO] 6:05:29 PM - Filling Password field with value
+[INFO] 6:05:29 PM - Clicking on Sign In button
+[INFO] 6:05:29 PM - Login initiated
 
-[[ATTACHMENT|test-results\Login-login-Login-Tests-should-login-with-email--chromium\trace.zip]]
+[[ATTACHMENT|test-results\Login-shreeLogin-Shree-Use-99f8f-gin-Shree-user-successfully-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\Login-shreeLogin-Shree-Use-99f8f-gin-Shree-user-successfully-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\Login-shreeLogin-Shree-Use-99f8f-gin-Shree-user-successfully-chromium\error-context.md]]
+
+[[ATTACHMENT|test-results\Login-shreeLogin-Shree-Use-99f8f-gin-Shree-user-successfully-chromium\trace.zip]]
 ]]>
 </system-out>
+<error message="page.waitForURL: Timeout 30000ms exceeded." type="TimeoutError">
+<![CDATA[  [chromium] › Login\shreeLogin.spec.ts:13:3 › Shree User Login Tests › should login Shree user successfully 
+
+    TimeoutError: page.waitForURL: Timeout 30000ms exceeded.
+    =========================== logs ===========================
+    waiting for navigation until "load"
+    ============================================================
+
+      17 |     
+      18 |     // Wait for dashboard
+    > 19 |     await page.waitForURL(/dashboard|ess-dashboard/, { timeout: 30000 });
+         |                ^
+      20 |     Logger.info('Shree user login successful');
+      21 |     
+      22 |     expect(page.url()).toMatch(/dashboard|ess-dashboard/);
+        at C:\Users\groni\HRMS Automation\tests\specs\Login\shreeLogin.spec.ts:19:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\test-results\Login-shreeLogin-Shree-Use-99f8f-gin-Shree-user-successfully-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\test-results\Login-shreeLogin-Shree-Use-99f8f-gin-Shree-user-successfully-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\test-results\Login-shreeLogin-Shree-Use-99f8f-gin-Shree-user-successfully-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\..\test-results\Login-shreeLogin-Shree-Use-99f8f-gin-Shree-user-successfully-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\..\test-results\Login-shreeLogin-Shree-Use-99f8f-gin-Shree-user-successfully-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
 </testcase>
 </testsuite>
 </testsuites>

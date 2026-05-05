@@ -3,8 +3,8 @@ import { BasePage } from "./BasePage";
 import { Logger } from "../helpers/logger";
 
 export class LogOutPage extends BasePage {
-    readonly profileMenu = this.page.getByRole('button', { name: /profile/i });
-    readonly logoutButton = this.page.getByRole('button', { name: /logout/i });
+    readonly profileMenu = this.page.locator('.media').first();
+    readonly logoutButton = this.page.getByRole('button', { name: ' Sign Out' });
 
 
     async clickProfileMenu() {

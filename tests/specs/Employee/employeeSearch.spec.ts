@@ -4,6 +4,7 @@ import { DashboardPage } from '../../pages/DashboardPage';
 import { EmployeeSearchPage } from '../../pages/EmployeeSearchPage';
 import { testUsers, config, testData } from '../../helpers/config';
 import { Logger } from '../../helpers/logger';
+import { OrganizationPage } from '../../pages/Modules/Organization';
 
 test.describe('Employee Search Tests', () => {
   test.beforeEach(async ({ page }) => {
@@ -90,6 +91,23 @@ test.describe('Employee Search Tests', () => {
         const inboxURL = await page.url();
         expect(inboxURL).toBeTruthy();
         Logger.info(`Successfully navigated to INBOX page. Current URL: ${inboxURL}`);
+
+        const organizationPage = new OrganizationPage(page);
+        await organizationPage.clickThreedotMenu();
+        Logger.info(`Clicked on three dot menu for employee ${employeeId}`);
+        await page.waitForLoadState('networkidle');
+        await page.waitForTimeout(2000);
+        const afterClickURL = await page.url();
+        expect(afterClickURL).toBeTruthy();
+        Logger.info(`Successfully navigated after clicking three dot menu. Current URL: ${afterClickURL}`);
+
+        await organizationPage.clickAddButton();
+        Logger.info(`Clicked on Add button for employee ${employeeId}`);
+        await page.waitForLoadState('networkidle');
+        await page.waitForTimeout(2000);
+        const afterAddClickURL = await page.url();
+        expect(afterAddClickURL).toBeTruthy();
+        Logger.info(`Successfully navigated after clicking Add button. Current URL: ${afterAddClickURL}`);
       });
     });
   });

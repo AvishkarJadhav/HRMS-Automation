@@ -97,21 +97,21 @@
   },
   "suites": [
     {
-      "title": "Login\\login.spec.ts",
-      "file": "Login/login.spec.ts",
+      "title": "Login\\shreeLogin.spec.ts",
+      "file": "Login/shreeLogin.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "Login Tests",
-          "file": "Login/login.spec.ts",
-          "line": 6,
+          "title": "Shree User Login Tests",
+          "file": "Login/shreeLogin.spec.ts",
+          "line": 7,
           "column": 6,
           "specs": [
             {
-              "title": "should login with email ",
-              "ok": true,
+              "title": "should login Shree user successfully",
+              "ok": false,
               "tags": [],
               "tests": [
                 {
@@ -122,59 +122,89 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 5,
+                      "workerIndex": 11,
                       "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 15273,
-                      "errors": [],
+                      "status": "failed",
+                      "duration": 45288,
+                      "error": {
+                        "message": "TimeoutError: page.waitForURL: Timeout 30000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================",
+                        "stack": "TimeoutError: page.waitForURL: Timeout 30000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================\n    at C:\\Users\\groni\\HRMS Automation\\tests\\specs\\Login\\shreeLogin.spec.ts:19:16",
+                        "location": {
+                          "file": "C:\\Users\\groni\\HRMS Automation\\tests\\specs\\Login\\shreeLogin.spec.ts",
+                          "column": 16,
+                          "line": 19
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 17 |\u001b[39m     \n \u001b[90m 18 |\u001b[39m     \u001b[90m// Wait for dashboard\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(\u001b[35m/dashboard|ess-dashboard/\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m30000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m     \u001b[33mLogger\u001b[39m\u001b[33m.\u001b[39minfo(\u001b[32m'Shree user login successful'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 21 |\u001b[39m     \n \u001b[90m 22 |\u001b[39m     expect(page\u001b[33m.\u001b[39murl())\u001b[33m.\u001b[39mtoMatch(\u001b[35m/dashboard|ess-dashboard/\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\groni\\HRMS Automation\\tests\\specs\\Login\\shreeLogin.spec.ts",
+                            "column": 16,
+                            "line": 19
+                          },
+                          "message": "TimeoutError: page.waitForURL: Timeout 30000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================\n\n\u001b[0m \u001b[90m 17 |\u001b[39m     \n \u001b[90m 18 |\u001b[39m     \u001b[90m// Wait for dashboard\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(\u001b[35m/dashboard|ess-dashboard/\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m30000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m     \u001b[33mLogger\u001b[39m\u001b[33m.\u001b[39minfo(\u001b[32m'Shree user login successful'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 21 |\u001b[39m     \n \u001b[90m 22 |\u001b[39m     expect(page\u001b[33m.\u001b[39murl())\u001b[33m.\u001b[39mtoMatch(\u001b[35m/dashboard|ess-dashboard/\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\groni\\HRMS Automation\\tests\\specs\\Login\\shreeLogin.spec.ts:19:16\u001b[22m"
+                        }
+                      ],
                       "stdout": [
                         {
-                          "text": "[INFO] 11:48:34 AM - Navigating to login page\n"
+                          "text": "[INFO] 6:05:19 PM - Navigating to Shree login page\n"
                         },
                         {
-                          "text": "[INFO] 11:48:35 AM - Attempting to login with email: ckoranne89@gmail.com\n"
+                          "text": "[INFO] 6:05:25 PM - Attempting to login with mobile: 9011409986\n"
                         },
                         {
-                          "text": "[INFO] 11:48:35 AM - Clicking on Email button\n"
+                          "text": "[INFO] 6:05:25 PM - Filling Mobile field with value\n"
                         },
                         {
-                          "text": "[INFO] 11:48:39 AM - Filling Email field with value\n"
+                          "text": "[INFO] 6:05:29 PM - Filling Password field with value\n"
                         },
                         {
-                          "text": "[INFO] 11:48:40 AM - Filling Password field with value\n"
+                          "text": "[INFO] 6:05:29 PM - Clicking on Sign In button\n"
                         },
                         {
-                          "text": "[INFO] 11:48:40 AM - Clicking on Sign In button\n"
-                        },
-                        {
-                          "text": "[INFO] 11:48:40 AM - Login initiated\n"
-                        },
-                        {
-                          "text": "[INFO] 11:48:43 AM - Login with email successful - dashboard URL confirmed\n"
-                        },
-                        {
-                          "text": "[INFO] 11:48:47 AM - Welcome message displayed after email login\n"
+                          "text": "[INFO] 6:05:29 PM - Login initiated\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-04T06:18:34.439Z",
+                      "startTime": "2026-05-05T12:35:19.429Z",
                       "annotations": [],
                       "attachments": [
                         {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\groni\\HRMS Automation\\test-results\\Login-shreeLogin-Shree-Use-99f8f-gin-Shree-user-successfully-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\groni\\HRMS Automation\\test-results\\Login-shreeLogin-Shree-Use-99f8f-gin-Shree-user-successfully-chromium\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\groni\\HRMS Automation\\test-results\\Login-shreeLogin-Shree-Use-99f8f-gin-Shree-user-successfully-chromium\\error-context.md"
+                        },
+                        {
                           "name": "trace",
                           "contentType": "application/zip",
-                          "path": "C:\\Users\\groni\\HRMS Automation\\test-results\\Login-login-Login-Tests-should-login-with-email--chromium\\trace.zip"
+                          "path": "C:\\Users\\groni\\HRMS Automation\\test-results\\Login-shreeLogin-Shree-Use-99f8f-gin-Shree-user-successfully-chromium\\trace.zip"
                         }
-                      ]
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\groni\\HRMS Automation\\tests\\specs\\Login\\shreeLogin.spec.ts",
+                        "column": 16,
+                        "line": 19
+                      }
                     }
                   ],
-                  "status": "expected"
+                  "status": "unexpected"
                 }
               ],
-              "id": "4f7fd2a119c489bae8d6-cf5b43fd846130f5ed63",
-              "file": "Login/login.spec.ts",
-              "line": 45,
+              "id": "05bb05df8ddff62eb229-12f6c910cfb0a926b451",
+              "file": "Login/shreeLogin.spec.ts",
+              "line": 13,
               "column": 3
             }
           ]
@@ -184,11 +214,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-05-04T06:18:32.093Z",
-    "duration": 20055.577999999747,
-    "expected": 1,
+    "startTime": "2026-05-05T12:35:15.927Z",
+    "duration": 50877.53899999999,
+    "expected": 0,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 1,
     "flaky": 0
   }
 }
