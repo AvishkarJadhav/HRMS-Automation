@@ -1,59 +1,46 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="1" time="50.87753899999999">
-<testsuite name="Login\shreeLogin.spec.ts" timestamp="2026-05-05T12:35:17.785Z" hostname="chromium" tests="1" failures="0" skipped="0" time="45.288" errors="1">
-<testcase name="Shree User Login Tests › should login Shree user successfully" classname="Login\shreeLogin.spec.ts" time="45.288">
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="46.870464">
+<testsuite name="Dashboard\Modules\AddOrganization.spec.ts" timestamp="2026-05-06T09:43:15.360Z" hostname="chromium" tests="1" failures="0" skipped="0" time="41.627" errors="0">
+<testcase name="Organization Module Tests › should navigate to organization module" classname="Dashboard\Modules\AddOrganization.spec.ts" time="41.627">
 <system-out>
-<![CDATA[[INFO] 6:05:19 PM - Navigating to Shree login page
-[INFO] 6:05:25 PM - Attempting to login with mobile: 9011409986
-[INFO] 6:05:25 PM - Filling Mobile field with value
-[INFO] 6:05:29 PM - Filling Password field with value
-[INFO] 6:05:29 PM - Clicking on Sign In button
-[INFO] 6:05:29 PM - Login initiated
+<![CDATA[[INFO] 3:13:16 PM - Navigating to login page
+[INFO] 3:13:18 PM - Attempting to login with email: ckoranne89@gmail.com
+[INFO] 3:13:18 PM - Clicking on Email button
+[INFO] 3:13:19 PM - Filling Email field with value
+[INFO] 3:13:20 PM - Filling Password field with value
+[INFO] 3:13:20 PM - Clicking on Sign In button
+[INFO] 3:13:20 PM - Login initiated
+[INFO] 3:13:23 PM - Login successful - dashboard URL confirmed
+[INFO] 3:13:39 PM - Verifying dashboard is loaded
+[INFO] 3:13:40 PM - Current URL: https://shree.groniva.net/app/global-dashboards/ess-dashboard
+[INFO] 3:13:40 PM - Is dashboard URL: true
+[INFO] 3:13:40 PM - Dashboard verification complete
+[INFO] 3:13:40 PM - Dashboard loaded successfully
+[INFO] 3:13:40 PM - Verifying dashboard is loaded
+[INFO] 3:13:41 PM - Current URL: https://shree.groniva.net/app/global-dashboards/ess-dashboard
+[INFO] 3:13:41 PM - Is dashboard URL: true
+[INFO] 3:13:41 PM - Dashboard verification complete
+[INFO] 3:13:42 PM - Clicking search menu
+[INFO] 3:13:42 PM - Clicking on Search Menu
+[INFO] 3:13:42 PM - Searching for employee: 1027
+[INFO] 3:13:42 PM - Clicking on Search combobox
+[INFO] 3:13:43 PM - Filling Employee ID with value
+[INFO] 3:13:44 PM - Searched for employee 1027 in menu
+[INFO] 3:13:44 PM - Clicking on Organization and waiting for navigation
+[INFO] 3:13:44 PM - Clicking on Organization 1027
+[INFO] 3:13:45 PM - Navigation completed after clicking Organization
+[INFO] 3:13:45 PM - Clicked on Organization and waited for navigation
+[INFO] 3:13:45 PM - Clicking three dot menu
+[INFO] 3:13:45 PM - Clicking on Three Dot Menu
+[INFO] 3:13:50 PM - Clicked on three dot menu in Organization module
+[INFO] 3:13:52 PM - Successfully navigated after clicking three dot menu. Current URL: https://shree.groniva.net/app/enterprise/organization
+[INFO] 3:13:52 PM - Clicking Add button
+[INFO] 3:13:52 PM - Clicking on Add Button
+[INFO] 3:13:52 PM - Clicked on Add button in Organization module
+[INFO] 3:13:54 PM - Successfully navigated after clicking Add button. Current URL: https://shree.groniva.net/app/enterprise/organization/add
 
-[[ATTACHMENT|test-results\Login-shreeLogin-Shree-Use-99f8f-gin-Shree-user-successfully-chromium\test-failed-1.png]]
-
-[[ATTACHMENT|test-results\Login-shreeLogin-Shree-Use-99f8f-gin-Shree-user-successfully-chromium\video.webm]]
-
-[[ATTACHMENT|test-results\Login-shreeLogin-Shree-Use-99f8f-gin-Shree-user-successfully-chromium\error-context.md]]
-
-[[ATTACHMENT|test-results\Login-shreeLogin-Shree-Use-99f8f-gin-Shree-user-successfully-chromium\trace.zip]]
+[[ATTACHMENT|test-results\Dashboard-Modules-AddOrgan-1068e-gate-to-organization-module-chromium\trace.zip]]
 ]]>
 </system-out>
-<error message="page.waitForURL: Timeout 30000ms exceeded." type="TimeoutError">
-<![CDATA[  [chromium] › Login\shreeLogin.spec.ts:13:3 › Shree User Login Tests › should login Shree user successfully 
-
-    TimeoutError: page.waitForURL: Timeout 30000ms exceeded.
-    =========================== logs ===========================
-    waiting for navigation until "load"
-    ============================================================
-
-      17 |     
-      18 |     // Wait for dashboard
-    > 19 |     await page.waitForURL(/dashboard|ess-dashboard/, { timeout: 30000 });
-         |                ^
-      20 |     Logger.info('Shree user login successful');
-      21 |     
-      22 |     expect(page.url()).toMatch(/dashboard|ess-dashboard/);
-        at C:\Users\groni\HRMS Automation\tests\specs\Login\shreeLogin.spec.ts:19:16
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    ..\..\test-results\Login-shreeLogin-Shree-Use-99f8f-gin-Shree-user-successfully-chromium\test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    ..\..\test-results\Login-shreeLogin-Shree-Use-99f8f-gin-Shree-user-successfully-chromium\video.webm
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    Error Context: ..\..\test-results\Login-shreeLogin-Shree-Use-99f8f-gin-Shree-user-successfully-chromium\error-context.md
-
-    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
-    ..\..\test-results\Login-shreeLogin-Shree-Use-99f8f-gin-Shree-user-successfully-chromium\trace.zip
-    Usage:
-
-        npx playwright show-trace ..\..\test-results\Login-shreeLogin-Shree-Use-99f8f-gin-Shree-user-successfully-chromium\trace.zip
-
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-]]>
-</error>
 </testcase>
 </testsuite>
 </testsuites>

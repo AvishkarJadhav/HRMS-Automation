@@ -97,21 +97,21 @@
   },
   "suites": [
     {
-      "title": "Login\\shreeLogin.spec.ts",
-      "file": "Login/shreeLogin.spec.ts",
+      "title": "Dashboard\\Modules\\AddOrganization.spec.ts",
+      "file": "Dashboard/Modules/AddOrganization.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "Shree User Login Tests",
-          "file": "Login/shreeLogin.spec.ts",
-          "line": 7,
+          "title": "Organization Module Tests",
+          "file": "Dashboard/Modules/AddOrganization.spec.ts",
+          "line": 10,
           "column": 6,
           "specs": [
             {
-              "title": "should login Shree user successfully",
-              "ok": false,
+              "title": "should navigate to organization module",
+              "ok": true,
               "tags": [],
               "tests": [
                 {
@@ -122,90 +122,138 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 11,
+                      "workerIndex": 0,
                       "parallelIndex": 0,
-                      "status": "failed",
-                      "duration": 45288,
-                      "error": {
-                        "message": "TimeoutError: page.waitForURL: Timeout 30000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================",
-                        "stack": "TimeoutError: page.waitForURL: Timeout 30000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================\n    at C:\\Users\\groni\\HRMS Automation\\tests\\specs\\Login\\shreeLogin.spec.ts:19:16",
-                        "location": {
-                          "file": "C:\\Users\\groni\\HRMS Automation\\tests\\specs\\Login\\shreeLogin.spec.ts",
-                          "column": 16,
-                          "line": 19
-                        },
-                        "snippet": "\u001b[0m \u001b[90m 17 |\u001b[39m     \n \u001b[90m 18 |\u001b[39m     \u001b[90m// Wait for dashboard\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(\u001b[35m/dashboard|ess-dashboard/\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m30000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m     \u001b[33mLogger\u001b[39m\u001b[33m.\u001b[39minfo(\u001b[32m'Shree user login successful'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 21 |\u001b[39m     \n \u001b[90m 22 |\u001b[39m     expect(page\u001b[33m.\u001b[39murl())\u001b[33m.\u001b[39mtoMatch(\u001b[35m/dashboard|ess-dashboard/\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "C:\\Users\\groni\\HRMS Automation\\tests\\specs\\Login\\shreeLogin.spec.ts",
-                            "column": 16,
-                            "line": 19
-                          },
-                          "message": "TimeoutError: page.waitForURL: Timeout 30000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================\n\n\u001b[0m \u001b[90m 17 |\u001b[39m     \n \u001b[90m 18 |\u001b[39m     \u001b[90m// Wait for dashboard\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(\u001b[35m/dashboard|ess-dashboard/\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m30000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m     \u001b[33mLogger\u001b[39m\u001b[33m.\u001b[39minfo(\u001b[32m'Shree user login successful'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 21 |\u001b[39m     \n \u001b[90m 22 |\u001b[39m     expect(page\u001b[33m.\u001b[39murl())\u001b[33m.\u001b[39mtoMatch(\u001b[35m/dashboard|ess-dashboard/\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\groni\\HRMS Automation\\tests\\specs\\Login\\shreeLogin.spec.ts:19:16\u001b[22m"
-                        }
-                      ],
+                      "status": "passed",
+                      "duration": 41627,
+                      "errors": [],
                       "stdout": [
                         {
-                          "text": "[INFO] 6:05:19 PM - Navigating to Shree login page\n"
+                          "text": "[INFO] 3:13:16 PM - Navigating to login page\n"
                         },
                         {
-                          "text": "[INFO] 6:05:25 PM - Attempting to login with mobile: 9011409986\n"
+                          "text": "[INFO] 3:13:18 PM - Attempting to login with email: ckoranne89@gmail.com\n"
                         },
                         {
-                          "text": "[INFO] 6:05:25 PM - Filling Mobile field with value\n"
+                          "text": "[INFO] 3:13:18 PM - Clicking on Email button\n"
                         },
                         {
-                          "text": "[INFO] 6:05:29 PM - Filling Password field with value\n"
+                          "text": "[INFO] 3:13:19 PM - Filling Email field with value\n"
                         },
                         {
-                          "text": "[INFO] 6:05:29 PM - Clicking on Sign In button\n"
+                          "text": "[INFO] 3:13:20 PM - Filling Password field with value\n"
                         },
                         {
-                          "text": "[INFO] 6:05:29 PM - Login initiated\n"
+                          "text": "[INFO] 3:13:20 PM - Clicking on Sign In button\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:20 PM - Login initiated\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:23 PM - Login successful - dashboard URL confirmed\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:39 PM - Verifying dashboard is loaded\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:40 PM - Current URL: https://shree.groniva.net/app/global-dashboards/ess-dashboard\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:40 PM - Is dashboard URL: true\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:40 PM - Dashboard verification complete\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:40 PM - Dashboard loaded successfully\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:40 PM - Verifying dashboard is loaded\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:41 PM - Current URL: https://shree.groniva.net/app/global-dashboards/ess-dashboard\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:41 PM - Is dashboard URL: true\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:41 PM - Dashboard verification complete\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:42 PM - Clicking search menu\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:42 PM - Clicking on Search Menu\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:42 PM - Searching for employee: 1027\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:42 PM - Clicking on Search combobox\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:43 PM - Filling Employee ID with value\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:44 PM - Searched for employee 1027 in menu\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:44 PM - Clicking on Organization and waiting for navigation\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:44 PM - Clicking on Organization 1027\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:45 PM - Navigation completed after clicking Organization\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:45 PM - Clicked on Organization and waited for navigation\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:45 PM - Clicking three dot menu\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:45 PM - Clicking on Three Dot Menu\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:50 PM - Clicked on three dot menu in Organization module\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:52 PM - Successfully navigated after clicking three dot menu. Current URL: https://shree.groniva.net/app/enterprise/organization\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:52 PM - Clicking Add button\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:52 PM - Clicking on Add Button\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:52 PM - Clicked on Add button in Organization module\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:54 PM - Successfully navigated after clicking Add button. Current URL: https://shree.groniva.net/app/enterprise/organization/add\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-05-05T12:35:19.429Z",
+                      "startTime": "2026-05-06T09:43:16.397Z",
                       "annotations": [],
                       "attachments": [
                         {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "C:\\Users\\groni\\HRMS Automation\\test-results\\Login-shreeLogin-Shree-Use-99f8f-gin-Shree-user-successfully-chromium\\test-failed-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "C:\\Users\\groni\\HRMS Automation\\test-results\\Login-shreeLogin-Shree-Use-99f8f-gin-Shree-user-successfully-chromium\\video.webm"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "C:\\Users\\groni\\HRMS Automation\\test-results\\Login-shreeLogin-Shree-Use-99f8f-gin-Shree-user-successfully-chromium\\error-context.md"
-                        },
-                        {
                           "name": "trace",
                           "contentType": "application/zip",
-                          "path": "C:\\Users\\groni\\HRMS Automation\\test-results\\Login-shreeLogin-Shree-Use-99f8f-gin-Shree-user-successfully-chromium\\trace.zip"
+                          "path": "C:\\Users\\groni\\HRMS Automation\\test-results\\Dashboard-Modules-AddOrgan-1068e-gate-to-organization-module-chromium\\trace.zip"
                         }
-                      ],
-                      "errorLocation": {
-                        "file": "C:\\Users\\groni\\HRMS Automation\\tests\\specs\\Login\\shreeLogin.spec.ts",
-                        "column": 16,
-                        "line": 19
-                      }
+                      ]
                     }
                   ],
-                  "status": "unexpected"
+                  "status": "expected"
                 }
               ],
-              "id": "05bb05df8ddff62eb229-12f6c910cfb0a926b451",
-              "file": "Login/shreeLogin.spec.ts",
-              "line": 13,
-              "column": 3
+              "id": "353ff82633503ec089fe-febb53f10f4c7099053f",
+              "file": "Dashboard/Modules/AddOrganization.spec.ts",
+              "line": 18,
+              "column": 1
             }
           ]
         }
@@ -214,11 +262,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-05-05T12:35:15.927Z",
-    "duration": 50877.53899999999,
-    "expected": 0,
+    "startTime": "2026-05-06T09:43:14.363Z",
+    "duration": 46870.464,
+    "expected": 1,
     "skipped": 0,
-    "unexpected": 1,
+    "unexpected": 0,
     "flaky": 0
   }
 }

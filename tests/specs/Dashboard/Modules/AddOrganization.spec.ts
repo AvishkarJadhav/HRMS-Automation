@@ -6,9 +6,7 @@ import { testUsers, config } from "../../../helpers/config";
 import { Logger } from "../../../helpers/logger";   
 import { EmployeeSearchPage } from "../../../pages/EmployeeSearchPage";
 
-
-
-
+ 
 test.describe('Organization Module Tests', () => {
     test.beforeEach(async ({ page }) => {
         Logger.info('Navigating to login page');
@@ -66,4 +64,5 @@ test('should navigate to organization module', async ({ page }) => {
     
 
 });
+
 
