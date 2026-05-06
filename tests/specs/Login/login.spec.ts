@@ -2,6 +2,7 @@ import { test, expect } from '@playwright/test';
 import { LoginPage } from '../../pages/LoginPage';
 import { testUsers, config } from '../../helpers/config';
 import { Logger } from '../../helpers/logger';
+import { LogOutPage } from '../../pages/LogOut';
 
 test.describe('Login Tests', () => {
   test.beforeEach(async ({ page }) => {
@@ -37,7 +38,7 @@ test.describe('Login Tests', () => {
      // Give the page a moment to render
      await page.waitForTimeout(1000);
 
-    const welcomeLocator = page.locator('text=Welcome Avishkar');
+    const welcomeLocator = page.locator('text=Welcome Chetan');
     await expect(welcomeLocator).toBeVisible();
     Logger.info('Welcome message displayed');
   });
@@ -55,9 +56,30 @@ test.describe('Login Tests', () => {
 
     await page.waitForURL(/dashboard|ess-dashboard/, { timeout: 30000 });
         await page.waitForLoadState('domcontentloaded');
-    const welcomeLocator = page.locator('text=Welcome Avishkar');
+    const welcomeLocator = page.locator('text=Welcome Chetan');
     await expect(welcomeLocator).toBeVisible();
     Logger.info('Welcome message displayed after email login');
     });
+
+  test('verify user logged out after clicking logout', async ({ page }) => {
+    const loginPage = new LoginPage(page);
+    await loginPage.loginwithEmail(testUsers.shreeUser.email, testUsers.shreeUser.password);
+    await page.waitForURL(/dashboard|ess-dashboard/, { timeout: 30000 });
+    Logger.info('Login successful - dashboard URL confirmed');  
+
+    // Navigate to ESS dashboard
+    await page.waitForTimeout(3500);
+    await page.goto(config.shreeURL + '/app/global-dashboards/ess-dashboard');
+    await page.waitForLoadState('networkidle');
+    Logger.info('Dashboard navigation completed');  
+
+    // Click profile menu and logout
+    const logOutPage = new LogOutPage(page);
+    await logOutPage.clickProfileMenu();
+    await logOutPage.clickLogout();
+    await page.waitForURL(/login/, { timeout: 30000 });
+    Logger.info('Logout successful - login URL confirmed');
+
+  });
 
 });

@@ -25,6 +25,7 @@
   "devDependencies": {
     "@playwright/test": "^1.59.1",
     "@types/node": "^25.6.0",
-    "dotenv": "^16.4.5"
+    "dotenv": "^16.4.5",
+    "pwmochawesome": "^2.0.2"
   }
 }

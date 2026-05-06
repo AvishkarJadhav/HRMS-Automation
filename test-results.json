@@ -97,136 +97,163 @@
   },
   "suites": [
     {
-      "title": "Employee\\employeeSearch.spec.ts",
-      "file": "Employee/employeeSearch.spec.ts",
+      "title": "Dashboard\\Modules\\AddOrganization.spec.ts",
+      "file": "Dashboard/Modules/AddOrganization.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "Employee Search Tests",
-          "file": "Employee/employeeSearch.spec.ts",
-          "line": 8,
+          "title": "Organization Module Tests",
+          "file": "Dashboard/Modules/AddOrganization.spec.ts",
+          "line": 10,
           "column": 6,
-          "specs": [],
-          "suites": [
+          "specs": [
             {
-              "title": "Multiple employee search",
-              "file": "Employee/employeeSearch.spec.ts",
-              "line": 47,
-              "column": 8,
-              "specs": [
+              "title": "should navigate to organization module",
+              "ok": true,
+              "tags": [],
+              "tests": [
                 {
-                  "title": "should search for employee 1027",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
                     {
-                      "timeout": 60000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 41627,
+                      "errors": [],
+                      "stdout": [
                         {
-                          "workerIndex": 5,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 29319,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "[INFO] 12:48:58 PM - Setting up: Login and navigate to dashboard\n"
-                            },
-                            {
-                              "text": "[INFO] 12:48:58 PM - Navigating to https://shree.groniva.net/login\n"
-                            },
-                            {
-                              "text": "[INFO] 12:48:59 PM - Attempting to login with email: ckoranne89@gmail.com\n"
-                            },
-                            {
-                              "text": "[INFO] 12:48:59 PM - Clicking on Email button\n"
-                            },
-                            {
-                              "text": "[INFO] 12:49:04 PM - Filling Email field with value\n"
-                            },
-                            {
-                              "text": "[INFO] 12:49:04 PM - Filling Password field with value\n"
-                            },
-                            {
-                              "text": "[INFO] 12:49:05 PM - Clicking on Sign In button\n"
-                            },
-                            {
-                              "text": "[INFO] 12:49:05 PM - Login initiated\n"
-                            },
-                            {
-                              "text": "[INFO] 12:49:05 PM - Login completed and token verified\n"
-                            },
-                            {
-                              "text": "[INFO] 12:49:13 PM - Dashboard navigation completed\n"
-                            },
-                            {
-                              "text": "[INFO] 12:49:21 PM - Verifying dashboard is loaded\n"
-                            },
-                            {
-                              "text": "[INFO] 12:49:22 PM - Current URL: https://shree.groniva.net/app/global-dashboards/ess-dashboard\n"
-                            },
-                            {
-                              "text": "[INFO] 12:49:22 PM - Is dashboard URL: true\n"
-                            },
-                            {
-                              "text": "[INFO] 12:49:22 PM - Dashboard verification complete\n"
-                            },
-                            {
-                              "text": "[INFO] 12:49:22 PM - Clicking search menu\n"
-                            },
-                            {
-                              "text": "[INFO] 12:49:22 PM - Clicking on Search Menu\n"
-                            },
-                            {
-                              "text": "[INFO] 12:49:23 PM - Searching for employee: 1027\n"
-                            },
-                            {
-                              "text": "[INFO] 12:49:23 PM - Clicking on Search combobox\n"
-                            },
-                            {
-                              "text": "[INFO] 12:49:23 PM - Filling Employee ID with value\n"
-                            },
-                            {
-                              "text": "[INFO] 12:49:24 PM - Search for employee 1027 completed\n"
-                            },
-                            {
-                              "text": "[INFO] 12:49:24 PM - Clicking on Organization\n"
-                            },
-                            {
-                              "text": "[INFO] 12:49:24 PM - Clicking on Organization 1027\n"
-                            },
-                            {
-                              "text": "[INFO] 12:49:24 PM - Clicked on Organization for employee 1027\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-05-02T07:18:58.450Z",
-                          "annotations": [],
-                          "attachments": [
-                            {
-                              "name": "trace",
-                              "contentType": "application/zip",
-                              "path": "C:\\Users\\groni\\HRMS Automation\\test-results\\Employee-employeeSearch-Em-b0b50-ld-search-for-employee-1027-chromium\\trace.zip"
-                            }
-                          ]
+                          "text": "[INFO] 3:13:16 PM - Navigating to login page\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:18 PM - Attempting to login with email: ckoranne89@gmail.com\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:18 PM - Clicking on Email button\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:19 PM - Filling Email field with value\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:20 PM - Filling Password field with value\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:20 PM - Clicking on Sign In button\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:20 PM - Login initiated\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:23 PM - Login successful - dashboard URL confirmed\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:39 PM - Verifying dashboard is loaded\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:40 PM - Current URL: https://shree.groniva.net/app/global-dashboards/ess-dashboard\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:40 PM - Is dashboard URL: true\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:40 PM - Dashboard verification complete\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:40 PM - Dashboard loaded successfully\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:40 PM - Verifying dashboard is loaded\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:41 PM - Current URL: https://shree.groniva.net/app/global-dashboards/ess-dashboard\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:41 PM - Is dashboard URL: true\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:41 PM - Dashboard verification complete\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:42 PM - Clicking search menu\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:42 PM - Clicking on Search Menu\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:42 PM - Searching for employee: 1027\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:42 PM - Clicking on Search combobox\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:43 PM - Filling Employee ID with value\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:44 PM - Searched for employee 1027 in menu\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:44 PM - Clicking on Organization and waiting for navigation\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:44 PM - Clicking on Organization 1027\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:45 PM - Navigation completed after clicking Organization\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:45 PM - Clicked on Organization and waited for navigation\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:45 PM - Clicking three dot menu\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:45 PM - Clicking on Three Dot Menu\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:50 PM - Clicked on three dot menu in Organization module\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:52 PM - Successfully navigated after clicking three dot menu. Current URL: https://shree.groniva.net/app/enterprise/organization\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:52 PM - Clicking Add button\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:52 PM - Clicking on Add Button\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:52 PM - Clicked on Add button in Organization module\n"
+                        },
+                        {
+                          "text": "[INFO] 3:13:54 PM - Successfully navigated after clicking Add button. Current URL: https://shree.groniva.net/app/enterprise/organization/add\n"
                         }
                       ],
-                      "status": "expected"
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-06T09:43:16.397Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\groni\\HRMS Automation\\test-results\\Dashboard-Modules-AddOrgan-1068e-gate-to-organization-module-chromium\\trace.zip"
+                        }
+                      ]
                     }
                   ],
-                  "id": "b793bb91ddb3a2a7e2e3-f8bd471cd32ea07c0f3e",
-                  "file": "Employee/employeeSearch.spec.ts",
-                  "line": 49,
-                  "column": 7
+                  "status": "expected"
                 }
-              ]
+              ],
+              "id": "353ff82633503ec089fe-febb53f10f4c7099053f",
+              "file": "Dashboard/Modules/AddOrganization.spec.ts",
+              "line": 18,
+              "column": 1
             }
           ]
         }
@@ -235,8 +262,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-05-02T07:18:56.049Z",
-    "duration": 34278.88500000001,
+    "startTime": "2026-05-06T09:43:14.363Z",
+    "duration": 46870.464,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,
