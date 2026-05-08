@@ -71,8 +71,11 @@ test.describe('Employee Search Tests', () => {
             await employeeSearchPage.clickonApprovalWorkflow();
             Logger.info(`Clicked on Approval Workflow for employee ${employeeId}`);
             break;
+          case '1117': 
+            await employeeSearchPage.clickOnEmployeeOnboardingPolicy(); 
+            Logger.info(`Clicked on employee onboarding policy for employee ${employeeId}`);
+            break;
           default:
-            Logger.info(`No specific workflow configured for employee ${employeeId}`);
         }
         
         // Wait for navigation to complete after clicking organization

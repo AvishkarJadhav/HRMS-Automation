@@ -1,44 +1,46 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="46.870464">
-<testsuite name="Dashboard\Modules\AddOrganization.spec.ts" timestamp="2026-05-06T09:43:15.360Z" hostname="chromium" tests="1" failures="0" skipped="0" time="41.627" errors="0">
-<testcase name="Organization Module Tests › should navigate to organization module" classname="Dashboard\Modules\AddOrganization.spec.ts" time="41.627">
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="43.698425000000746">
+<testsuite name="Employee\employeeSearch.spec.ts" timestamp="2026-05-08T07:24:00.218Z" hostname="chromium" tests="1" failures="0" skipped="0" time="38.2" errors="0">
+<testcase name="Employee Search Tests › Multiple employee search › should search for employee 1050" classname="Employee\employeeSearch.spec.ts" time="38.2">
 <system-out>
-<![CDATA[[INFO] 3:13:16 PM - Navigating to login page
-[INFO] 3:13:18 PM - Attempting to login with email: ckoranne89@gmail.com
-[INFO] 3:13:18 PM - Clicking on Email button
-[INFO] 3:13:19 PM - Filling Email field with value
-[INFO] 3:13:20 PM - Filling Password field with value
-[INFO] 3:13:20 PM - Clicking on Sign In button
-[INFO] 3:13:20 PM - Login initiated
-[INFO] 3:13:23 PM - Login successful - dashboard URL confirmed
-[INFO] 3:13:39 PM - Verifying dashboard is loaded
-[INFO] 3:13:40 PM - Current URL: https://shree.groniva.net/app/global-dashboards/ess-dashboard
-[INFO] 3:13:40 PM - Is dashboard URL: true
-[INFO] 3:13:40 PM - Dashboard verification complete
-[INFO] 3:13:40 PM - Dashboard loaded successfully
-[INFO] 3:13:40 PM - Verifying dashboard is loaded
-[INFO] 3:13:41 PM - Current URL: https://shree.groniva.net/app/global-dashboards/ess-dashboard
-[INFO] 3:13:41 PM - Is dashboard URL: true
-[INFO] 3:13:41 PM - Dashboard verification complete
-[INFO] 3:13:42 PM - Clicking search menu
-[INFO] 3:13:42 PM - Clicking on Search Menu
-[INFO] 3:13:42 PM - Searching for employee: 1027
-[INFO] 3:13:42 PM - Clicking on Search combobox
-[INFO] 3:13:43 PM - Filling Employee ID with value
-[INFO] 3:13:44 PM - Searched for employee 1027 in menu
-[INFO] 3:13:44 PM - Clicking on Organization and waiting for navigation
-[INFO] 3:13:44 PM - Clicking on Organization 1027
-[INFO] 3:13:45 PM - Navigation completed after clicking Organization
-[INFO] 3:13:45 PM - Clicked on Organization and waited for navigation
-[INFO] 3:13:45 PM - Clicking three dot menu
-[INFO] 3:13:45 PM - Clicking on Three Dot Menu
-[INFO] 3:13:50 PM - Clicked on three dot menu in Organization module
-[INFO] 3:13:52 PM - Successfully navigated after clicking three dot menu. Current URL: https://shree.groniva.net/app/enterprise/organization
-[INFO] 3:13:52 PM - Clicking Add button
-[INFO] 3:13:52 PM - Clicking on Add Button
-[INFO] 3:13:52 PM - Clicked on Add button in Organization module
-[INFO] 3:13:54 PM - Successfully navigated after clicking Add button. Current URL: https://shree.groniva.net/app/enterprise/organization/add
+<![CDATA[[INFO] 12:54:01 PM - Setting up: Login and navigate to dashboard
+[INFO] 12:54:01 PM - Navigating to https://shree.groniva.net/login
+[INFO] 12:54:02 PM - Attempting to login with email: ckoranne89@gmail.com
+[INFO] 12:54:02 PM - Clicking on Email button
+[INFO] 12:54:05 PM - Filling Email field with value
+[INFO] 12:54:06 PM - Filling Password field with value
+[INFO] 12:54:06 PM - Clicking on Sign In button
+[INFO] 12:54:06 PM - Login initiated
+[INFO] 12:54:06 PM - Login completed and token verified
+[INFO] 12:54:14 PM - Dashboard navigation completed
+[INFO] 12:54:23 PM - Verifying dashboard is loaded
+[INFO] 12:54:24 PM - Current URL: https://shree.groniva.net/app/global-dashboards/ess-dashboard
+[INFO] 12:54:24 PM - Is dashboard URL: true
+[INFO] 12:54:24 PM - Dashboard verification complete
+[INFO] 12:54:25 PM - Clicking search menu
+[INFO] 12:54:25 PM - Clicking on Search Menu
+[INFO] 12:54:25 PM - Searching for employee: 1050
+[INFO] 12:54:25 PM - Clicking on Search combobox
+[INFO] 12:54:25 PM - Filling Employee ID with value
+[INFO] 12:54:27 PM - Search for employee 1050 completed
+[INFO] 12:54:27 PM - Clicking on Approval Workflow
+[INFO] 12:54:27 PM - Clicking on Approval Workflow 1050
+[INFO] 12:54:27 PM - Clicked on Approval Workflow for employee 1050
+[INFO] 12:54:29 PM - Successfully navigated to organization landing page. Current URL: https://shree.groniva.net/app/workflow-management/approval-workflow
+[INFO] 12:54:29 PM - INBOX link is visible, proceeding to click
+[INFO] 12:54:29 PM - Clicking INBOX link
+[INFO] 12:54:29 PM - Clicking on INBOX link
+[INFO] 12:54:29 PM - Clicked on INBOX link for employee 1050
+[INFO] 12:54:31 PM - Successfully navigated to INBOX page. Current URL: https://shree.groniva.net/app/workflow-management/approval-workflow
+[INFO] 12:54:31 PM - Clicking three dot menu
+[INFO] 12:54:31 PM - Clicking on Three Dot Menu
+[INFO] 12:54:32 PM - Clicked on three dot menu for employee 1050
+[INFO] 12:54:34 PM - Successfully navigated after clicking three dot menu. Current URL: https://shree.groniva.net/app/workflow-management/approval-workflow
+[INFO] 12:54:34 PM - Clicking Add button
+[INFO] 12:54:34 PM - Clicking on Add Button
+[INFO] 12:54:34 PM - Clicked on Add button for employee 1050
+[INFO] 12:54:36 PM - Successfully navigated after clicking Add button. Current URL: https://shree.groniva.net/app/workflow-management/approval-workflow/add
 
-[[ATTACHMENT|test-results\Dashboard-Modules-AddOrgan-1068e-gate-to-organization-module-chromium\trace.zip]]
+[[ATTACHMENT|test-results\Employee-employeeSearch-Em-32b55-ld-search-for-employee-1050-chromium\trace.zip]]
 ]]>
 </system-out>
 </testcase>

@@ -7,6 +7,7 @@ export class EmployeeSearchPage extends BasePage {
   readonly searchCombobox = this.page.getByRole('combobox').first();
   readonly approvalWorkflow = this.page.locator('div').filter({ hasText: /^Approval Workflow 1050$/ }).nth(5);
   readonly organization = this.page.locator('div').filter({ hasText: /^Organization 1027$/ }).nth(5);
+  readonly employeeOnboardingPolicy = this.page.getByRole('option', { name: 'EMPLOYEE Employee Onboarding' });
 
   async clickSearchMenu() {
     Logger.info(`Clicking search menu`);
@@ -50,6 +51,13 @@ export class EmployeeSearchPage extends BasePage {
     await this.page.waitForTimeout(1000);
   }
 
+  async clickOnEmployeeOnboardingPolicy() {
+    Logger.info(`Clicking on Employee Onboarding Policy`);
+    const onboardingPolicy = this.page.locator('div').filter({ hasText: /^Employee Onboarding Policy 1117$/ }).nth(5);
+    await this.click(onboardingPolicy, 'Employee Onboarding Policy 1117');
+    // Wait for the click to trigger navigation
+    await this.page.waitForTimeout(1000);
+  }
   async clickOnOrganizationAndWaitForNavigation() {
     Logger.info(`Clicking on Organization and waiting for navigation`);
     // Start waiting for navigation before clicking

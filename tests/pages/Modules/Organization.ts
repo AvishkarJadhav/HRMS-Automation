@@ -21,6 +21,6 @@ export class OrganizationPage extends BasePage {
 
  async clickAddButton() {
     Logger.info(`Clicking Add button`);
-    await this.click(this.addbutton, 'Add Button');
+    await this.click(this.addbutton, 'Add Button'); 
  }
 }
