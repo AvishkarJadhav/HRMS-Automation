@@ -11,7 +11,7 @@ HRMS Automation/
 │   │   ├── BasePage.ts    # Base class with common methods
 │   │   ├── LoginPage.ts   # Login functionality
 │   │   ├── DashboardPage.ts
-│   │   └── EmployeeSearchPage.ts
+│   │   └── TaskSearchPage.ts
 │   ├── fixtures/           # Test fixtures and setup
 │   │   └── auth.fixture.ts # Authentication fixture
 │   ├── helpers/            # Utilities and configuration
@@ -130,11 +130,11 @@ Dashboard operations:
 - `verifyWelcomeMessage()` - Verify user greeting
 - `verifyDashboardLoaded()` - Check dashboard load
 
-#### EmployeeSearchPage
+#### TaskSearchPage
 Employee search functionality:
-- `searchEmployee()` - Search by ID
-- `selectEmployee()` - Select from results
-- `searchAndSelectEmployee()` - Combined operation
+- `searchTask()` - Search by ID
+- `selectTask()` - Select from results
+- `searchAndselectTask()` - Combined operation
 
 ## Authentication Fixture
 

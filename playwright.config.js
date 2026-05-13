@@ -25,6 +25,7 @@ export default defineConfig({
     ['html'],
     ['json', { outputFile: 'test-results.json' }],
     ['junit', { outputFile: 'test-results.xml' }]
+
    ,
   ]
   ,
@@ -44,12 +45,11 @@ export default defineConfig({
 
   /* Configure projects for major browsers */
   projects: [
-        { name: 'setup', testMatch: /.*\.setup\.ts/ },
 
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome']},
-      
+
     },
    
 

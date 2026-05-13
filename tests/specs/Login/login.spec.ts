@@ -82,4 +82,15 @@ test.describe('Login Tests', () => {
 
   });
 
+
+  test('Setup verification', async ({ page }) => {
+
+    // This test is just to verify that the authentication setup is working correctly and that we can use the authenticated state in our tests.
+
+    await page.goto(config.shreeURL + '/app/global-dashboards/ess-dashboard');
+    await page.waitForURL(/dashboard|ess-dashboard/, { timeout: 30000 });
+    Logger.info('Authenticated navigation successful - dashboard URL confirmed');
+    expect(page.url()).toMatch(/dashboard|ess-dashboard/);
+  });
+
 });

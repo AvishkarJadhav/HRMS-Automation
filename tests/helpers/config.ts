@@ -1,7 +1,9 @@
 import dotenv from 'dotenv';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
-dotenv.config({ path: path.resolve('C:\\Users\\groni\\HRMS Automation', '../../.env') });
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+dotenv.config({ path: path.resolve(__dirname, '../../.env') });
 
 export const config = {
   //baseURL: process.env.BASE_URL || 'https://test.groniva.net',
@@ -26,6 +28,18 @@ export const testUsers = {
 };
 
 export const testData = {
-  employeeIds: ['1027', '1117', '1050'],
+  taskIds: ['1027', '1028', '1050'],
+  defaultTimeout: 30000,
+};
+
+export const orgDetails = {
+  name: process.env.ORG_NAME || 'Groniva',
+  shortName: process.env.ORG_SHORT_NAME || 'Groniva', 
+  code: process.env.ORG_CODE || 'GRV',
+  legalType: process.env.ORG_LEGAL_TYPE || 'Private Limited',
+  industryType: process.env.ORG_INDUSTRY_TYPE || 'Technology',
+  status: process.env.ORG_STATUS || 'Active',
+  shortDescription: process.env.ORG_SHORT_DESCRIPTION || 'Groniva Organization',
+
   defaultTimeout: 30000,
 };

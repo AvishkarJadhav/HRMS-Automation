@@ -1,48 +1,2287 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="43.698425000000746">
-<testsuite name="Employee\employeeSearch.spec.ts" timestamp="2026-05-08T07:24:00.218Z" hostname="chromium" tests="1" failures="0" skipped="0" time="38.2" errors="0">
-<testcase name="Employee Search Tests › Multiple employee search › should search for employee 1050" classname="Employee\employeeSearch.spec.ts" time="38.2">
+<testsuites id="" name="" tests="51" failures="7" skipped="0" errors="33" time="597.7685950000001">
+<testsuite name="Dashboard\Dashboard.spec.ts" timestamp="2026-05-13T05:32:57.553Z" hostname="chromium" tests="3" failures="0" skipped="0" time="178.974" errors="2">
+<testcase name="Dashboard Tests › should login with valid credentials" classname="Dashboard\Dashboard.spec.ts" time="61.499">
 <system-out>
-<![CDATA[[INFO] 12:54:01 PM - Setting up: Login and navigate to dashboard
-[INFO] 12:54:01 PM - Navigating to https://shree.groniva.net/login
-[INFO] 12:54:02 PM - Attempting to login with email: ckoranne89@gmail.com
-[INFO] 12:54:02 PM - Clicking on Email button
-[INFO] 12:54:05 PM - Filling Email field with value
-[INFO] 12:54:06 PM - Filling Password field with value
-[INFO] 12:54:06 PM - Clicking on Sign In button
-[INFO] 12:54:06 PM - Login initiated
-[INFO] 12:54:06 PM - Login completed and token verified
-[INFO] 12:54:14 PM - Dashboard navigation completed
-[INFO] 12:54:23 PM - Verifying dashboard is loaded
-[INFO] 12:54:24 PM - Current URL: https://shree.groniva.net/app/global-dashboards/ess-dashboard
-[INFO] 12:54:24 PM - Is dashboard URL: true
-[INFO] 12:54:24 PM - Dashboard verification complete
-[INFO] 12:54:25 PM - Clicking search menu
-[INFO] 12:54:25 PM - Clicking on Search Menu
-[INFO] 12:54:25 PM - Searching for employee: 1050
-[INFO] 12:54:25 PM - Clicking on Search combobox
-[INFO] 12:54:25 PM - Filling Employee ID with value
-[INFO] 12:54:27 PM - Search for employee 1050 completed
-[INFO] 12:54:27 PM - Clicking on Approval Workflow
-[INFO] 12:54:27 PM - Clicking on Approval Workflow 1050
-[INFO] 12:54:27 PM - Clicked on Approval Workflow for employee 1050
-[INFO] 12:54:29 PM - Successfully navigated to organization landing page. Current URL: https://shree.groniva.net/app/workflow-management/approval-workflow
-[INFO] 12:54:29 PM - INBOX link is visible, proceeding to click
-[INFO] 12:54:29 PM - Clicking INBOX link
-[INFO] 12:54:29 PM - Clicking on INBOX link
-[INFO] 12:54:29 PM - Clicked on INBOX link for employee 1050
-[INFO] 12:54:31 PM - Successfully navigated to INBOX page. Current URL: https://shree.groniva.net/app/workflow-management/approval-workflow
-[INFO] 12:54:31 PM - Clicking three dot menu
-[INFO] 12:54:31 PM - Clicking on Three Dot Menu
-[INFO] 12:54:32 PM - Clicked on three dot menu for employee 1050
-[INFO] 12:54:34 PM - Successfully navigated after clicking three dot menu. Current URL: https://shree.groniva.net/app/workflow-management/approval-workflow
-[INFO] 12:54:34 PM - Clicking Add button
-[INFO] 12:54:34 PM - Clicking on Add Button
-[INFO] 12:54:34 PM - Clicked on Add button for employee 1050
-[INFO] 12:54:36 PM - Successfully navigated after clicking Add button. Current URL: https://shree.groniva.net/app/workflow-management/approval-workflow/add
+<![CDATA[[INFO] 11:03:00 AM - Navigating to login page
+[INFO] 11:03:25 AM - Attempting to login with email: ckoranne89@gmail.com
+[INFO] 11:03:25 AM - Clicking on Email button
+[INFO] 11:03:47 AM - Filling Email field with value
+[INFO] 11:03:47 AM - Filling Password field with value
+[INFO] 11:03:48 AM - Clicking on Sign In button
+[INFO] 11:03:48 AM - Login initiated
+[INFO] 11:03:57 AM - Login successful - dashboard URL confirmed
+[INFO] 11:03:57 AM - Verifying dashboard is loaded
+[INFO] 11:03:58 AM - Current URL: https://shree.groniva.net/app/global-dashboards/ess-dashboard?
+[INFO] 11:03:58 AM - Is dashboard URL: true
+[INFO] 11:03:58 AM - Dashboard verification complete
+[INFO] 11:03:58 AM - Dashboard loaded successfully
+[INFO] 11:03:58 AM - Verifying sidebar menu is visible
 
-[[ATTACHMENT|test-results\Employee-employeeSearch-Em-32b55-ld-search-for-employee-1050-chromium\trace.zip]]
+[[ATTACHMENT|test-results\Dashboard-Dashboard-Dashbo-f3130-ogin-with-valid-credentials-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\Dashboard-Dashboard-Dashbo-f3130-ogin-with-valid-credentials-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\Dashboard-Dashboard-Dashbo-f3130-ogin-with-valid-credentials-chromium\error-context.md]]
 ]]>
 </system-out>
+<error message="Test timeout of 60000ms exceeded." type="Error">
+<![CDATA[  [chromium] › Dashboard\Dashboard.spec.ts:15:3 › Dashboard Tests › should login with valid credentials 
+
+    Test timeout of 60000ms exceeded.
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('//div[@id=\'sidebar-menu\']')
+    Expected: visible
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('//div[@id=\'sidebar-menu\']')
+
+
+       at ..\pages\DashboardPage.ts:35
+
+      33 |   async verifySidebarMenu() {
+      34 |     Logger.info(`Verifying sidebar menu is visible`);
+    > 35 |     await expect(this.sidebarMenu).toBeVisible();
+         |                                    ^
+      36 |   }
+      37 |
+      38 |   async clicktoverifysidebarMenu() {
+        at DashboardPage.verifySidebarMenu (C:\Users\groni\HRMS Automation\tests\pages\DashboardPage.ts:35:36)
+        at C:\Users\groni\HRMS Automation\tests\specs\Dashboard\Dashboard.spec.ts:30:25
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\test-results\Dashboard-Dashboard-Dashbo-f3130-ogin-with-valid-credentials-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\test-results\Dashboard-Dashboard-Dashbo-f3130-ogin-with-valid-credentials-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\test-results\Dashboard-Dashboard-Dashbo-f3130-ogin-with-valid-credentials-chromium\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Dashboard Tests › should search menu with value 1027 and verify dropdown results" classname="Dashboard\Dashboard.spec.ts" time="57.022">
+<system-out>
+<![CDATA[[INFO] 11:03:00 AM - Navigating to login page
+[INFO] 11:03:23 AM - Attempting to login with email: ckoranne89@gmail.com
+[INFO] 11:03:23 AM - Clicking on Email button
+[INFO] 11:03:36 AM - Filling Email field with value
+[INFO] 11:03:36 AM - Filling Password field with value
+[INFO] 11:03:36 AM - Clicking on Sign In button
+[INFO] 11:03:37 AM - Login initiated
+[INFO] 11:03:42 AM - Login successful - dashboard URL confirmed
+[INFO] 11:03:42 AM - Verifying dashboard is loaded
+[INFO] 11:03:43 AM - Current URL: https://shree.groniva.net/app/global-dashboards/ess-dashboard?
+[INFO] 11:03:43 AM - Is dashboard URL: true
+[INFO] 11:03:43 AM - Dashboard verification complete
+[INFO] 11:03:43 AM - Dashboard loaded successfully
+[INFO] 11:03:43 AM - Searching in menu for: 1047
+[INFO] 11:03:43 AM - Clicking on Menu search input
+[INFO] 11:03:49 AM - Typed "1047" in menu search
+[INFO] 11:03:49 AM - Dropdown panel is now visible
+[INFO] 11:03:49 AM - Searched for 1047 in menu
+[INFO] 11:03:51 AM - Verifying search results appear
+[INFO] 11:03:51 AM - Found 0 search results
+[INFO] 11:03:51 AM - No search results found for 1047
+[INFO] 11:03:51 AM - Verifying no data found message
+[INFO] 11:03:51 AM - Confirmed: No Data Found message is displayed
+]]>
+</system-out>
+</testcase>
+<testcase name="Dashboard Tests › should search menu with organization and verify results appear" classname="Dashboard\Dashboard.spec.ts" time="60.453">
+<system-out>
+<![CDATA[[INFO] 11:03:00 AM - Navigating to login page
+[INFO] 11:03:21 AM - Attempting to login with email: ckoranne89@gmail.com
+[INFO] 11:03:21 AM - Clicking on Email button
+[INFO] 11:03:46 AM - Filling Email field with value
+[INFO] 11:03:47 AM - Filling Password field with value
+[INFO] 11:03:47 AM - Clicking on Sign In button
+[INFO] 11:03:48 AM - Login initiated
+[INFO] 11:03:54 AM - Verifying dashboard is loaded
+[INFO] 11:03:55 AM - Current URL: https://shree.groniva.net/app/global-dashboards/ess-dashboard?
+[INFO] 11:03:55 AM - Is dashboard URL: true
+[INFO] 11:03:55 AM - Dashboard verification complete
+[INFO] 11:03:55 AM - Dashboard loaded successfully
+[INFO] 11:03:55 AM - Opening menu
+[INFO] 11:03:55 AM - Clicking on Menu button
+
+[[ATTACHMENT|test-results\Dashboard-Dashboard-Dashbo-5eac5-n-and-verify-results-appear-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\Dashboard-Dashboard-Dashbo-5eac5-n-and-verify-results-appear-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\Dashboard-Dashboard-Dashbo-5eac5-n-and-verify-results-appear-chromium\error-context.md]]
+]]>
+</system-out>
+<error message="Test timeout of 60000ms exceeded." type="Error">
+<![CDATA[  [chromium] › Dashboard\Dashboard.spec.ts:84:3 › Dashboard Tests › should search menu with organization and verify results appear 
+
+    Test timeout of 60000ms exceeded.
+
+    Error: locator.waitFor: Test timeout of 60000ms exceeded.
+    Call log:
+      - waiting for getByRole('button').first() to be visible
+
+
+       at ..\pages\BasePage.ts:15
+
+      13 |   async waitForElement(locator: Locator, timeout: number = config.timeout) {
+      14 |    // Logger.debug(`Waiting for element to be visible`);
+    > 15 |     await locator.waitFor({ state: 'visible', timeout });
+         |                   ^
+      16 |   }
+      17 |
+      18 |   async click(locator: Locator, description: string = 'element') {
+        at DashboardPage.waitForElement (C:\Users\groni\HRMS Automation\tests\pages\BasePage.ts:15:19)
+        at DashboardPage.click (C:\Users\groni\HRMS Automation\tests\pages\BasePage.ts:20:16)
+        at DashboardPage.openMenu (C:\Users\groni\HRMS Automation\tests\pages\DashboardPage.ts:46:16)
+        at C:\Users\groni\HRMS Automation\tests\specs\Dashboard\Dashboard.spec.ts:98:25
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\test-results\Dashboard-Dashboard-Dashbo-5eac5-n-and-verify-results-appear-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\test-results\Dashboard-Dashboard-Dashbo-5eac5-n-and-verify-results-appear-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\test-results\Dashboard-Dashboard-Dashbo-5eac5-n-and-verify-results-appear-chromium\error-context.md
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="Dashboard\Modules\AddOrganization.spec.ts" timestamp="2026-05-13T05:32:57.553Z" hostname="chromium" tests="1" failures="0" skipped="0" time="23.08" errors="1">
+<testcase name="Organization Module Tests › should navigate to organization module" classname="Dashboard\Modules\AddOrganization.spec.ts" time="23.08">
+<system-out>
+<![CDATA[[INFO] 11:03:00 AM - Navigating to login page
+
+[[ATTACHMENT|test-results\Dashboard-Modules-AddOrgan-1068e-gate-to-organization-module-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\Dashboard-Modules-AddOrgan-1068e-gate-to-organization-module-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\Dashboard-Modules-AddOrgan-1068e-gate-to-organization-module-chromium\error-context.md]]
+]]>
+</system-out>
+<error message="Cannot access &apos;TaskSearchPage&apos; before initialization" type="ReferenceError">
+<![CDATA[  [chromium] › Dashboard\Modules\AddOrganization.spec.ts:18:1 › Organization Module Tests › should navigate to organization module 
+
+    ReferenceError: Cannot access 'TaskSearchPage' before initialization
+
+      19 |     const loginPage = new LoginPage(page);
+      20 |     const dashboardPage = new DashboardPage(page); 
+    > 21 |     const TaskSearchPage = new TaskSearchPage(page); 
+         |                            ^
+      22 |     const organizationPage = new OrganizationPage(page);
+      23 |
+      24 |     await loginPage.loginwithEmail(testUsers.shreeUser.email, testUsers.shreeUser.password);
+        at C:\Users\groni\HRMS Automation\tests\specs\Dashboard\Modules\AddOrganization.spec.ts:21:28
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\test-results\Dashboard-Modules-AddOrgan-1068e-gate-to-organization-module-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\test-results\Dashboard-Modules-AddOrgan-1068e-gate-to-organization-module-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\test-results\Dashboard-Modules-AddOrgan-1068e-gate-to-organization-module-chromium\error-context.md
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="Dashboard\Modules\Organization.spec.ts" timestamp="2026-05-13T05:32:57.553Z" hostname="chromium" tests="1" failures="0" skipped="0" time="5.33" errors="1">
+<testcase name="Organization Module Tests › should navigate to organization module" classname="Dashboard\Modules\Organization.spec.ts" time="5.33">
+<system-out>
+<![CDATA[[INFO] 11:03:24 AM - Navigating to login page
+
+[[ATTACHMENT|test-results\Dashboard-Modules-Organiza-74789-gate-to-organization-module-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\Dashboard-Modules-Organiza-74789-gate-to-organization-module-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\Dashboard-Modules-Organiza-74789-gate-to-organization-module-chromium\error-context.md]]
+]]>
+</system-out>
+<error message="Cannot access &apos;TaskSearchPage&apos; before initialization" type="ReferenceError">
+<![CDATA[  [chromium] › Dashboard\Modules\Organization.spec.ts:20:1 › Organization Module Tests › should navigate to organization module 
+
+    ReferenceError: Cannot access 'TaskSearchPage' before initialization
+
+      21 |     const loginPage = new LoginPage(page);
+      22 |     const dashboardPage = new DashboardPage(page); 
+    > 23 |     const TaskSearchPage = new TaskSearchPage(page); 
+         |                            ^
+      24 |     const organizationPage = new OrganizationPage(page);
+      25 |
+      26 |     await loginPage.loginwithEmail(testUsers.shreeUser.email, testUsers.shreeUser.password);
+        at C:\Users\groni\HRMS Automation\tests\specs\Dashboard\Modules\Organization.spec.ts:23:28
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\test-results\Dashboard-Modules-Organiza-74789-gate-to-organization-module-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\test-results\Dashboard-Modules-Organiza-74789-gate-to-organization-module-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\test-results\Dashboard-Modules-Organiza-74789-gate-to-organization-module-chromium\error-context.md
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="Login\login.spec.ts" timestamp="2026-05-13T05:32:57.553Z" hostname="chromium" tests="6" failures="1" skipped="0" time="241.434" errors="2">
+<testcase name="Login Tests › should display login page elements" classname="Login\login.spec.ts" time="23.731">
+<system-out>
+<![CDATA[[INFO] 11:03:32 AM - Navigating to login page
+[INFO] 11:03:48 AM - Verifying login page is loaded
+
+[[ATTACHMENT|test-results\Login-login-Login-Tests-should-display-login-page-elements-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\Login-login-Login-Tests-should-display-login-page-elements-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\Login-login-Login-Tests-should-display-login-page-elements-chromium\error-context.md]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [chromium] › Login\login.spec.ts:13:3 › Login Tests › should display login page elements ─────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByPlaceholder('Enter Mobile Number')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByPlaceholder('Enter Mobile Number')
+
+
+       at ..\pages\LoginPage.ts:42
+
+      40 |   async verifyLoginPageLoaded() {
+      41 |     Logger.info(`Verifying login page is loaded`);
+    > 42 |     await expect(this.mobileField).toBeVisible();
+         |                                    ^
+      43 |     await expect(this.signInButton).toBeVisible();
+      44 |   }
+      45 |
+        at LoginPage.verifyLoginPageLoaded (C:\Users\groni\HRMS Automation\tests\pages\LoginPage.ts:42:36)
+        at C:\Users\groni\HRMS Automation\tests\specs\Login\login.spec.ts:15:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\test-results\Login-login-Login-Tests-should-display-login-page-elements-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\test-results\Login-login-Login-Tests-should-display-login-page-elements-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\test-results\Login-login-Login-Tests-should-display-login-page-elements-chromium\error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Login Tests › should login with valid credentials" classname="Login\login.spec.ts" time="61.32">
+<system-out>
+<![CDATA[[INFO] 11:03:59 AM - Navigating to login page
+[INFO] 11:04:08 AM - Attempting to login with mobile: 9011409986
+[INFO] 11:04:08 AM - Filling Mobile field with value
+[INFO] 11:04:26 AM - Filling Password field with value
+[INFO] 11:04:26 AM - Clicking on Sign In button
+[INFO] 11:04:27 AM - Login initiated
+
+[[ATTACHMENT|test-results\Login-login-Login-Tests-should-login-with-valid-credentials-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\Login-login-Login-Tests-should-login-with-valid-credentials-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\Login-login-Login-Tests-should-login-with-valid-credentials-chromium\error-context.md]]
+]]>
+</system-out>
+<error message="page.waitForURL: Timeout 30000ms exceeded." type="TimeoutError">
+<![CDATA[  [chromium] › Login\login.spec.ts:19:3 › Login Tests › should login with valid credentials ────────
+
+    TimeoutError: page.waitForURL: Timeout 30000ms exceeded.
+    =========================== logs ===========================
+    waiting for navigation until "load"
+    ============================================================
+
+      23 |
+      24 |     
+    > 25 |     await page.waitForURL(/dashboard|ess-dashboard/, { timeout: 30000 });
+         |                ^
+      26 |     Logger.info('Login successful - dashboard URL confirmed');
+      27 |     
+      28 |     expect(page.url()).toMatch(/dashboard|ess-dashboard/);
+        at C:\Users\groni\HRMS Automation\tests\specs\Login\login.spec.ts:25:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\test-results\Login-login-Login-Tests-should-login-with-valid-credentials-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\test-results\Login-login-Login-Tests-should-login-with-valid-credentials-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\test-results\Login-login-Login-Tests-should-login-with-valid-credentials-chromium\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Login Tests › should display welcome message after successful login" classname="Login\login.spec.ts" time="62.272">
+<system-out>
+<![CDATA[[INFO] 11:03:57 AM - Navigating to login page
+[INFO] 11:04:21 AM - Attempting to login with mobile: 9011409986
+[INFO] 11:04:21 AM - Filling Mobile field with value
+[INFO] 11:04:28 AM - Filling Password field with value
+[INFO] 11:04:29 AM - Clicking on Sign In button
+[INFO] 11:04:30 AM - Login initiated
+
+[[ATTACHMENT|test-results\Login-login-Login-Tests-sh-3ef0a-sage-after-successful-login-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\Login-login-Login-Tests-sh-3ef0a-sage-after-successful-login-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\Login-login-Login-Tests-sh-3ef0a-sage-after-successful-login-chromium\error-context.md]]
+]]>
+</system-out>
+<error message="Test timeout of 60000ms exceeded." type="Error">
+<![CDATA[  [chromium] › Login\login.spec.ts:31:3 › Login Tests › should display welcome message after successful login 
+
+    Test timeout of 60000ms exceeded.
+
+    Error: page.waitForURL: Test timeout of 60000ms exceeded.
+    =========================== logs ===========================
+    waiting for navigation until "load"
+    ============================================================
+
+      33 |     
+      34 |     await loginPage.login(testUsers.shreeUser.mobile, testUsers.shreeUser.password);
+    > 35 |     await page.waitForURL(/dashboard|ess-dashboard/, { timeout: 30000 });
+         |                ^
+      36 |     await page.waitForLoadState('networkidle');
+      37 |
+      38 |      // Give the page a moment to render
+        at C:\Users\groni\HRMS Automation\tests\specs\Login\login.spec.ts:35:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\test-results\Login-login-Login-Tests-sh-3ef0a-sage-after-successful-login-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\test-results\Login-login-Login-Tests-sh-3ef0a-sage-after-successful-login-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\test-results\Login-login-Login-Tests-sh-3ef0a-sage-after-successful-login-chromium\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Login Tests › should login with email " classname="Login\login.spec.ts" time="40.385">
+<system-out>
+<![CDATA[[INFO] 11:04:02 AM - Navigating to login page
+[INFO] 11:04:21 AM - Attempting to login with email: ckoranne89@gmail.com
+[INFO] 11:04:21 AM - Clicking on Email button
+[INFO] 11:04:27 AM - Filling Email field with value
+[INFO] 11:04:28 AM - Filling Password field with value
+[INFO] 11:04:28 AM - Clicking on Sign In button
+[INFO] 11:04:29 AM - Login initiated
+[INFO] 11:04:39 AM - Login with email successful - dashboard URL confirmed
+[INFO] 11:04:41 AM - Welcome message displayed after email login
+]]>
+</system-out>
+</testcase>
+<testcase name="Login Tests › verify user logged out after clicking logout" classname="Login\login.spec.ts" time="51.67">
+<system-out>
+<![CDATA[[INFO] 11:04:03 AM - Navigating to login page
+[INFO] 11:04:16 AM - Attempting to login with email: ckoranne89@gmail.com
+[INFO] 11:04:16 AM - Clicking on Email button
+[INFO] 11:04:26 AM - Filling Email field with value
+[INFO] 11:04:27 AM - Filling Password field with value
+[INFO] 11:04:27 AM - Clicking on Sign In button
+[INFO] 11:04:27 AM - Login initiated
+[INFO] 11:04:35 AM - Login successful - dashboard URL confirmed
+[INFO] 11:04:53 AM - Dashboard navigation completed
+[INFO] 11:04:53 AM - Clicking profile menu
+[INFO] 11:04:53 AM - Clicking on Profile Menu
+[INFO] 11:04:53 AM - Clicking logout button
+[INFO] 11:04:53 AM - Clicking on Logout Button
+[INFO] 11:04:54 AM - Logout successful - login URL confirmed
+]]>
+</system-out>
+</testcase>
+<testcase name="Login Tests › Setup verification" classname="Login\login.spec.ts" time="2.056">
+<system-out>
+<![CDATA[[INFO] 11:04:42 AM - Navigating to login page
+[INFO] 11:04:44 AM - Authenticated navigation successful - dashboard URL confirmed
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="Login\shreeLogin.spec.ts" timestamp="2026-05-13T05:32:57.553Z" hostname="chromium" tests="2" failures="0" skipped="0" time="82.654" errors="2">
+<testcase name="Shree User Login Tests › should login Shree user successfully" classname="Login\shreeLogin.spec.ts" time="42.641">
+<system-out>
+<![CDATA[[INFO] 11:04:45 AM - Navigating to Shree login page
+[INFO] 11:04:46 AM - Attempting to login with mobile: 9011409986
+[INFO] 11:04:46 AM - Filling Mobile field with value
+[INFO] 11:04:54 AM - Filling Password field with value
+[INFO] 11:04:54 AM - Clicking on Sign In button
+[INFO] 11:04:54 AM - Login initiated
+
+[[ATTACHMENT|test-results\Login-shreeLogin-Shree-Use-99f8f-gin-Shree-user-successfully-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\Login-shreeLogin-Shree-Use-99f8f-gin-Shree-user-successfully-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\Login-shreeLogin-Shree-Use-99f8f-gin-Shree-user-successfully-chromium\error-context.md]]
+]]>
+</system-out>
+<error message="page.waitForURL: Timeout 30000ms exceeded." type="TimeoutError">
+<![CDATA[  [chromium] › Login\shreeLogin.spec.ts:13:3 › Shree User Login Tests › should login Shree user successfully 
+
+    TimeoutError: page.waitForURL: Timeout 30000ms exceeded.
+    =========================== logs ===========================
+    waiting for navigation until "load"
+    ============================================================
+
+      17 |     
+      18 |     // Wait for dashboard
+    > 19 |     await page.waitForURL(/dashboard|ess-dashboard/, { timeout: 30000 });
+         |                ^
+      20 |     Logger.info('Shree user login successful');
+      21 |     
+      22 |     expect(page.url()).toMatch(/dashboard|ess-dashboard/);
+        at C:\Users\groni\HRMS Automation\tests\specs\Login\shreeLogin.spec.ts:19:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\test-results\Login-shreeLogin-Shree-Use-99f8f-gin-Shree-user-successfully-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\test-results\Login-shreeLogin-Shree-Use-99f8f-gin-Shree-user-successfully-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\test-results\Login-shreeLogin-Shree-Use-99f8f-gin-Shree-user-successfully-chromium\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Shree User Login Tests › should display dashboard after Shree user login" classname="Login\shreeLogin.spec.ts" time="40.013">
+<system-out>
+<![CDATA[[INFO] 11:04:54 AM - Navigating to Shree login page
+[INFO] 11:04:56 AM - Attempting to login with mobile: 9011409986
+[INFO] 11:04:56 AM - Filling Mobile field with value
+[INFO] 11:05:01 AM - Filling Password field with value
+[INFO] 11:05:02 AM - Clicking on Sign In button
+[INFO] 11:05:02 AM - Login initiated
+
+[[ATTACHMENT|test-results\Login-shreeLogin-Shree-Use-a9f95-oard-after-Shree-user-login-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\Login-shreeLogin-Shree-Use-a9f95-oard-after-Shree-user-login-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\Login-shreeLogin-Shree-Use-a9f95-oard-after-Shree-user-login-chromium\error-context.md]]
+]]>
+</system-out>
+<error message="page.waitForURL: Timeout 30000ms exceeded." type="TimeoutError">
+<![CDATA[  [chromium] › Login\shreeLogin.spec.ts:25:3 › Shree User Login Tests › should display dashboard after Shree user login 
+
+    TimeoutError: page.waitForURL: Timeout 30000ms exceeded.
+    =========================== logs ===========================
+    waiting for navigation until "load"
+    ============================================================
+
+      28 |     
+      29 |     await loginPage.login(testUsers.shreeUser.mobile, testUsers.shreeUser.password);
+    > 30 |     await page.waitForURL(/ess-dashboard/, { timeout: 30000 });
+         |                ^
+      31 |     
+      32 |     await dashboardPage.verifyDashboardTitle('Ess Dashboard');
+      33 |     Logger.info('Dashboard title verified for Shree user');
+        at C:\Users\groni\HRMS Automation\tests\specs\Login\shreeLogin.spec.ts:30:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\test-results\Login-shreeLogin-Shree-Use-a9f95-oard-after-Shree-user-login-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\test-results\Login-shreeLogin-Shree-Use-a9f95-oard-after-Shree-user-login-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\test-results\Login-shreeLogin-Shree-Use-a9f95-oard-after-Shree-user-login-chromium\error-context.md
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="Tasks\taskSearch.spec.ts" timestamp="2026-05-13T05:32:57.553Z" hostname="chromium" tests="4" failures="0" skipped="0" time="196.025" errors="3">
+<testcase name="Task Search Tests › should search and select task 1047" classname="Tasks\taskSearch.spec.ts" time="23.869">
+<system-out>
+<![CDATA[[INFO] 11:05:01 AM - Setting up: Login and navigate to dashboard
+[INFO] 11:05:01 AM - Navigating to https://shree.groniva.net/login
+[INFO] 11:05:03 AM - Attempting to login with email: ckoranne89@gmail.com
+[INFO] 11:05:03 AM - Clicking on Email button
+[INFO] 11:05:08 AM - Filling Email field with value
+[INFO] 11:05:08 AM - Filling Password field with value
+[INFO] 11:05:09 AM - Clicking on Sign In button
+[INFO] 11:05:09 AM - Login initiated
+[INFO] 11:05:09 AM - Login completed and token verified
+[INFO] 11:05:16 AM - Dashboard navigation completed
+[INFO] 11:05:20 AM - Verifying dashboard is loaded
+[INFO] 11:05:21 AM - Current URL: https://shree.groniva.net/app/global-dashboards/ess-dashboard
+[INFO] 11:05:21 AM - Is dashboard URL: true
+[INFO] 11:05:21 AM - Dashboard verification complete
+[INFO] 11:05:21 AM - Clicking search menu
+[INFO] 11:05:21 AM - Clicking on Search Menu
+[INFO] 11:05:21 AM - Searching for employee: 1027
+[INFO] 11:05:21 AM - Clicking on Search combobox
+[INFO] 11:05:22 AM - Filling Employee ID with value
+[INFO] 11:05:23 AM - Task 1027 search completed
+]]>
+</system-out>
+</testcase>
+<testcase name="Task Search Tests › Multiple task search › should search for task 1027" classname="Tasks\taskSearch.spec.ts" time="60.344">
+<system-out>
+<![CDATA[[INFO] 11:05:02 AM - Setting up: Login and navigate to dashboard
+[INFO] 11:05:02 AM - Navigating to https://shree.groniva.net/login
+[INFO] 11:05:04 AM - Attempting to login with email: ckoranne89@gmail.com
+[INFO] 11:05:04 AM - Clicking on Email button
+[INFO] 11:05:08 AM - Filling Email field with value
+[INFO] 11:05:09 AM - Filling Password field with value
+[INFO] 11:05:09 AM - Clicking on Sign In button
+[INFO] 11:05:09 AM - Login initiated
+[INFO] 11:05:09 AM - Login completed and token verified
+[INFO] 11:05:17 AM - Dashboard navigation completed
+[INFO] 11:05:46 AM - Verifying dashboard is loaded
+[INFO] 11:05:47 AM - Current URL: https://shree.groniva.net/app/global-dashboards/ess-dashboard
+[INFO] 11:05:47 AM - Is dashboard URL: true
+[INFO] 11:05:47 AM - Dashboard verification complete
+[INFO] 11:05:48 AM - Clicking search menu
+[INFO] 11:05:48 AM - Clicking on Search Menu
+[INFO] 11:05:48 AM - Searching for employee: 1027
+[INFO] 11:05:48 AM - Clicking on Search combobox
+[INFO] 11:05:48 AM - Filling Employee ID with value
+[INFO] 11:05:49 AM - Search for task 1027 completed
+[INFO] 11:05:49 AM - Clicking on Organization
+[INFO] 11:05:49 AM - Clicking on Organization 1027
+[INFO] 11:05:50 AM - Clicked on Organization for task 1027
+[INFO] 11:05:52 AM - Successfully navigated to organization landing page. Current URL: https://shree.groniva.net/app/global-dashboards/ess-dashboard
+
+[[ATTACHMENT|test-results\Tasks-taskSearch-Task-Sear-f2487-should-search-for-task-1027-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\Tasks-taskSearch-Task-Sear-f2487-should-search-for-task-1027-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\Tasks-taskSearch-Task-Sear-f2487-should-search-for-task-1027-chromium\error-context.md]]
+]]>
+</system-out>
+<error message="Test timeout of 60000ms exceeded." type="Error">
+<![CDATA[  [chromium] › Tasks\taskSearch.spec.ts:51:7 › Task Search Tests › Multiple task search › should search for task 1027 
+
+    Test timeout of 60000ms exceeded.
+
+    Error: locator.waitFor: Test timeout of 60000ms exceeded.
+    Call log:
+      - waiting for getByRole('link', { name: 'INBOX' }) to be visible
+
+
+       at ..\pages\BasePage.ts:15
+
+      13 |   async waitForElement(locator: Locator, timeout: number = config.timeout) {
+      14 |    // Logger.debug(`Waiting for element to be visible`);
+    > 15 |     await locator.waitFor({ state: 'visible', timeout });
+         |                   ^
+      16 |   }
+      17 |
+      18 |   async click(locator: Locator, description: string = 'element') {
+        at DashboardPage.waitForElement (C:\Users\groni\HRMS Automation\tests\pages\BasePage.ts:15:19)
+        at DashboardPage.clickInbox (C:\Users\groni\HRMS Automation\tests\pages\DashboardPage.ts:56:16)
+        at C:\Users\groni\HRMS Automation\tests\specs\Tasks\taskSearch.spec.ts:93:29
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\test-results\Tasks-taskSearch-Task-Sear-f2487-should-search-for-task-1027-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\test-results\Tasks-taskSearch-Task-Sear-f2487-should-search-for-task-1027-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\test-results\Tasks-taskSearch-Task-Sear-f2487-should-search-for-task-1027-chromium\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Task Search Tests › Multiple task search › should search for task 1028" classname="Tasks\taskSearch.spec.ts" time="51.493">
+<system-out>
+<![CDATA[[INFO] 11:05:25 AM - Setting up: Login and navigate to dashboard
+[INFO] 11:05:25 AM - Navigating to https://shree.groniva.net/login
+[INFO] 11:05:26 AM - Attempting to login with email: ckoranne89@gmail.com
+[INFO] 11:05:26 AM - Clicking on Email button
+[INFO] 11:05:40 AM - Filling Email field with value
+[INFO] 11:05:45 AM - Filling Password field with value
+[INFO] 11:05:45 AM - Clicking on Sign In button
+[INFO] 11:05:46 AM - Login initiated
+
+[[ATTACHMENT|test-results\Tasks-taskSearch-Task-Sear-ae902-should-search-for-task-1028-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\Tasks-taskSearch-Task-Sear-ae902-should-search-for-task-1028-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\Tasks-taskSearch-Task-Sear-ae902-should-search-for-task-1028-chromium\error-context.md]]
+]]>
+</system-out>
+<error message="page.waitForLoadState: Timeout 30000ms exceeded." type="TimeoutError">
+<![CDATA[  [chromium] › Tasks\taskSearch.spec.ts:51:7 › Task Search Tests › Multiple task search › should search for task 1028 
+
+    TimeoutError: page.waitForLoadState: Timeout 30000ms exceeded.
+    =========================== logs ===========================
+      "commit" event fired
+      "domcontentloaded" event fired
+      "load" event fired
+    ============================================================
+
+      15 |     await loginPage.loginwithEmail(testUsers.shreeUser.email, testUsers.shreeUser.password);
+      16 |     // Wait for login to complete - verify token is set
+    > 17 |     await page.waitForLoadState('networkidle');
+         |                ^
+      18 |     Logger.info('Login completed and token verified');
+      19 |     
+      20 |     // Navigate to ESS dashboard
+        at C:\Users\groni\HRMS Automation\tests\specs\Tasks\taskSearch.spec.ts:17:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\test-results\Tasks-taskSearch-Task-Sear-ae902-should-search-for-task-1028-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\test-results\Tasks-taskSearch-Task-Sear-ae902-should-search-for-task-1028-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\test-results\Tasks-taskSearch-Task-Sear-ae902-should-search-for-task-1028-chromium\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Task Search Tests › Multiple task search › should search for task 1050" classname="Tasks\taskSearch.spec.ts" time="60.319">
+<system-out>
+<![CDATA[[INFO] 11:05:29 AM - Setting up: Login and navigate to dashboard
+[INFO] 11:05:29 AM - Navigating to https://shree.groniva.net/login
+[INFO] 11:05:30 AM - Attempting to login with email: ckoranne89@gmail.com
+[INFO] 11:05:30 AM - Clicking on Email button
+[INFO] 11:05:46 AM - Filling Email field with value
+[INFO] 11:05:46 AM - Filling Password field with value
+[INFO] 11:05:46 AM - Clicking on Sign In button
+[INFO] 11:05:47 AM - Login initiated
+[INFO] 11:06:13 AM - Login completed and token verified
+[INFO] 11:06:20 AM - Dashboard navigation completed
+[INFO] 11:06:20 AM - Verifying dashboard is loaded
+[INFO] 11:06:21 AM - Current URL: https://shree.groniva.net/app/global-dashboards/ess-dashboard
+[INFO] 11:06:21 AM - Is dashboard URL: true
+[INFO] 11:06:21 AM - Dashboard verification complete
+[INFO] 11:06:22 AM - Clicking search menu
+[INFO] 11:06:22 AM - Clicking on Search Menu
+[INFO] 11:06:22 AM - Searching for employee: 1050
+[INFO] 11:06:22 AM - Clicking on Search combobox
+[INFO] 11:06:22 AM - Filling Employee ID with value
+[INFO] 11:06:23 AM - Search for task 1050 completed
+[INFO] 11:06:23 AM - Clicking on Approval Workflow
+[INFO] 11:06:23 AM - Clicking on Approval Workflow 1050
+[INFO] 11:06:24 AM - Clicked on Approval Workflow for task 1050
+[INFO] 11:06:26 AM - Successfully navigated to organization landing page. Current URL: https://shree.groniva.net/app/global-dashboards/ess-dashboard
+[INFO] 11:06:26 AM - INBOX link is visible, proceeding to click
+[INFO] 11:06:26 AM - Clicking INBOX link
+[INFO] 11:06:26 AM - Clicking on INBOX link
+[INFO] 11:06:26 AM - Clicked on INBOX link for task 1050
+[INFO] 11:06:28 AM - Successfully navigated to INBOX page. Current URL: https://shree.groniva.net/app/global-dashboards/ess-dashboard
+[INFO] 11:06:28 AM - Clicking three dot menu
+[INFO] 11:06:28 AM - Clicking on Three Dot Menu
+
+[[ATTACHMENT|test-results\Tasks-taskSearch-Task-Sear-0b700-should-search-for-task-1050-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\Tasks-taskSearch-Task-Sear-0b700-should-search-for-task-1050-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\Tasks-taskSearch-Task-Sear-0b700-should-search-for-task-1050-chromium\error-context.md]]
+]]>
+</system-out>
+<error message="Test timeout of 60000ms exceeded." type="Error">
+<![CDATA[  [chromium] › Tasks\taskSearch.spec.ts:51:7 › Task Search Tests › Multiple task search › should search for task 1050 
+
+    Test timeout of 60000ms exceeded.
+
+    Error: locator.waitFor: Test timeout of 60000ms exceeded.
+    Call log:
+      - waiting for locator('#otherNavLink') to be visible
+
+
+       at ..\pages\BasePage.ts:15
+
+      13 |   async waitForElement(locator: Locator, timeout: number = config.timeout) {
+      14 |    // Logger.debug(`Waiting for element to be visible`);
+    > 15 |     await locator.waitFor({ state: 'visible', timeout });
+         |                   ^
+      16 |   }
+      17 |
+      18 |   async click(locator: Locator, description: string = 'element') {
+        at OrganizationPage.waitForElement (C:\Users\groni\HRMS Automation\tests\pages\BasePage.ts:15:19)
+        at OrganizationPage.click (C:\Users\groni\HRMS Automation\tests\pages\BasePage.ts:20:16)
+        at OrganizationPage.clickThreedotMenu (C:\Users\groni\HRMS Automation\tests\pages\Modules\Organization.ts:26:16)
+        at C:\Users\groni\HRMS Automation\tests\specs\Tasks\taskSearch.spec.ts:102:32
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\test-results\Tasks-taskSearch-Task-Sear-0b700-should-search-for-task-1050-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\test-results\Tasks-taskSearch-Task-Sear-0b700-should-search-for-task-1050-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\test-results\Tasks-taskSearch-Task-Sear-0b700-should-search-for-task-1050-chromium\error-context.md
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="Dashboard\Dashboard.spec.ts" timestamp="2026-05-13T05:32:57.553Z" hostname="firefox" tests="3" failures="1" skipped="0" time="115.82" errors="0">
+<testcase name="Dashboard Tests › should login with valid credentials" classname="Dashboard\Dashboard.spec.ts" time="41.913">
+<system-out>
+<![CDATA[[INFO] 11:05:51 AM - Navigating to login page
+[INFO] 11:05:56 AM - Attempting to login with email: ckoranne89@gmail.com
+[INFO] 11:05:57 AM - Clicking on Email button
+[INFO] 11:06:14 AM - Filling Email field with value
+[INFO] 11:06:14 AM - Filling Password field with value
+[INFO] 11:06:15 AM - Clicking on Sign In button
+[INFO] 11:06:15 AM - Login initiated
+[INFO] 11:06:23 AM - Login successful - dashboard URL confirmed
+[INFO] 11:06:23 AM - Verifying dashboard is loaded
+[INFO] 11:06:24 AM - Current URL: https://shree.groniva.net/app/global-dashboards/ess-dashboard?
+[INFO] 11:06:24 AM - Is dashboard URL: true
+[INFO] 11:06:24 AM - Dashboard verification complete
+[INFO] 11:06:24 AM - Dashboard loaded successfully
+[INFO] 11:06:24 AM - Verifying sidebar menu is visible
+
+[[ATTACHMENT|test-results\Dashboard-Dashboard-Dashbo-f3130-ogin-with-valid-credentials-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\Dashboard-Dashboard-Dashbo-f3130-ogin-with-valid-credentials-firefox\video.webm]]
+
+[[ATTACHMENT|test-results\Dashboard-Dashboard-Dashbo-f3130-ogin-with-valid-credentials-firefox\error-context.md]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [firefox] › Dashboard\Dashboard.spec.ts:15:3 › Dashboard Tests › should login with valid credentials 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('//div[@id=\'sidebar-menu\']')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('//div[@id=\'sidebar-menu\']')
+
+
+       at ..\pages\DashboardPage.ts:35
+
+      33 |   async verifySidebarMenu() {
+      34 |     Logger.info(`Verifying sidebar menu is visible`);
+    > 35 |     await expect(this.sidebarMenu).toBeVisible();
+         |                                    ^
+      36 |   }
+      37 |
+      38 |   async clicktoverifysidebarMenu() {
+        at DashboardPage.verifySidebarMenu (C:\Users\groni\HRMS Automation\tests\pages\DashboardPage.ts:35:36)
+        at C:\Users\groni\HRMS Automation\tests\specs\Dashboard\Dashboard.spec.ts:30:25
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\test-results\Dashboard-Dashboard-Dashbo-f3130-ogin-with-valid-credentials-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\test-results\Dashboard-Dashboard-Dashbo-f3130-ogin-with-valid-credentials-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\test-results\Dashboard-Dashboard-Dashbo-f3130-ogin-with-valid-credentials-firefox\error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Dashboard Tests › should search menu with value 1027 and verify dropdown results" classname="Dashboard\Dashboard.spec.ts" time="32.327">
+<system-out>
+<![CDATA[[INFO] 11:06:07 AM - Navigating to login page
+[INFO] 11:06:11 AM - Attempting to login with email: ckoranne89@gmail.com
+[INFO] 11:06:11 AM - Clicking on Email button
+[INFO] 11:06:14 AM - Filling Email field with value
+[INFO] 11:06:15 AM - Filling Password field with value
+[INFO] 11:06:15 AM - Clicking on Sign In button
+[INFO] 11:06:15 AM - Login initiated
+[INFO] 11:06:23 AM - Login successful - dashboard URL confirmed
+[INFO] 11:06:23 AM - Verifying dashboard is loaded
+[INFO] 11:06:24 AM - Current URL: https://shree.groniva.net/app/global-dashboards/ess-dashboard?
+[INFO] 11:06:24 AM - Is dashboard URL: true
+[INFO] 11:06:24 AM - Dashboard verification complete
+[INFO] 11:06:24 AM - Dashboard loaded successfully
+[INFO] 11:06:24 AM - Searching in menu for: 1047
+[INFO] 11:06:24 AM - Clicking on Menu search input
+[INFO] 11:06:34 AM - Typed "1047" in menu search
+[INFO] 11:06:34 AM - Dropdown panel is now visible
+[INFO] 11:06:34 AM - Searched for 1047 in menu
+[INFO] 11:06:36 AM - Verifying search results appear
+[INFO] 11:06:37 AM - Found 0 search results
+[INFO] 11:06:37 AM - No search results found for 1047
+[INFO] 11:06:37 AM - Verifying no data found message
+[INFO] 11:06:37 AM - Confirmed: No Data Found message is displayed
+]]>
+</system-out>
+</testcase>
+<testcase name="Dashboard Tests › should search menu with organization and verify results appear" classname="Dashboard\Dashboard.spec.ts" time="41.58">
+<system-out>
+<![CDATA[[INFO] 11:06:21 AM - Navigating to login page
+[INFO] 11:06:29 AM - Attempting to login with email: ckoranne89@gmail.com
+[INFO] 11:06:29 AM - Clicking on Email button
+[INFO] 11:06:42 AM - Filling Email field with value
+[INFO] 11:06:44 AM - Filling Password field with value
+[INFO] 11:06:44 AM - Clicking on Sign In button
+[INFO] 11:06:44 AM - Login initiated
+[INFO] 11:06:49 AM - Verifying dashboard is loaded
+[INFO] 11:06:50 AM - Current URL: https://shree.groniva.net/app/global-dashboards/ess-dashboard?
+[INFO] 11:06:50 AM - Is dashboard URL: true
+[INFO] 11:06:50 AM - Dashboard verification complete
+[INFO] 11:06:50 AM - Dashboard loaded successfully
+[INFO] 11:06:50 AM - Opening menu
+[INFO] 11:06:50 AM - Clicking on Menu button
+[INFO] 11:06:53 AM - Clicking menu link
+[INFO] 11:06:53 AM - Clicking on Menu link
+[INFO] 11:06:53 AM - Searching in menu for: organization
+[INFO] 11:06:53 AM - Clicking on Menu search input
+[INFO] 11:06:55 AM - Typed "organization" in menu search
+[INFO] 11:06:55 AM - Dropdown panel is now visible
+[INFO] 11:06:55 AM - Searched for organization in menu
+[INFO] 11:06:56 AM - Verifying search results appear
+[INFO] 11:06:56 AM - Found 0 search results
+[INFO] 11:06:56 AM - Search returned results: false
+[INFO] 11:06:56 AM - Verifying no data found message
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="Dashboard\Modules\AddOrganization.spec.ts" timestamp="2026-05-13T05:32:57.553Z" hostname="firefox" tests="1" failures="0" skipped="0" time="5.357" errors="1">
+<testcase name="Organization Module Tests › should navigate to organization module" classname="Dashboard\Modules\AddOrganization.spec.ts" time="5.357">
+<system-out>
+<![CDATA[[INFO] 11:06:35 AM - Navigating to login page
+
+[[ATTACHMENT|test-results\Dashboard-Modules-AddOrgan-1068e-gate-to-organization-module-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\Dashboard-Modules-AddOrgan-1068e-gate-to-organization-module-firefox\video.webm]]
+
+[[ATTACHMENT|test-results\Dashboard-Modules-AddOrgan-1068e-gate-to-organization-module-firefox\error-context.md]]
+]]>
+</system-out>
+<error message="Cannot access &apos;TaskSearchPage&apos; before initialization" type="ReferenceError">
+<![CDATA[  [firefox] › Dashboard\Modules\AddOrganization.spec.ts:18:1 › Organization Module Tests › should navigate to organization module 
+
+    ReferenceError: Cannot access 'TaskSearchPage' before initialization
+
+      19 |     const loginPage = new LoginPage(page);
+      20 |     const dashboardPage = new DashboardPage(page); 
+    > 21 |     const TaskSearchPage = new TaskSearchPage(page); 
+         |                            ^
+      22 |     const organizationPage = new OrganizationPage(page);
+      23 |
+      24 |     await loginPage.loginwithEmail(testUsers.shreeUser.email, testUsers.shreeUser.password);
+        at C:\Users\groni\HRMS Automation\tests\specs\Dashboard\Modules\AddOrganization.spec.ts:21:28
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\test-results\Dashboard-Modules-AddOrgan-1068e-gate-to-organization-module-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\test-results\Dashboard-Modules-AddOrgan-1068e-gate-to-organization-module-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\test-results\Dashboard-Modules-AddOrgan-1068e-gate-to-organization-module-firefox\error-context.md
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="Dashboard\Modules\Organization.spec.ts" timestamp="2026-05-13T05:32:57.553Z" hostname="firefox" tests="1" failures="0" skipped="0" time="7.35" errors="1">
+<testcase name="Organization Module Tests › should navigate to organization module" classname="Dashboard\Modules\Organization.spec.ts" time="7.35">
+<system-out>
+<![CDATA[[INFO] 11:06:38 AM - Navigating to login page
+
+[[ATTACHMENT|test-results\Dashboard-Modules-Organiza-74789-gate-to-organization-module-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\Dashboard-Modules-Organiza-74789-gate-to-organization-module-firefox\video.webm]]
+
+[[ATTACHMENT|test-results\Dashboard-Modules-Organiza-74789-gate-to-organization-module-firefox\error-context.md]]
+]]>
+</system-out>
+<error message="Cannot access &apos;TaskSearchPage&apos; before initialization" type="ReferenceError">
+<![CDATA[  [firefox] › Dashboard\Modules\Organization.spec.ts:20:1 › Organization Module Tests › should navigate to organization module 
+
+    ReferenceError: Cannot access 'TaskSearchPage' before initialization
+
+      21 |     const loginPage = new LoginPage(page);
+      22 |     const dashboardPage = new DashboardPage(page); 
+    > 23 |     const TaskSearchPage = new TaskSearchPage(page); 
+         |                            ^
+      24 |     const organizationPage = new OrganizationPage(page);
+      25 |
+      26 |     await loginPage.loginwithEmail(testUsers.shreeUser.email, testUsers.shreeUser.password);
+        at C:\Users\groni\HRMS Automation\tests\specs\Dashboard\Modules\Organization.spec.ts:23:28
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\test-results\Dashboard-Modules-Organiza-74789-gate-to-organization-module-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\test-results\Dashboard-Modules-Organiza-74789-gate-to-organization-module-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\test-results\Dashboard-Modules-Organiza-74789-gate-to-organization-module-firefox\error-context.md
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="Login\login.spec.ts" timestamp="2026-05-13T05:32:57.553Z" hostname="firefox" tests="6" failures="2" skipped="0" time="205.654" errors="3">
+<testcase name="Login Tests › should display login page elements" classname="Login\login.spec.ts" time="8.485">
+<system-out>
+<![CDATA[[INFO] 11:06:39 AM - Navigating to login page
+[INFO] 11:06:41 AM - Verifying login page is loaded
+
+[[ATTACHMENT|test-results\Login-login-Login-Tests-should-display-login-page-elements-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\Login-login-Login-Tests-should-display-login-page-elements-firefox\video.webm]]
+
+[[ATTACHMENT|test-results\Login-login-Login-Tests-should-display-login-page-elements-firefox\error-context.md]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [firefox] › Login\login.spec.ts:13:3 › Login Tests › should display login page elements ──────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByPlaceholder('Enter Mobile Number')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByPlaceholder('Enter Mobile Number')
+
+
+       at ..\pages\LoginPage.ts:42
+
+      40 |   async verifyLoginPageLoaded() {
+      41 |     Logger.info(`Verifying login page is loaded`);
+    > 42 |     await expect(this.mobileField).toBeVisible();
+         |                                    ^
+      43 |     await expect(this.signInButton).toBeVisible();
+      44 |   }
+      45 |
+        at LoginPage.verifyLoginPageLoaded (C:\Users\groni\HRMS Automation\tests\pages\LoginPage.ts:42:36)
+        at C:\Users\groni\HRMS Automation\tests\specs\Login\login.spec.ts:15:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\test-results\Login-login-Login-Tests-should-display-login-page-elements-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\test-results\Login-login-Login-Tests-should-display-login-page-elements-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\test-results\Login-login-Login-Tests-should-display-login-page-elements-firefox\error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Login Tests › should login with valid credentials" classname="Login\login.spec.ts" time="60.429">
+<system-out>
+<![CDATA[[INFO] 11:06:48 AM - Navigating to login page
+[INFO] 11:07:11 AM - Attempting to login with mobile: 9011409986
+[INFO] 11:07:11 AM - Filling Mobile field with value
+[INFO] 11:07:20 AM - Filling Password field with value
+[INFO] 11:07:21 AM - Clicking on Sign In button
+[INFO] 11:07:21 AM - Login initiated
+
+[[ATTACHMENT|test-results\Login-login-Login-Tests-should-login-with-valid-credentials-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\Login-login-Login-Tests-should-login-with-valid-credentials-firefox\video.webm]]
+
+[[ATTACHMENT|test-results\Login-login-Login-Tests-should-login-with-valid-credentials-firefox\error-context.md]]
+]]>
+</system-out>
+<error message="Test timeout of 60000ms exceeded." type="Error">
+<![CDATA[  [firefox] › Login\login.spec.ts:19:3 › Login Tests › should login with valid credentials ─────────
+
+    Test timeout of 60000ms exceeded.
+
+    Error: page.waitForURL: Test timeout of 60000ms exceeded.
+    =========================== logs ===========================
+    waiting for navigation until "load"
+    ============================================================
+
+      23 |
+      24 |     
+    > 25 |     await page.waitForURL(/dashboard|ess-dashboard/, { timeout: 30000 });
+         |                ^
+      26 |     Logger.info('Login successful - dashboard URL confirmed');
+      27 |     
+      28 |     expect(page.url()).toMatch(/dashboard|ess-dashboard/);
+        at C:\Users\groni\HRMS Automation\tests\specs\Login\login.spec.ts:25:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\test-results\Login-login-Login-Tests-should-login-with-valid-credentials-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\test-results\Login-login-Login-Tests-should-login-with-valid-credentials-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\test-results\Login-login-Login-Tests-should-login-with-valid-credentials-firefox\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Login Tests › should display welcome message after successful login" classname="Login\login.spec.ts" time="33.625">
+<system-out>
+<![CDATA[[INFO] 11:06:51 AM - Navigating to login page
+
+[[ATTACHMENT|test-results\Login-login-Login-Tests-sh-3ef0a-sage-after-successful-login-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\Login-login-Login-Tests-sh-3ef0a-sage-after-successful-login-firefox\video.webm]]
+
+[[ATTACHMENT|test-results\Login-login-Login-Tests-sh-3ef0a-sage-after-successful-login-firefox\error-context.md]]
+]]>
+</system-out>
+<error message="page.goto: Timeout 30000ms exceeded." type="TimeoutError">
+<![CDATA[  [firefox] › Login\login.spec.ts:31:3 › Login Tests › should display welcome message after successful login 
+
+    TimeoutError: page.goto: Timeout 30000ms exceeded.
+    Call log:
+      - navigating to "https://shree.groniva.net/login", waiting until "load"
+
+
+       8 |   test.beforeEach(async ({ page }) => {
+       9 |     Logger.info('Navigating to login page');
+    > 10 |     await page.goto(config.shreeURL + '/login');
+         |                ^
+      11 |   });
+      12 |
+      13 |   test('should display login page elements', async ({ page }) => {
+        at C:\Users\groni\HRMS Automation\tests\specs\Login\login.spec.ts:10:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\test-results\Login-login-Login-Tests-sh-3ef0a-sage-after-successful-login-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\test-results\Login-login-Login-Tests-sh-3ef0a-sage-after-successful-login-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\test-results\Login-login-Login-Tests-sh-3ef0a-sage-after-successful-login-firefox\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Login Tests › should login with email " classname="Login\login.spec.ts" time="33.688">
+<system-out>
+<![CDATA[[INFO] 11:06:57 AM - Navigating to login page
+[INFO] 11:07:06 AM - Attempting to login with email: ckoranne89@gmail.com
+[INFO] 11:07:06 AM - Clicking on Email button
+[INFO] 11:07:14 AM - Filling Email field with value
+[INFO] 11:07:14 AM - Filling Password field with value
+[INFO] 11:07:15 AM - Clicking on Sign In button
+[INFO] 11:07:15 AM - Login initiated
+[INFO] 11:07:21 AM - Login with email successful - dashboard URL confirmed
+
+[[ATTACHMENT|test-results\Login-login-Login-Tests-should-login-with-email--firefox\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\Login-login-Login-Tests-should-login-with-email--firefox\video.webm]]
+
+[[ATTACHMENT|test-results\Login-login-Login-Tests-should-login-with-email--firefox\error-context.md]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [firefox] › Login\login.spec.ts:46:3 › Login Tests › should login with email  ────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('text=Welcome Chetan')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('text=Welcome Chetan')
+
+
+      58 |         await page.waitForLoadState('domcontentloaded');
+      59 |     const welcomeLocator = page.locator('text=Welcome Chetan');
+    > 60 |     await expect(welcomeLocator).toBeVisible();
+         |                                  ^
+      61 |     Logger.info('Welcome message displayed after email login');
+      62 |     });
+      63 |
+        at C:\Users\groni\HRMS Automation\tests\specs\Login\login.spec.ts:60:34
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\test-results\Login-login-Login-Tests-should-login-with-email--firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\test-results\Login-login-Login-Tests-should-login-with-email--firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\test-results\Login-login-Login-Tests-should-login-with-email--firefox\error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Login Tests › verify user logged out after clicking logout" classname="Login\login.spec.ts" time="60.591">
+<system-out>
+<![CDATA[[INFO] 11:07:02 AM - Navigating to login page
+[INFO] 11:07:08 AM - Attempting to login with email: ckoranne89@gmail.com
+[INFO] 11:07:08 AM - Clicking on Email button
+[INFO] 11:07:23 AM - Filling Email field with value
+[INFO] 11:07:23 AM - Filling Password field with value
+[INFO] 11:07:23 AM - Clicking on Sign In button
+[INFO] 11:07:23 AM - Login initiated
+[INFO] 11:07:30 AM - Login successful - dashboard URL confirmed
+[INFO] 11:07:35 AM - Dashboard navigation completed
+[INFO] 11:07:35 AM - Clicking profile menu
+[INFO] 11:07:35 AM - Clicking on Profile Menu
+[INFO] 11:07:47 AM - Clicking logout button
+[INFO] 11:07:47 AM - Clicking on Logout Button
+
+[[ATTACHMENT|test-results\Login-login-Login-Tests-ve-3b59b-d-out-after-clicking-logout-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\Login-login-Login-Tests-ve-3b59b-d-out-after-clicking-logout-firefox\video.webm]]
+
+[[ATTACHMENT|test-results\Login-login-Login-Tests-ve-3b59b-d-out-after-clicking-logout-firefox\error-context.md]]
+]]>
+</system-out>
+<error message="Test timeout of 60000ms exceeded." type="Error">
+<![CDATA[  [firefox] › Login\login.spec.ts:64:3 › Login Tests › verify user logged out after clicking logout 
+
+    Test timeout of 60000ms exceeded.
+
+    Error: page.waitForURL: Test timeout of 60000ms exceeded.
+    =========================== logs ===========================
+      "domcontentloaded" event fired
+      "networkidle" event fired
+    ============================================================
+
+      78 |     await logOutPage.clickProfileMenu();
+      79 |     await logOutPage.clickLogout();
+    > 80 |     await page.waitForURL(/login/, { timeout: 30000 });
+         |                ^
+      81 |     Logger.info('Logout successful - login URL confirmed');
+      82 |
+      83 |   });
+        at C:\Users\groni\HRMS Automation\tests\specs\Login\login.spec.ts:80:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\test-results\Login-login-Login-Tests-ve-3b59b-d-out-after-clicking-logout-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\test-results\Login-login-Login-Tests-ve-3b59b-d-out-after-clicking-logout-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\test-results\Login-login-Login-Tests-ve-3b59b-d-out-after-clicking-logout-firefox\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Login Tests › Setup verification" classname="Login\login.spec.ts" time="8.836">
+<system-out>
+<![CDATA[[INFO] 11:07:28 AM - Navigating to login page
+[INFO] 11:07:35 AM - Authenticated navigation successful - dashboard URL confirmed
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="Login\shreeLogin.spec.ts" timestamp="2026-05-13T05:32:57.553Z" hostname="firefox" tests="2" failures="0" skipped="0" time="78.568" errors="2">
+<testcase name="Shree User Login Tests › should login Shree user successfully" classname="Login\shreeLogin.spec.ts" time="42.444">
+<system-out>
+<![CDATA[[INFO] 11:07:36 AM - Navigating to Shree login page
+[INFO] 11:07:45 AM - Attempting to login with mobile: 9011409986
+[INFO] 11:07:45 AM - Filling Mobile field with value
+
+[[ATTACHMENT|test-results\Login-shreeLogin-Shree-Use-99f8f-gin-Shree-user-successfully-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\Login-shreeLogin-Shree-Use-99f8f-gin-Shree-user-successfully-firefox\video.webm]]
+
+[[ATTACHMENT|test-results\Login-shreeLogin-Shree-Use-99f8f-gin-Shree-user-successfully-firefox\error-context.md]]
+]]>
+</system-out>
+<error message="locator.waitFor: Timeout 30000ms exceeded." type="TimeoutError">
+<![CDATA[  [firefox] › Login\shreeLogin.spec.ts:13:3 › Shree User Login Tests › should login Shree user successfully 
+
+    TimeoutError: locator.waitFor: Timeout 30000ms exceeded.
+    Call log:
+      - waiting for getByPlaceholder('Enter Mobile Number') to be visible
+
+
+       at ..\pages\BasePage.ts:15
+
+      13 |   async waitForElement(locator: Locator, timeout: number = config.timeout) {
+      14 |    // Logger.debug(`Waiting for element to be visible`);
+    > 15 |     await locator.waitFor({ state: 'visible', timeout });
+         |                   ^
+      16 |   }
+      17 |
+      18 |   async click(locator: Locator, description: string = 'element') {
+        at LoginPage.waitForElement (C:\Users\groni\HRMS Automation\tests\pages\BasePage.ts:15:19)
+        at LoginPage.fillText (C:\Users\groni\HRMS Automation\tests\pages\BasePage.ts:26:16)
+        at LoginPage.login (C:\Users\groni\HRMS Automation\tests\pages\LoginPage.ts:18:16)
+        at C:\Users\groni\HRMS Automation\tests\specs\Login\shreeLogin.spec.ts:16:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\test-results\Login-shreeLogin-Shree-Use-99f8f-gin-Shree-user-successfully-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\test-results\Login-shreeLogin-Shree-Use-99f8f-gin-Shree-user-successfully-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\test-results\Login-shreeLogin-Shree-Use-99f8f-gin-Shree-user-successfully-firefox\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Shree User Login Tests › should display dashboard after Shree user login" classname="Login\shreeLogin.spec.ts" time="36.124">
+<system-out>
+<![CDATA[[INFO] 11:07:36 AM - Navigating to Shree login page
+
+[[ATTACHMENT|test-results\Login-shreeLogin-Shree-Use-a9f95-oard-after-Shree-user-login-firefox\video.webm]]
+
+[[ATTACHMENT|test-results\Login-shreeLogin-Shree-Use-a9f95-oard-after-Shree-user-login-firefox\error-context.md]]
+]]>
+</system-out>
+<error message="page.goto: Timeout 30000ms exceeded." type="TimeoutError">
+<![CDATA[  [firefox] › Login\shreeLogin.spec.ts:25:3 › Shree User Login Tests › should display dashboard after Shree user login 
+
+    TimeoutError: page.goto: Timeout 30000ms exceeded.
+    Call log:
+      - navigating to "https://shree.groniva.net/login", waiting until "load"
+
+
+       8 |   test.beforeEach(async ({ page }) => {
+       9 |     Logger.info('Navigating to Shree login page');
+    > 10 |     await page.goto(config.shreeURL + '/login');
+         |                ^
+      11 |   });
+      12 |
+      13 |   test('should login Shree user successfully', async ({ page }) => {
+        at C:\Users\groni\HRMS Automation\tests\specs\Login\shreeLogin.spec.ts:10:16
+
+    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\test-results\Login-shreeLogin-Shree-Use-a9f95-oard-after-Shree-user-login-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\test-results\Login-shreeLogin-Shree-Use-a9f95-oard-after-Shree-user-login-firefox\error-context.md
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="Tasks\taskSearch.spec.ts" timestamp="2026-05-13T05:32:57.553Z" hostname="firefox" tests="4" failures="0" skipped="0" time="210.392" errors="4">
+<testcase name="Task Search Tests › should search and select task 1047" classname="Tasks\taskSearch.spec.ts" time="65.837">
+<system-out>
+<![CDATA[[INFO] 11:07:55 AM - Setting up: Login and navigate to dashboard
+[INFO] 11:07:55 AM - Navigating to https://shree.groniva.net/login
+[INFO] 11:08:03 AM - Attempting to login with email: ckoranne89@gmail.com
+[INFO] 11:08:03 AM - Clicking on Email button
+[INFO] 11:08:31 AM - Filling Email field with value
+[INFO] 11:08:31 AM - Filling Password field with value
+[INFO] 11:08:32 AM - Clicking on Sign In button
+[INFO] 11:08:32 AM - Login initiated
+
+[[ATTACHMENT|test-results\Tasks-taskSearch-Task-Sear-73436-search-and-select-task-1047-firefox\video.webm]]
+
+[[ATTACHMENT|test-results\Tasks-taskSearch-Task-Sear-73436-search-and-select-task-1047-firefox\error-context.md]]
+]]>
+</system-out>
+<error message="Test timeout of 60000ms exceeded while running &quot;beforeEach&quot; hook." type="Error">
+<![CDATA[  [firefox] › Tasks\taskSearch.spec.ts:30:3 › Task Search Tests › should search and select task 1047 
+
+    Test timeout of 60000ms exceeded while running "beforeEach" hook.
+
+       8 |
+       9 | test.describe('Task Search Tests', () => {
+    > 10 |   test.beforeEach(async ({ page }) => {
+         |        ^
+      11 |     Logger.info('Setting up: Login and navigate to dashboard');
+      12 |     const loginPage = new LoginPage(page);
+      13 |     
+        at C:\Users\groni\HRMS Automation\tests\specs\Tasks\taskSearch.spec.ts:10:8
+
+    Error: page.waitForLoadState: Test timeout of 60000ms exceeded.
+    =========================== logs ===========================
+      "commit" event fired
+      "domcontentloaded" event fired
+      "load" event fired
+    ============================================================
+
+      15 |     await loginPage.loginwithEmail(testUsers.shreeUser.email, testUsers.shreeUser.password);
+      16 |     // Wait for login to complete - verify token is set
+    > 17 |     await page.waitForLoadState('networkidle');
+         |                ^
+      18 |     Logger.info('Login completed and token verified');
+      19 |     
+      20 |     // Navigate to ESS dashboard
+        at C:\Users\groni\HRMS Automation\tests\specs\Tasks\taskSearch.spec.ts:17:16
+
+    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\test-results\Tasks-taskSearch-Task-Sear-73436-search-and-select-task-1047-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\test-results\Tasks-taskSearch-Task-Sear-73436-search-and-select-task-1047-firefox\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Task Search Tests › Multiple task search › should search for task 1027" classname="Tasks\taskSearch.spec.ts" time="40.331">
+<system-out>
+<![CDATA[[INFO] 11:08:09 AM - Setting up: Login and navigate to dashboard
+[INFO] 11:08:09 AM - Navigating to https://shree.groniva.net/login
+[INFO] 11:08:17 AM - Attempting to login with email: ckoranne89@gmail.com
+[INFO] 11:08:17 AM - Clicking on Email button
+
+[[ATTACHMENT|test-results\Tasks-taskSearch-Task-Sear-f2487-should-search-for-task-1027-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\Tasks-taskSearch-Task-Sear-f2487-should-search-for-task-1027-firefox\video.webm]]
+
+[[ATTACHMENT|test-results\Tasks-taskSearch-Task-Sear-f2487-should-search-for-task-1027-firefox\error-context.md]]
+]]>
+</system-out>
+<error message="locator.waitFor: Timeout 30000ms exceeded." type="TimeoutError">
+<![CDATA[  [firefox] › Tasks\taskSearch.spec.ts:51:7 › Task Search Tests › Multiple task search › should search for task 1027 
+
+    TimeoutError: locator.waitFor: Timeout 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button').nth(2) to be visible
+
+
+       at ..\pages\BasePage.ts:15
+
+      13 |   async waitForElement(locator: Locator, timeout: number = config.timeout) {
+      14 |    // Logger.debug(`Waiting for element to be visible`);
+    > 15 |     await locator.waitFor({ state: 'visible', timeout });
+         |                   ^
+      16 |   }
+      17 |
+      18 |   async click(locator: Locator, description: string = 'element') {
+        at LoginPage.waitForElement (C:\Users\groni\HRMS Automation\tests\pages\BasePage.ts:15:19)
+        at LoginPage.click (C:\Users\groni\HRMS Automation\tests\pages\BasePage.ts:20:16)
+        at LoginPage.loginwithEmail (C:\Users\groni\HRMS Automation\tests\pages\LoginPage.ts:30:16)
+        at C:\Users\groni\HRMS Automation\tests\specs\Tasks\taskSearch.spec.ts:15:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\test-results\Tasks-taskSearch-Task-Sear-f2487-should-search-for-task-1027-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\test-results\Tasks-taskSearch-Task-Sear-f2487-should-search-for-task-1027-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\test-results\Tasks-taskSearch-Task-Sear-f2487-should-search-for-task-1027-firefox\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Task Search Tests › Multiple task search › should search for task 1028" classname="Tasks\taskSearch.spec.ts" time="38.936">
+<system-out>
+<![CDATA[[INFO] 11:08:18 AM - Setting up: Login and navigate to dashboard
+[INFO] 11:08:18 AM - Navigating to https://shree.groniva.net/login
+[INFO] 11:08:25 AM - Attempting to login with email: ckoranne89@gmail.com
+[INFO] 11:08:25 AM - Clicking on Email button
+
+[[ATTACHMENT|test-results\Tasks-taskSearch-Task-Sear-ae902-should-search-for-task-1028-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\Tasks-taskSearch-Task-Sear-ae902-should-search-for-task-1028-firefox\video.webm]]
+
+[[ATTACHMENT|test-results\Tasks-taskSearch-Task-Sear-ae902-should-search-for-task-1028-firefox\error-context.md]]
+]]>
+</system-out>
+<error message="locator.waitFor: Timeout 30000ms exceeded." type="TimeoutError">
+<![CDATA[  [firefox] › Tasks\taskSearch.spec.ts:51:7 › Task Search Tests › Multiple task search › should search for task 1028 
+
+    TimeoutError: locator.waitFor: Timeout 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button').nth(2) to be visible
+
+
+       at ..\pages\BasePage.ts:15
+
+      13 |   async waitForElement(locator: Locator, timeout: number = config.timeout) {
+      14 |    // Logger.debug(`Waiting for element to be visible`);
+    > 15 |     await locator.waitFor({ state: 'visible', timeout });
+         |                   ^
+      16 |   }
+      17 |
+      18 |   async click(locator: Locator, description: string = 'element') {
+        at LoginPage.waitForElement (C:\Users\groni\HRMS Automation\tests\pages\BasePage.ts:15:19)
+        at LoginPage.click (C:\Users\groni\HRMS Automation\tests\pages\BasePage.ts:20:16)
+        at LoginPage.loginwithEmail (C:\Users\groni\HRMS Automation\tests\pages\LoginPage.ts:30:16)
+        at C:\Users\groni\HRMS Automation\tests\specs\Tasks\taskSearch.spec.ts:15:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\test-results\Tasks-taskSearch-Task-Sear-ae902-should-search-for-task-1028-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\test-results\Tasks-taskSearch-Task-Sear-ae902-should-search-for-task-1028-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\test-results\Tasks-taskSearch-Task-Sear-ae902-should-search-for-task-1028-firefox\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Task Search Tests › Multiple task search › should search for task 1050" classname="Tasks\taskSearch.spec.ts" time="65.288">
+<system-out>
+<![CDATA[[INFO] 11:08:23 AM - Setting up: Login and navigate to dashboard
+[INFO] 11:08:23 AM - Navigating to https://shree.groniva.net/login
+[INFO] 11:08:44 AM - Attempting to login with email: ckoranne89@gmail.com
+[INFO] 11:08:44 AM - Clicking on Email button
+[INFO] 11:08:59 AM - Filling Email field with value
+[INFO] 11:08:59 AM - Filling Password field with value
+[INFO] 11:08:59 AM - Clicking on Sign In button
+[INFO] 11:09:00 AM - Login initiated
+
+[[ATTACHMENT|test-results\Tasks-taskSearch-Task-Sear-0b700-should-search-for-task-1050-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\Tasks-taskSearch-Task-Sear-0b700-should-search-for-task-1050-firefox\video.webm]]
+
+[[ATTACHMENT|test-results\Tasks-taskSearch-Task-Sear-0b700-should-search-for-task-1050-firefox\error-context.md]]
+]]>
+</system-out>
+<error message="Test timeout of 60000ms exceeded while running &quot;beforeEach&quot; hook." type="Error">
+<![CDATA[  [firefox] › Tasks\taskSearch.spec.ts:51:7 › Task Search Tests › Multiple task search › should search for task 1050 
+
+    Test timeout of 60000ms exceeded while running "beforeEach" hook.
+
+       8 |
+       9 | test.describe('Task Search Tests', () => {
+    > 10 |   test.beforeEach(async ({ page }) => {
+         |        ^
+      11 |     Logger.info('Setting up: Login and navigate to dashboard');
+      12 |     const loginPage = new LoginPage(page);
+      13 |     
+        at C:\Users\groni\HRMS Automation\tests\specs\Tasks\taskSearch.spec.ts:10:8
+
+    Error: page.waitForLoadState: Test timeout of 60000ms exceeded.
+    =========================== logs ===========================
+      "commit" event fired
+      "domcontentloaded" event fired
+      "load" event fired
+    ============================================================
+
+      15 |     await loginPage.loginwithEmail(testUsers.shreeUser.email, testUsers.shreeUser.password);
+      16 |     // Wait for login to complete - verify token is set
+    > 17 |     await page.waitForLoadState('networkidle');
+         |                ^
+      18 |     Logger.info('Login completed and token verified');
+      19 |     
+      20 |     // Navigate to ESS dashboard
+        at C:\Users\groni\HRMS Automation\tests\specs\Tasks\taskSearch.spec.ts:17:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\test-results\Tasks-taskSearch-Task-Sear-0b700-should-search-for-task-1050-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\test-results\Tasks-taskSearch-Task-Sear-0b700-should-search-for-task-1050-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\test-results\Tasks-taskSearch-Task-Sear-0b700-should-search-for-task-1050-firefox\error-context.md
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="Dashboard\Dashboard.spec.ts" timestamp="2026-05-13T05:32:57.553Z" hostname="webkit" tests="3" failures="1" skipped="0" time="195.737" errors="1">
+<testcase name="Dashboard Tests › should login with valid credentials" classname="Dashboard\Dashboard.spec.ts" time="60.841">
+<system-out>
+<![CDATA[[INFO] 11:08:57 AM - Navigating to login page
+[INFO] 11:09:04 AM - Attempting to login with email: ckoranne89@gmail.com
+[INFO] 11:09:04 AM - Clicking on Email button
+[INFO] 11:09:30 AM - Filling Email field with value
+[INFO] 11:09:33 AM - Filling Password field with value
+[INFO] 11:09:35 AM - Clicking on Sign In button
+[INFO] 11:09:36 AM - Login initiated
+[INFO] 11:09:49 AM - Login successful - dashboard URL confirmed
+[INFO] 11:09:49 AM - Verifying dashboard is loaded
+[INFO] 11:09:50 AM - Current URL: https://shree.groniva.net/app/global-dashboards/ess-dashboard?
+[INFO] 11:09:50 AM - Is dashboard URL: true
+[INFO] 11:09:50 AM - Dashboard verification complete
+[INFO] 11:09:50 AM - Dashboard loaded successfully
+[INFO] 11:09:50 AM - Verifying sidebar menu is visible
+
+[[ATTACHMENT|test-results\Dashboard-Dashboard-Dashbo-f3130-ogin-with-valid-credentials-webkit\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\Dashboard-Dashboard-Dashbo-f3130-ogin-with-valid-credentials-webkit\video.webm]]
+
+[[ATTACHMENT|test-results\Dashboard-Dashboard-Dashbo-f3130-ogin-with-valid-credentials-webkit\error-context.md]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [webkit] › Dashboard\Dashboard.spec.ts:15:3 › Dashboard Tests › should login with valid credentials 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('//div[@id=\'sidebar-menu\']')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('//div[@id=\'sidebar-menu\']')
+
+
+       at ..\pages\DashboardPage.ts:35
+
+      33 |   async verifySidebarMenu() {
+      34 |     Logger.info(`Verifying sidebar menu is visible`);
+    > 35 |     await expect(this.sidebarMenu).toBeVisible();
+         |                                    ^
+      36 |   }
+      37 |
+      38 |   async clicktoverifysidebarMenu() {
+        at DashboardPage.verifySidebarMenu (C:\Users\groni\HRMS Automation\tests\pages\DashboardPage.ts:35:36)
+        at C:\Users\groni\HRMS Automation\tests\specs\Dashboard\Dashboard.spec.ts:30:25
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\test-results\Dashboard-Dashboard-Dashbo-f3130-ogin-with-valid-credentials-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\test-results\Dashboard-Dashboard-Dashbo-f3130-ogin-with-valid-credentials-webkit\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\test-results\Dashboard-Dashboard-Dashbo-f3130-ogin-with-valid-credentials-webkit\error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Dashboard Tests › should search menu with value 1027 and verify dropdown results" classname="Dashboard\Dashboard.spec.ts" time="64.067">
+<system-out>
+<![CDATA[[INFO] 11:08:58 AM - Navigating to login page
+[INFO] 11:09:04 AM - Attempting to login with email: ckoranne89@gmail.com
+[INFO] 11:09:04 AM - Clicking on Email button
+[INFO] 11:09:30 AM - Filling Email field with value
+[INFO] 11:09:31 AM - Filling Password field with value
+[INFO] 11:09:32 AM - Clicking on Sign In button
+[INFO] 11:09:32 AM - Login initiated
+[INFO] 11:09:40 AM - Login successful - dashboard URL confirmed
+[INFO] 11:09:40 AM - Verifying dashboard is loaded
+[INFO] 11:09:41 AM - Current URL: https://shree.groniva.net/app/global-dashboards/ess-dashboard?
+[INFO] 11:09:41 AM - Is dashboard URL: true
+[INFO] 11:09:41 AM - Dashboard verification complete
+[INFO] 11:09:41 AM - Dashboard loaded successfully
+[INFO] 11:09:41 AM - Searching in menu for: 1047
+[INFO] 11:09:41 AM - Clicking on Menu search input
+[INFO] 11:09:55 AM - Typed "1047" in menu search
+[INFO] 11:09:55 AM - Dropdown panel is now visible
+[INFO] 11:09:55 AM - Searched for 1047 in menu
+[INFO] 11:09:57 AM - Verifying search results appear
+[INFO] 11:09:57 AM - Found 0 search results
+[INFO] 11:09:57 AM - No search results found for 1047
+[INFO] 11:09:57 AM - Verifying no data found message
+[INFO] 11:09:57 AM - Confirmed: No Data Found message is displayed
+]]>
+</system-out>
+</testcase>
+<testcase name="Dashboard Tests › should search menu with organization and verify results appear" classname="Dashboard\Dashboard.spec.ts" time="70.829">
+<system-out>
+<![CDATA[[INFO] 11:09:02 AM - Navigating to login page
+[INFO] 11:09:04 AM - Attempting to login with email: ckoranne89@gmail.com
+[INFO] 11:09:04 AM - Clicking on Email button
+[INFO] 11:09:30 AM - Filling Email field with value
+[INFO] 11:09:31 AM - Filling Password field with value
+[INFO] 11:09:32 AM - Clicking on Sign In button
+[INFO] 11:09:33 AM - Login initiated
+[INFO] 11:09:43 AM - Verifying dashboard is loaded
+[INFO] 11:09:44 AM - Current URL: https://shree.groniva.net/app/global-dashboards/ess-dashboard?
+[INFO] 11:09:44 AM - Is dashboard URL: true
+[INFO] 11:09:44 AM - Dashboard verification complete
+[INFO] 11:09:44 AM - Dashboard loaded successfully
+[INFO] 11:09:44 AM - Opening menu
+[INFO] 11:09:44 AM - Clicking on Menu button
+[INFO] 11:10:12 AM - Clicking menu link
+[INFO] 11:10:12 AM - Clicking on Menu link
+
+[[ATTACHMENT|test-results\Dashboard-Dashboard-Dashbo-5eac5-n-and-verify-results-appear-webkit\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\Dashboard-Dashboard-Dashbo-5eac5-n-and-verify-results-appear-webkit\video.webm]]
+
+[[ATTACHMENT|test-results\Dashboard-Dashboard-Dashbo-5eac5-n-and-verify-results-appear-webkit\error-context.md]]
+]]>
+</system-out>
+<error message="Test timeout of 60000ms exceeded." type="Error">
+<![CDATA[  [webkit] › Dashboard\Dashboard.spec.ts:84:3 › Dashboard Tests › should search menu with organization and verify results appear 
+
+    Test timeout of 60000ms exceeded.
+
+    Error: locator.waitFor: Test timeout of 60000ms exceeded.
+    Call log:
+      - waiting for getByRole('link', { name: /menu/i }) to be visible
+
+
+       at ..\pages\BasePage.ts:15
+
+      13 |   async waitForElement(locator: Locator, timeout: number = config.timeout) {
+      14 |    // Logger.debug(`Waiting for element to be visible`);
+    > 15 |     await locator.waitFor({ state: 'visible', timeout });
+         |                   ^
+      16 |   }
+      17 |
+      18 |   async click(locator: Locator, description: string = 'element') {
+        at DashboardPage.waitForElement (C:\Users\groni\HRMS Automation\tests\pages\BasePage.ts:15:19)
+        at DashboardPage.click (C:\Users\groni\HRMS Automation\tests\pages\BasePage.ts:20:16)
+        at DashboardPage.clickMenuLink (C:\Users\groni\HRMS Automation\tests\pages\DashboardPage.ts:51:16)
+        at C:\Users\groni\HRMS Automation\tests\specs\Dashboard\Dashboard.spec.ts:99:25
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\test-results\Dashboard-Dashboard-Dashbo-5eac5-n-and-verify-results-appear-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\test-results\Dashboard-Dashboard-Dashbo-5eac5-n-and-verify-results-appear-webkit\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\test-results\Dashboard-Dashboard-Dashbo-5eac5-n-and-verify-results-appear-webkit\error-context.md
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="Dashboard\Modules\AddOrganization.spec.ts" timestamp="2026-05-13T05:32:57.553Z" hostname="webkit" tests="1" failures="0" skipped="0" time="6.67" errors="1">
+<testcase name="Organization Module Tests › should navigate to organization module" classname="Dashboard\Modules\AddOrganization.spec.ts" time="6.67">
+<system-out>
+<![CDATA[[INFO] 11:09:34 AM - Navigating to login page
+
+[[ATTACHMENT|test-results\Dashboard-Modules-AddOrgan-1068e-gate-to-organization-module-webkit\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\Dashboard-Modules-AddOrgan-1068e-gate-to-organization-module-webkit\video.webm]]
+
+[[ATTACHMENT|test-results\Dashboard-Modules-AddOrgan-1068e-gate-to-organization-module-webkit\error-context.md]]
+]]>
+</system-out>
+<error message="Cannot access &apos;TaskSearchPage&apos; before initialization" type="ReferenceError">
+<![CDATA[  [webkit] › Dashboard\Modules\AddOrganization.spec.ts:18:1 › Organization Module Tests › should navigate to organization module 
+
+    ReferenceError: Cannot access 'TaskSearchPage' before initialization
+
+      19 |     const loginPage = new LoginPage(page);
+      20 |     const dashboardPage = new DashboardPage(page); 
+    > 21 |     const TaskSearchPage = new TaskSearchPage(page); 
+         |                            ^
+      22 |     const organizationPage = new OrganizationPage(page);
+      23 |
+      24 |     await loginPage.loginwithEmail(testUsers.shreeUser.email, testUsers.shreeUser.password);
+        at C:\Users\groni\HRMS Automation\tests\specs\Dashboard\Modules\AddOrganization.spec.ts:21:28
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\test-results\Dashboard-Modules-AddOrgan-1068e-gate-to-organization-module-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\test-results\Dashboard-Modules-AddOrgan-1068e-gate-to-organization-module-webkit\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\test-results\Dashboard-Modules-AddOrgan-1068e-gate-to-organization-module-webkit\error-context.md
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="Dashboard\Modules\Organization.spec.ts" timestamp="2026-05-13T05:32:57.553Z" hostname="webkit" tests="1" failures="0" skipped="0" time="3.968" errors="1">
+<testcase name="Organization Module Tests › should navigate to organization module" classname="Dashboard\Modules\Organization.spec.ts" time="3.968">
+<system-out>
+<![CDATA[[INFO] 11:09:41 AM - Navigating to login page
+
+[[ATTACHMENT|test-results\Dashboard-Modules-Organiza-74789-gate-to-organization-module-webkit\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\Dashboard-Modules-Organiza-74789-gate-to-organization-module-webkit\video.webm]]
+
+[[ATTACHMENT|test-results\Dashboard-Modules-Organiza-74789-gate-to-organization-module-webkit\error-context.md]]
+]]>
+</system-out>
+<error message="Cannot access &apos;TaskSearchPage&apos; before initialization" type="ReferenceError">
+<![CDATA[  [webkit] › Dashboard\Modules\Organization.spec.ts:20:1 › Organization Module Tests › should navigate to organization module 
+
+    ReferenceError: Cannot access 'TaskSearchPage' before initialization
+
+      21 |     const loginPage = new LoginPage(page);
+      22 |     const dashboardPage = new DashboardPage(page); 
+    > 23 |     const TaskSearchPage = new TaskSearchPage(page); 
+         |                            ^
+      24 |     const organizationPage = new OrganizationPage(page);
+      25 |
+      26 |     await loginPage.loginwithEmail(testUsers.shreeUser.email, testUsers.shreeUser.password);
+        at C:\Users\groni\HRMS Automation\tests\specs\Dashboard\Modules\Organization.spec.ts:23:28
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\test-results\Dashboard-Modules-Organiza-74789-gate-to-organization-module-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\test-results\Dashboard-Modules-Organiza-74789-gate-to-organization-module-webkit\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\test-results\Dashboard-Modules-Organiza-74789-gate-to-organization-module-webkit\error-context.md
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="Login\login.spec.ts" timestamp="2026-05-13T05:32:57.553Z" hostname="webkit" tests="6" failures="2" skipped="0" time="238.65" errors="2">
+<testcase name="Login Tests › should display login page elements" classname="Login\login.spec.ts" time="25.765">
+<system-out>
+<![CDATA[[INFO] 11:09:47 AM - Navigating to login page
+[INFO] 11:10:02 AM - Verifying login page is loaded
+
+[[ATTACHMENT|test-results\Login-login-Login-Tests-should-display-login-page-elements-webkit\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\Login-login-Login-Tests-should-display-login-page-elements-webkit\video.webm]]
+
+[[ATTACHMENT|test-results\Login-login-Login-Tests-should-display-login-page-elements-webkit\error-context.md]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [webkit] › Login\login.spec.ts:13:3 › Login Tests › should display login page elements ───────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByPlaceholder('Enter Mobile Number')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByPlaceholder('Enter Mobile Number')
+
+
+       at ..\pages\LoginPage.ts:42
+
+      40 |   async verifyLoginPageLoaded() {
+      41 |     Logger.info(`Verifying login page is loaded`);
+    > 42 |     await expect(this.mobileField).toBeVisible();
+         |                                    ^
+      43 |     await expect(this.signInButton).toBeVisible();
+      44 |   }
+      45 |
+        at LoginPage.verifyLoginPageLoaded (C:\Users\groni\HRMS Automation\tests\pages\LoginPage.ts:42:36)
+        at C:\Users\groni\HRMS Automation\tests\specs\Login\login.spec.ts:15:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\test-results\Login-login-Login-Tests-should-display-login-page-elements-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\test-results\Login-login-Login-Tests-should-display-login-page-elements-webkit\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\test-results\Login-login-Login-Tests-should-display-login-page-elements-webkit\error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Login Tests › should login with valid credentials" classname="Login\login.spec.ts" time="51.095">
+<system-out>
+<![CDATA[[INFO] 11:10:00 AM - Navigating to login page
+[INFO] 11:10:04 AM - Attempting to login with mobile: 9011409986
+[INFO] 11:10:04 AM - Filling Mobile field with value
+[INFO] 11:10:12 AM - Filling Password field with value
+[INFO] 11:10:13 AM - Clicking on Sign In button
+[INFO] 11:10:14 AM - Login initiated
+
+[[ATTACHMENT|test-results\Login-login-Login-Tests-should-login-with-valid-credentials-webkit\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\Login-login-Login-Tests-should-login-with-valid-credentials-webkit\video.webm]]
+
+[[ATTACHMENT|test-results\Login-login-Login-Tests-should-login-with-valid-credentials-webkit\error-context.md]]
+]]>
+</system-out>
+<error message="page.waitForURL: Timeout 30000ms exceeded." type="TimeoutError">
+<![CDATA[  [webkit] › Login\login.spec.ts:19:3 › Login Tests › should login with valid credentials ──────────
+
+    TimeoutError: page.waitForURL: Timeout 30000ms exceeded.
+    =========================== logs ===========================
+    waiting for navigation until "load"
+    ============================================================
+
+      23 |
+      24 |     
+    > 25 |     await page.waitForURL(/dashboard|ess-dashboard/, { timeout: 30000 });
+         |                ^
+      26 |     Logger.info('Login successful - dashboard URL confirmed');
+      27 |     
+      28 |     expect(page.url()).toMatch(/dashboard|ess-dashboard/);
+        at C:\Users\groni\HRMS Automation\tests\specs\Login\login.spec.ts:25:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\test-results\Login-login-Login-Tests-should-login-with-valid-credentials-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\test-results\Login-login-Login-Tests-should-login-with-valid-credentials-webkit\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\test-results\Login-login-Login-Tests-should-login-with-valid-credentials-webkit\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Login Tests › should display welcome message after successful login" classname="Login\login.spec.ts" time="52.759">
+<system-out>
+<![CDATA[[INFO] 11:10:03 AM - Navigating to login page
+[INFO] 11:10:05 AM - Attempting to login with mobile: 9011409986
+[INFO] 11:10:05 AM - Filling Mobile field with value
+[INFO] 11:10:16 AM - Filling Password field with value
+[INFO] 11:10:16 AM - Clicking on Sign In button
+[INFO] 11:10:17 AM - Login initiated
+
+[[ATTACHMENT|test-results\Login-login-Login-Tests-sh-3ef0a-sage-after-successful-login-webkit\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\Login-login-Login-Tests-sh-3ef0a-sage-after-successful-login-webkit\video.webm]]
+
+[[ATTACHMENT|test-results\Login-login-Login-Tests-sh-3ef0a-sage-after-successful-login-webkit\error-context.md]]
+]]>
+</system-out>
+<error message="page.waitForURL: Timeout 30000ms exceeded." type="TimeoutError">
+<![CDATA[  [webkit] › Login\login.spec.ts:31:3 › Login Tests › should display welcome message after successful login 
+
+    TimeoutError: page.waitForURL: Timeout 30000ms exceeded.
+    =========================== logs ===========================
+    waiting for navigation until "load"
+    ============================================================
+
+      33 |     
+      34 |     await loginPage.login(testUsers.shreeUser.mobile, testUsers.shreeUser.password);
+    > 35 |     await page.waitForURL(/dashboard|ess-dashboard/, { timeout: 30000 });
+         |                ^
+      36 |     await page.waitForLoadState('networkidle');
+      37 |
+      38 |      // Give the page a moment to render
+        at C:\Users\groni\HRMS Automation\tests\specs\Login\login.spec.ts:35:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\test-results\Login-login-Login-Tests-sh-3ef0a-sage-after-successful-login-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\test-results\Login-login-Login-Tests-sh-3ef0a-sage-after-successful-login-webkit\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\test-results\Login-login-Login-Tests-sh-3ef0a-sage-after-successful-login-webkit\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Login Tests › should login with email " classname="Login\login.spec.ts" time="38.301">
+<system-out>
+<![CDATA[[INFO] 11:10:15 AM - Navigating to login page
+[INFO] 11:10:26 AM - Attempting to login with email: ckoranne89@gmail.com
+[INFO] 11:10:26 AM - Clicking on Email button
+[INFO] 11:10:36 AM - Filling Email field with value
+[INFO] 11:10:38 AM - Filling Password field with value
+[INFO] 11:10:38 AM - Clicking on Sign In button
+[INFO] 11:10:39 AM - Login initiated
+[INFO] 11:10:45 AM - Login with email successful - dashboard URL confirmed
+
+[[ATTACHMENT|test-results\Login-login-Login-Tests-should-login-with-email--webkit\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\Login-login-Login-Tests-should-login-with-email--webkit\video.webm]]
+
+[[ATTACHMENT|test-results\Login-login-Login-Tests-should-login-with-email--webkit\error-context.md]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [webkit] › Login\login.spec.ts:46:3 › Login Tests › should login with email  ─────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('text=Welcome Chetan')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('text=Welcome Chetan')
+
+
+      58 |         await page.waitForLoadState('domcontentloaded');
+      59 |     const welcomeLocator = page.locator('text=Welcome Chetan');
+    > 60 |     await expect(welcomeLocator).toBeVisible();
+         |                                  ^
+      61 |     Logger.info('Welcome message displayed after email login');
+      62 |     });
+      63 |
+        at C:\Users\groni\HRMS Automation\tests\specs\Login\login.spec.ts:60:34
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\test-results\Login-login-Login-Tests-should-login-with-email--webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\test-results\Login-login-Login-Tests-should-login-with-email--webkit\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\test-results\Login-login-Login-Tests-should-login-with-email--webkit\error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Login Tests › verify user logged out after clicking logout" classname="Login\login.spec.ts" time="53.674">
+<system-out>
+<![CDATA[[INFO] 11:10:16 AM - Navigating to login page
+[INFO] 11:10:27 AM - Attempting to login with email: ckoranne89@gmail.com
+[INFO] 11:10:27 AM - Clicking on Email button
+[INFO] 11:10:36 AM - Filling Email field with value
+[INFO] 11:10:39 AM - Filling Password field with value
+[INFO] 11:10:39 AM - Clicking on Sign In button
+[INFO] 11:10:40 AM - Login initiated
+[INFO] 11:10:47 AM - Login successful - dashboard URL confirmed
+[INFO] 11:10:55 AM - Dashboard navigation completed
+[INFO] 11:10:55 AM - Clicking profile menu
+[INFO] 11:10:55 AM - Clicking on Profile Menu
+[INFO] 11:11:01 AM - Clicking logout button
+[INFO] 11:11:01 AM - Clicking on Logout Button
+[INFO] 11:11:05 AM - Logout successful - login URL confirmed
+]]>
+</system-out>
+</testcase>
+<testcase name="Login Tests › Setup verification" classname="Login\login.spec.ts" time="17.056">
+<system-out>
+<![CDATA[[INFO] 11:10:54 AM - Navigating to login page
+[INFO] 11:11:04 AM - Authenticated navigation successful - dashboard URL confirmed
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="Login\shreeLogin.spec.ts" timestamp="2026-05-13T05:32:57.553Z" hostname="webkit" tests="2" failures="0" skipped="0" time="104.669" errors="2">
+<testcase name="Shree User Login Tests › should login Shree user successfully" classname="Login\shreeLogin.spec.ts" time="54.161">
+<system-out>
+<![CDATA[[INFO] 11:10:57 AM - Navigating to Shree login page
+[INFO] 11:11:00 AM - Attempting to login with mobile: 9011409986
+[INFO] 11:11:00 AM - Filling Mobile field with value
+[INFO] 11:11:13 AM - Filling Password field with value
+[INFO] 11:11:14 AM - Clicking on Sign In button
+[INFO] 11:11:15 AM - Login initiated
+
+[[ATTACHMENT|test-results\Login-shreeLogin-Shree-Use-99f8f-gin-Shree-user-successfully-webkit\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\Login-shreeLogin-Shree-Use-99f8f-gin-Shree-user-successfully-webkit\video.webm]]
+
+[[ATTACHMENT|test-results\Login-shreeLogin-Shree-Use-99f8f-gin-Shree-user-successfully-webkit\error-context.md]]
+]]>
+</system-out>
+<error message="page.waitForURL: Timeout 30000ms exceeded." type="TimeoutError">
+<![CDATA[  [webkit] › Login\shreeLogin.spec.ts:13:3 › Shree User Login Tests › should login Shree user successfully 
+
+    TimeoutError: page.waitForURL: Timeout 30000ms exceeded.
+    =========================== logs ===========================
+    waiting for navigation until "load"
+    ============================================================
+
+      17 |     
+      18 |     // Wait for dashboard
+    > 19 |     await page.waitForURL(/dashboard|ess-dashboard/, { timeout: 30000 });
+         |                ^
+      20 |     Logger.info('Shree user login successful');
+      21 |     
+      22 |     expect(page.url()).toMatch(/dashboard|ess-dashboard/);
+        at C:\Users\groni\HRMS Automation\tests\specs\Login\shreeLogin.spec.ts:19:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\test-results\Login-shreeLogin-Shree-Use-99f8f-gin-Shree-user-successfully-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\test-results\Login-shreeLogin-Shree-Use-99f8f-gin-Shree-user-successfully-webkit\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\test-results\Login-shreeLogin-Shree-Use-99f8f-gin-Shree-user-successfully-webkit\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Shree User Login Tests › should display dashboard after Shree user login" classname="Login\shreeLogin.spec.ts" time="50.508">
+<system-out>
+<![CDATA[[INFO] 11:10:58 AM - Navigating to Shree login page
+[INFO] 11:11:00 AM - Attempting to login with mobile: 9011409986
+[INFO] 11:11:00 AM - Filling Mobile field with value
+[INFO] 11:11:09 AM - Filling Password field with value
+[INFO] 11:11:10 AM - Clicking on Sign In button
+[INFO] 11:11:11 AM - Login initiated
+
+[[ATTACHMENT|test-results\Login-shreeLogin-Shree-Use-a9f95-oard-after-Shree-user-login-webkit\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\Login-shreeLogin-Shree-Use-a9f95-oard-after-Shree-user-login-webkit\video.webm]]
+
+[[ATTACHMENT|test-results\Login-shreeLogin-Shree-Use-a9f95-oard-after-Shree-user-login-webkit\error-context.md]]
+]]>
+</system-out>
+<error message="page.waitForURL: Timeout 30000ms exceeded." type="TimeoutError">
+<![CDATA[  [webkit] › Login\shreeLogin.spec.ts:25:3 › Shree User Login Tests › should display dashboard after Shree user login 
+
+    TimeoutError: page.waitForURL: Timeout 30000ms exceeded.
+    =========================== logs ===========================
+    waiting for navigation until "load"
+    ============================================================
+
+      28 |     
+      29 |     await loginPage.login(testUsers.shreeUser.mobile, testUsers.shreeUser.password);
+    > 30 |     await page.waitForURL(/ess-dashboard/, { timeout: 30000 });
+         |                ^
+      31 |     
+      32 |     await dashboardPage.verifyDashboardTitle('Ess Dashboard');
+      33 |     Logger.info('Dashboard title verified for Shree user');
+        at C:\Users\groni\HRMS Automation\tests\specs\Login\shreeLogin.spec.ts:30:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\test-results\Login-shreeLogin-Shree-Use-a9f95-oard-after-Shree-user-login-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\test-results\Login-shreeLogin-Shree-Use-a9f95-oard-after-Shree-user-login-webkit\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\test-results\Login-shreeLogin-Shree-Use-a9f95-oard-after-Shree-user-login-webkit\error-context.md
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="Tasks\taskSearch.spec.ts" timestamp="2026-05-13T05:32:57.553Z" hostname="webkit" tests="4" failures="0" skipped="0" time="254.648" errors="4">
+<testcase name="Task Search Tests › should search and select task 1047" classname="Tasks\taskSearch.spec.ts" time="65.656">
+<system-out>
+<![CDATA[[INFO] 11:11:10 AM - Setting up: Login and navigate to dashboard
+[INFO] 11:11:10 AM - Navigating to https://shree.groniva.net/login
+[INFO] 11:11:11 AM - Attempting to login with email: ckoranne89@gmail.com
+[INFO] 11:11:11 AM - Clicking on Email button
+[INFO] 11:11:33 AM - Filling Email field with value
+[INFO] 11:11:35 AM - Filling Password field with value
+[INFO] 11:11:36 AM - Clicking on Sign In button
+[INFO] 11:11:37 AM - Login initiated
+[INFO] 11:12:00 AM - Login completed and token verified
+[INFO] 11:12:10 AM - Dashboard navigation completed
+
+[[ATTACHMENT|test-results\Tasks-taskSearch-Task-Sear-73436-search-and-select-task-1047-webkit\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\Tasks-taskSearch-Task-Sear-73436-search-and-select-task-1047-webkit\video.webm]]
+
+[[ATTACHMENT|test-results\Tasks-taskSearch-Task-Sear-73436-search-and-select-task-1047-webkit\error-context.md]]
+]]>
+</system-out>
+<error message="Test timeout of 60000ms exceeded while running &quot;beforeEach&quot; hook." type="Error">
+<![CDATA[  [webkit] › Tasks\taskSearch.spec.ts:30:3 › Task Search Tests › should search and select task 1047 
+
+    Test timeout of 60000ms exceeded while running "beforeEach" hook.
+
+       8 |
+       9 | test.describe('Task Search Tests', () => {
+    > 10 |   test.beforeEach(async ({ page }) => {
+         |        ^
+      11 |     Logger.info('Setting up: Login and navigate to dashboard');
+      12 |     const loginPage = new LoginPage(page);
+      13 |     
+        at C:\Users\groni\HRMS Automation\tests\specs\Tasks\taskSearch.spec.ts:10:8
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\test-results\Tasks-taskSearch-Task-Sear-73436-search-and-select-task-1047-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\test-results\Tasks-taskSearch-Task-Sear-73436-search-and-select-task-1047-webkit\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\test-results\Tasks-taskSearch-Task-Sear-73436-search-and-select-task-1047-webkit\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Task Search Tests › Multiple task search › should search for task 1027" classname="Tasks\taskSearch.spec.ts" time="64.368">
+<system-out>
+<![CDATA[[INFO] 11:11:11 AM - Setting up: Login and navigate to dashboard
+[INFO] 11:11:11 AM - Navigating to https://shree.groniva.net/login
+[INFO] 11:11:17 AM - Attempting to login with email: ckoranne89@gmail.com
+[INFO] 11:11:17 AM - Clicking on Email button
+[INFO] 11:11:34 AM - Filling Email field with value
+[INFO] 11:11:36 AM - Filling Password field with value
+[INFO] 11:11:36 AM - Clicking on Sign In button
+[INFO] 11:11:37 AM - Login initiated
+[INFO] 11:11:37 AM - Login completed and token verified
+[INFO] 11:11:45 AM - Dashboard navigation completed
+[INFO] 11:11:57 AM - Verifying dashboard is loaded
+[INFO] 11:11:58 AM - Current URL: https://shree.groniva.net/app/global-dashboards/ess-dashboard
+[INFO] 11:11:58 AM - Is dashboard URL: true
+[INFO] 11:11:58 AM - Dashboard verification complete
+[INFO] 11:11:58 AM - Clicking search menu
+[INFO] 11:11:58 AM - Clicking on Search Menu
+[INFO] 11:12:04 AM - Searching for employee: 1027
+[INFO] 11:12:04 AM - Clicking on Search combobox
+[INFO] 11:12:07 AM - Filling Employee ID with value
+[INFO] 11:12:10 AM - Search for task 1027 completed
+[INFO] 11:12:10 AM - Clicking on Organization
+[INFO] 11:12:10 AM - Clicking on Organization 1027
+
+[[ATTACHMENT|test-results\Tasks-taskSearch-Task-Sear-f2487-should-search-for-task-1027-webkit\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\Tasks-taskSearch-Task-Sear-f2487-should-search-for-task-1027-webkit\video.webm]]
+
+[[ATTACHMENT|test-results\Tasks-taskSearch-Task-Sear-f2487-should-search-for-task-1027-webkit\error-context.md]]
+]]>
+</system-out>
+<error message="Test timeout of 60000ms exceeded." type="Error">
+<![CDATA[  [webkit] › Tasks\taskSearch.spec.ts:51:7 › Task Search Tests › Multiple task search › should search for task 1027 
+
+    Test timeout of 60000ms exceeded.
+
+    Error: locator.waitFor: Test timeout of 60000ms exceeded.
+    Call log:
+      - waiting for locator('div').filter({ hasText: /^Organization 1027$/ }).nth(5) to be visible
+
+
+       at ..\pages\BasePage.ts:15
+
+      13 |   async waitForElement(locator: Locator, timeout: number = config.timeout) {
+      14 |    // Logger.debug(`Waiting for element to be visible`);
+    > 15 |     await locator.waitFor({ state: 'visible', timeout });
+         |                   ^
+      16 |   }
+      17 |
+      18 |   async click(locator: Locator, description: string = 'element') {
+        at TaskSearchPage.waitForElement (C:\Users\groni\HRMS Automation\tests\pages\BasePage.ts:15:19)
+        at TaskSearchPage.click (C:\Users\groni\HRMS Automation\tests\pages\BasePage.ts:20:16)
+        at TaskSearchPage.clickonOrganization (C:\Users\groni\HRMS Automation\tests\pages\TaskSearchPage.ts:50:16)
+        at C:\Users\groni\HRMS Automation\tests\specs\Tasks\taskSearch.spec.ts:70:34
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\test-results\Tasks-taskSearch-Task-Sear-f2487-should-search-for-task-1027-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\test-results\Tasks-taskSearch-Task-Sear-f2487-should-search-for-task-1027-webkit\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\test-results\Tasks-taskSearch-Task-Sear-f2487-should-search-for-task-1027-webkit\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Task Search Tests › Multiple task search › should search for task 1028" classname="Tasks\taskSearch.spec.ts" time="62.25">
+<system-out>
+<![CDATA[[INFO] 11:11:50 AM - Setting up: Login and navigate to dashboard
+[INFO] 11:11:50 AM - Navigating to https://shree.groniva.net/login
+[INFO] 11:11:55 AM - Attempting to login with email: ckoranne89@gmail.com
+[INFO] 11:11:55 AM - Clicking on Email button
+[INFO] 11:12:07 AM - Filling Email field with value
+[INFO] 11:12:11 AM - Filling Password field with value
+[INFO] 11:12:13 AM - Clicking on Sign In button
+[INFO] 11:12:14 AM - Login initiated
+[INFO] 11:12:14 AM - Login completed and token verified
+[INFO] 11:12:22 AM - Dashboard navigation completed
+[INFO] 11:12:27 AM - Verifying dashboard is loaded
+[INFO] 11:12:28 AM - Current URL: https://shree.groniva.net/app/global-dashboards/ess-dashboard
+[INFO] 11:12:28 AM - Is dashboard URL: true
+[INFO] 11:12:28 AM - Dashboard verification complete
+[INFO] 11:12:29 AM - Clicking search menu
+[INFO] 11:12:29 AM - Clicking on Search Menu
+[INFO] 11:12:34 AM - Searching for employee: 1028
+[INFO] 11:12:34 AM - Clicking on Search combobox
+[INFO] 11:12:36 AM - Filling Employee ID with value
+[INFO] 11:12:37 AM - Search for task 1028 completed
+[INFO] 11:12:37 AM - Clicking on Location
+[INFO] 11:12:37 AM - Clicking on Location 1028
+[INFO] 11:12:39 AM - Clicked on Location for task 1028
+[INFO] 11:12:41 AM - Successfully navigated to organization landing page. Current URL: https://shree.groniva.net/app/global-dashboards/ess-dashboard
+[INFO] 11:12:41 AM - INBOX link is visible, proceeding to click
+[INFO] 11:12:41 AM - Clicking INBOX link
+[INFO] 11:12:41 AM - Clicking on INBOX link
+[INFO] 11:12:42 AM - Clicked on INBOX link for task 1028
+[INFO] 11:12:44 AM - Successfully navigated to INBOX page. Current URL: https://shree.groniva.net/app/global-dashboards/ess-dashboard
+[INFO] 11:12:44 AM - Clicking three dot menu
+[INFO] 11:12:44 AM - Clicking on Three Dot Menu
+[INFO] 11:12:52 AM - Clicked on three dot menu for task 1028
+
+[[ATTACHMENT|test-results\Tasks-taskSearch-Task-Sear-ae902-should-search-for-task-1028-webkit\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\Tasks-taskSearch-Task-Sear-ae902-should-search-for-task-1028-webkit\video.webm]]
+
+[[ATTACHMENT|test-results\Tasks-taskSearch-Task-Sear-ae902-should-search-for-task-1028-webkit\error-context.md]]
+]]>
+</system-out>
+<error message="Test timeout of 60000ms exceeded." type="Error">
+<![CDATA[  [webkit] › Tasks\taskSearch.spec.ts:51:7 › Task Search Tests › Multiple task search › should search for task 1028 
+
+    Test timeout of 60000ms exceeded.
+
+    Error: page.waitForTimeout: Test timeout of 60000ms exceeded.
+
+      103 |         Logger.info(`Clicked on three dot menu for task ${taskId}`);
+      104 |         await page.waitForLoadState('networkidle');
+    > 105 |         await page.waitForTimeout(2000);
+          |                    ^
+      106 |         const afterClickURL = await page.url();
+      107 |         expect(afterClickURL).toBeTruthy();
+      108 |         Logger.info(`Successfully navigated after clicking three dot menu. Current URL: ${afterClickURL}`);
+        at C:\Users\groni\HRMS Automation\tests\specs\Tasks\taskSearch.spec.ts:105:20
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\test-results\Tasks-taskSearch-Task-Sear-ae902-should-search-for-task-1028-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\test-results\Tasks-taskSearch-Task-Sear-ae902-should-search-for-task-1028-webkit\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\test-results\Tasks-taskSearch-Task-Sear-ae902-should-search-for-task-1028-webkit\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Task Search Tests › Multiple task search › should search for task 1050" classname="Tasks\taskSearch.spec.ts" time="62.374">
+<system-out>
+<![CDATA[[INFO] 11:11:52 AM - Setting up: Login and navigate to dashboard
+[INFO] 11:11:52 AM - Navigating to https://shree.groniva.net/login
+[INFO] 11:11:56 AM - Attempting to login with email: ckoranne89@gmail.com
+[INFO] 11:11:56 AM - Clicking on Email button
+[INFO] 11:12:10 AM - Filling Email field with value
+[INFO] 11:12:17 AM - Filling Password field with value
+[INFO] 11:12:18 AM - Clicking on Sign In button
+[INFO] 11:12:19 AM - Login initiated
+[INFO] 11:12:19 AM - Login completed and token verified
+[INFO] 11:12:27 AM - Dashboard navigation completed
+[INFO] 11:12:29 AM - Verifying dashboard is loaded
+[INFO] 11:12:30 AM - Current URL: https://shree.groniva.net/app/global-dashboards/ess-dashboard
+[INFO] 11:12:30 AM - Is dashboard URL: true
+[INFO] 11:12:30 AM - Dashboard verification complete
+[INFO] 11:12:30 AM - Clicking search menu
+[INFO] 11:12:30 AM - Clicking on Search Menu
+[INFO] 11:12:36 AM - Searching for employee: 1050
+[INFO] 11:12:36 AM - Clicking on Search combobox
+[INFO] 11:12:37 AM - Filling Employee ID with value
+[INFO] 11:12:39 AM - Search for task 1050 completed
+[INFO] 11:12:39 AM - Clicking on Approval Workflow
+[INFO] 11:12:39 AM - Clicking on Approval Workflow 1050
+
+[[ATTACHMENT|test-results\Tasks-taskSearch-Task-Sear-0b700-should-search-for-task-1050-webkit\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\Tasks-taskSearch-Task-Sear-0b700-should-search-for-task-1050-webkit\video.webm]]
+
+[[ATTACHMENT|test-results\Tasks-taskSearch-Task-Sear-0b700-should-search-for-task-1050-webkit\error-context.md]]
+]]>
+</system-out>
+<error message="Test timeout of 60000ms exceeded." type="Error">
+<![CDATA[  [webkit] › Tasks\taskSearch.spec.ts:51:7 › Task Search Tests › Multiple task search › should search for task 1050 
+
+    Test timeout of 60000ms exceeded.
+
+    Error: locator.waitFor: Test timeout of 60000ms exceeded.
+    Call log:
+      - waiting for locator('div').filter({ hasText: /^Approval Workflow 1050$/ }).nth(5) to be visible
+
+
+       at ..\pages\BasePage.ts:15
+
+      13 |   async waitForElement(locator: Locator, timeout: number = config.timeout) {
+      14 |    // Logger.debug(`Waiting for element to be visible`);
+    > 15 |     await locator.waitFor({ state: 'visible', timeout });
+         |                   ^
+      16 |   }
+      17 |
+      18 |   async click(locator: Locator, description: string = 'element') {
+        at TaskSearchPage.waitForElement (C:\Users\groni\HRMS Automation\tests\pages\BasePage.ts:15:19)
+        at TaskSearchPage.click (C:\Users\groni\HRMS Automation\tests\pages\BasePage.ts:20:16)
+        at TaskSearchPage.clickonApprovalWorkflow (C:\Users\groni\HRMS Automation\tests\pages\TaskSearchPage.ts:46:16)
+        at C:\Users\groni\HRMS Automation\tests\specs\Tasks\taskSearch.spec.ts:74:34
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\..\test-results\Tasks-taskSearch-Task-Sear-0b700-should-search-for-task-1050-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\..\test-results\Tasks-taskSearch-Task-Sear-0b700-should-search-for-task-1050-webkit\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\..\test-results\Tasks-taskSearch-Task-Sear-0b700-should-search-for-task-1050-webkit\error-context.md
+]]>
+</error>
 </testcase>
 </testsuite>
 </testsuites>

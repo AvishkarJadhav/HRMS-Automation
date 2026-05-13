@@ -4,8 +4,8 @@ import { LoginPage } from "../../../pages/LoginPage";
 import { DashboardPage } from "../../../pages/DashboardPage";
 import { testUsers, config } from "../../../helpers/config";
 import { Logger } from "../../../helpers/logger";   
-import { EmployeeSearchPage } from "../../../pages/EmployeeSearchPage";
-
+import { TaskSearchPage } from "../../../pages/TaskSearchPage";
+import { orgDetails } from "../../../helpers/config";
  
 test.describe('Organization Module Tests', () => {
     test.beforeEach(async ({ page }) => {
@@ -18,7 +18,7 @@ test.describe('Organization Module Tests', () => {
 test('should navigate to organization module', async ({ page }) => {
     const loginPage = new LoginPage(page);
     const dashboardPage = new DashboardPage(page); 
-    const employeeSearchPage = new EmployeeSearchPage(page); 
+    const taskSearchPage = new TaskSearchPage(page); 
     const organizationPage = new OrganizationPage(page);
 
     await loginPage.loginwithEmail(testUsers.shreeUser.email, testUsers.shreeUser.password);
@@ -32,11 +32,11 @@ test('should navigate to organization module', async ({ page }) => {
 
     await dashboardPage.verifyDashboardLoaded();
     await page.waitForTimeout(500); 
-    await employeeSearchPage.clickSearchMenu();
-    await employeeSearchPage.searchEmployee('1027');
+    await taskSearchPage.clickSearchMenu();
+    await taskSearchPage.searchTask('1027');
     Logger.info('Searched for employee 1027 in menu'); 
     
-    await employeeSearchPage.clickOnOrganizationAndWaitForNavigation();
+    await taskSearchPage.clickOnOrganizationAndWaitForNavigation();
     Logger.info('Clicked on Organization and waited for navigation'); 
 
     await organizationPage.clickThreedotMenu();
@@ -55,8 +55,26 @@ test('should navigate to organization module', async ({ page }) => {
     expect(afterAddClickURL).toBeTruthy();
     Logger.info(`Successfully navigated after clicking Add button. Current URL: ${afterAddClickURL}`);
 
-    
-    
+
+    await organizationPage.fillOrganizationForm(
+        orgDetails.name,
+        orgDetails.shortName,
+        orgDetails.code,
+      
+    );
+    Logger.info('Filled organization form with provided details');
+
+    await organizationPage.selectLegalType(orgDetails.legalType);
+    Logger.info(`Selected legal type: ${orgDetails.legalType}`);
+
+    await organizationPage.selectIndustryType(orgDetails.industryType);
+    Logger.info(`Selected industry type: ${orgDetails.industryType}`);
+
+    await organizationPage.selectStatus(orgDetails.status);
+    Logger.info(`Selected status: ${orgDetails.status}`);
+
+    await organizationPage.clickResetButton();
+    Logger.info('Clicked Reset button to clear the form');
   });
 
 
