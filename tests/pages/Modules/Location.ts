@@ -18,4 +18,20 @@ readonly Status = this.page.locator('div').filter({ hasText: /^Select Status$/ }
 
 readonly ResetButton = this.page.getByRole('button', { name: 'Reset' });
 readonly SaveButton = this.page.getByRole('button', { name: 'Save' });
-} 
+
+
+async SelectOrganization(organizationName: string) {
+    Logger.info(`Selecting organization: ${organizationName}`);
+    await this.click(this.OrganizationName, 'Organization Name Dropdown');
+    const optionLocator = this.page.locator('div[role="option"]').filter({ hasText: organizationName }).first();
+    await this.click(optionLocator, `Organization Option: ${organizationName}`);
+}
+
+
+async fillBranchLocationName(branchLocationName: string) {
+    await this.fillText(this.BranchLocationName, branchLocationName, 'Branch/Location Name');
+
+
+}
+
+}
