@@ -4,6 +4,7 @@ import { Logger } from "../../helpers/logger";
 import { config } from "../../helpers/config";
 
 export class LocationPage extends BasePage { 
+ readonly AddLocationHeading = this.page.getByRole('heading', { name: 'Location' });
     
 readonly OrganizationName =this.page.locator('div').filter({ hasText: /^Search Organization$/ }).first();
 readonly BranchLocationName = this.page.getByRole('textbox', { name: 'Branch/Location Name*' });
@@ -18,4 +19,47 @@ readonly Status = this.page.locator('div').filter({ hasText: /^Select Status$/ }
 
 readonly ResetButton = this.page.getByRole('button', { name: 'Reset' });
 readonly SaveButton = this.page.getByRole('button', { name: 'Save' });
+
+async fillLocationForm(
+    organizationName: string,
+    branchLocationName: string,
+    code: string,
+    locationType: string,
+    addressLine1: string,
+    addressLine2: string,
+    landmark: string,
+    pincode: string,
+    city: string,
+    status: string
+) {
+    Logger.info('Filling out Location form');
+    await this.OrganizationName.click();
+    await this.page.getByText(organizationName).click();
+    await this.BranchLocationName.fill(branchLocationName);
+    await this.Code.fill(code);
+    await this.LocationType.click();
+    await this.page.getByText(locationType).click();
+    await this.AddressLine1.fill(addressLine1);
+    await this.AddressLine2.fill(addressLine2);
+    await this.Landmark.fill(landmark);
+    await this.Pincode.fill(pincode);
+    await this.City.click();
+    await this.page.getByText(city).click();
+    await this.Status.click();
+    await this.page.getByText(status).click();
 } 
+
+async fillOrgName(OrgDetails: { organizationName: string }) {
+    Logger.info(`Selecting organization name: ${OrgDetails.organizationName}`);
+    await this.OrganizationName.click();    
+
+    
+    await this.page.getByText(OrgDetails.organizationName).click();     
+}
+
+async expecttobeVisible() {
+    Logger.info('Verifying Location form is visible');
+    await expect(this.AddLocationHeading).toBeVisible({ timeout: config.timeout }); 
+}
+
+}

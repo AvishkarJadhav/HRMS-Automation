@@ -20,7 +20,7 @@ test.describe('Organization Module Tests', () => {
 test('should navigate to organization module', async ({ page }) => {
     const loginPage = new LoginPage(page);
     const dashboardPage = new DashboardPage(page); 
-    const TaskSearchPage = new TaskSearchPage(page); 
+    const taskSearchPage = new TaskSearchPage(page); 
     const organizationPage = new OrganizationPage(page);
 
     await loginPage.loginwithEmail(testUsers.shreeUser.email, testUsers.shreeUser.password);
@@ -34,11 +34,11 @@ test('should navigate to organization module', async ({ page }) => {
 
     await dashboardPage.verifyDashboardLoaded();
     await page.waitForTimeout(500); 
-    await TaskSearchPage.clickSearchMenu();
-    await TaskSearchPage.searchTask('1027');
+    await taskSearchPage.clickSearchMenu();
+    await taskSearchPage.searchTask('1027');
     Logger.info('Searched for employee 1027 in menu'); 
     
-    await TaskSearchPage.clickOnOrganizationAndWaitForNavigation();
+    await taskSearchPage.clickOnOrganizationAndWaitForNavigation();
     Logger.info('Clicked on Organization and waited for navigation'); 
 
     await organizationPage.clickThreedotMenu();
