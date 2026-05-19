@@ -33,8 +33,6 @@ async fillLocationForm(
     status: string
 ) {
     Logger.info('Filling out Location form');
-    await this.OrganizationName.click();
-    await this.page.getByText(organizationName).click();
     await this.BranchLocationName.fill(branchLocationName);
     await this.Code.fill(code);
     await this.LocationType.click();
@@ -49,12 +47,13 @@ async fillLocationForm(
     await this.page.getByText(status).click();
 } 
 
-async fillOrgName(OrgDetails: { organizationName: string }) {
-    Logger.info(`Selecting organization name: ${OrgDetails.organizationName}`);
-    await this.OrganizationName.click();    
+async FillOrgName(OrgDetails: { organizationName: string }) {
+    Logger.info(`Filling text for organization name: ${OrgDetails.organizationName}`);
+    await this.page.locator('ng-select').filter({ hasText: /Search Organization/ }).click();
+    await this.page.keyboard.type('Groniva');
+    await this.page.locator('.ng-option').filter({ hasText: 'Groniva' }).click();
 
-    
-    await this.page.getByText(OrgDetails.organizationName).click();     
+
 }
 
 async expecttobeVisible() {

@@ -62,10 +62,9 @@ test.describe('Add Location Module Tests', () => {
             expect(afterAddClickURL).toBeTruthy();
             Logger.info(`Successfully navigated after clicking Add button. Current URL: ${afterAddClickURL}`);  
 
-            await locationPage.fillOrgName(orgDetails.name);
-            Logger.info('Filled organization name in Location form');
-
-
+        
+            await locationPage.FillOrgName({ organizationName: orgDetails.name });
+            Logger.info(`Filled organization name: ${orgDetails.name} in Location form`);   
     });
 
  });

@@ -24,6 +24,7 @@ export const testUsers = {
     email: process.env.SHREE_EMAIL || 'ckoranne89@gmail.com',
     mobile: process.env.SHREE_MOBILE || '9011409986', // Add mobile
     password: process.env.SHREE_PASSWORD || 'Shree@123',
+    Mpass: process.env.MPASS || 'Vermilion@2026',
   },
 };
 

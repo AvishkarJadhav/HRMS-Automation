@@ -19,7 +19,7 @@ test.describe('Login Tests', () => {
   test('should login with valid credentials', async ({ page }) => {
     const loginPage = new LoginPage(page);
     
-    await loginPage.login(testUsers.shreeUser.mobile, testUsers.shreeUser.password);
+    await loginPage.login(testUsers.shreeUser.mobile, testUsers.shreeUser.Mpass);
 
     
     await page.waitForURL(/dashboard|ess-dashboard/, { timeout: 30000 });
@@ -31,14 +31,14 @@ test.describe('Login Tests', () => {
   test('should display welcome message after successful login', async ({ page }) => {
     const loginPage = new LoginPage(page);
     
-    await loginPage.login(testUsers.shreeUser.mobile, testUsers.shreeUser.password);
+    await loginPage.login(testUsers.shreeUser.mobile, testUsers.shreeUser.Mpass);
     await page.waitForURL(/dashboard|ess-dashboard/, { timeout: 30000 });
     await page.waitForLoadState('networkidle');
 
      // Give the page a moment to render
      await page.waitForTimeout(1000);
 
-    const welcomeLocator = page.locator('text=Welcome Chetan');
+    const welcomeLocator = page.locator('text=Welcome Avishkar');
     await expect(welcomeLocator).toBeVisible();
     Logger.info('Welcome message displayed');
   });

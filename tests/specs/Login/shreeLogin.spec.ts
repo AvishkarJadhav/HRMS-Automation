@@ -13,7 +13,7 @@ test.describe('Shree User Login Tests', () => {
   test('should login Shree user successfully', async ({ page }) => {
     const loginPage = new LoginPage(page);
     
-    await loginPage.login(testUsers.shreeUser.mobile, testUsers.shreeUser.password);
+    await loginPage.login(testUsers.shreeUser.mobile, testUsers.shreeUser.Mpass);
     
     // Wait for dashboard
     await page.waitForURL(/dashboard|ess-dashboard/, { timeout: 30000 });
@@ -26,7 +26,7 @@ test.describe('Shree User Login Tests', () => {
     const loginPage = new LoginPage(page);
     const dashboardPage = new DashboardPage(page);
     
-    await loginPage.login(testUsers.shreeUser.mobile, testUsers.shreeUser.password);
+    await loginPage.login(testUsers.shreeUser.mobile, testUsers.shreeUser.Mpass);
     await page.waitForURL(/ess-dashboard/, { timeout: 30000 });
     
     await dashboardPage.verifyDashboardTitle('Ess Dashboard');
